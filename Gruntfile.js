@@ -143,7 +143,17 @@ module.exports = function(grunt) {
           'build/js/scripts.js'
         ],
       }
-    }
+    },
+
+    // takana allows for live as-you-type style injection. AWESOME for designing
+    // in the browser. Its complicated. Ask me if you're curious.
+    // @author bill, echo & co.
+    takana: {
+      options: {
+        path: 'src/sass'
+      }
+    },
+
 
   });
 
@@ -152,6 +162,7 @@ module.exports = function(grunt) {
   grunt.registerTask('templates', ['node_version', 'assemble']);
   grunt.registerTask('javascript', ['node_version', 'copy:customjs']);
   grunt.registerTask('images', ['node_version', 'imagemin', 'copy:images']);
+  grunt.registerTask('fast', ['node_version', 'takana']);
 
   grunt.registerTask('build', [
     'node_version',
