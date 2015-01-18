@@ -146,14 +146,20 @@ module.exports = function(grunt) {
     },
 
     // takana allows for live as-you-type style injection. AWESOME for designing
-    // in the browser. Its complicated. Ask me if you're curious.
-    // @author bill, echo & co.
+    // in the browser.
     takana: {
       options: {
         path: 'src/sass'
       }
     },
 
+    // this task allows you to publish to github pages
+    'gh-pages': {
+      options: {
+        base: 'build'
+      },
+      src: ['**']
+    }
 
   });
 
@@ -173,5 +179,7 @@ module.exports = function(grunt) {
     'sass',
     'autoprefixer'
   ]);
+
+  grunt.registerTask('deploy', ['build', 'gh-pages']);
 
 };
