@@ -1,0 +1,24 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Form and input styles
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+/////////////////////////////////////-+++-
+// input elements
+
+
+// default input styles
+input {
+  border: none;
+  background: none;
+  border: 1px solid $gray;
+  border-radius: 3px;
+  padding: 8px 16px 9px;
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: 0;
+    border: 1px dotted $link-color;
+  }
+}

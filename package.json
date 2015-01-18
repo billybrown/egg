@@ -1,0 +1,39 @@
+{
+  "name": "egg",
+  "version": "1.0.0",
+  "description": "A starting point for web projects",
+  "main": "build/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billybrown/egg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billybrown/egg/issues"
+  },
+  "homepage": "https://github.com/billybrown/egg",
+  "engines": {
+    "node": "~0.10.33"
+  },
+  "devDependencies": {
+    "assemble": "^0.4.42",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.2.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-imagemin": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-node-version": "^1.0.0",
+    "grunt-sass": "^0.17.0",
+    "handlebars-helper-partial": "^0.1.3",
+    "handlebars-helpers": "^0.5.8",
+    "jit-grunt": "^0.9.0"
+  },
+  "keywords": [
+    "handlebars-helper-partial"
+  ]
+}

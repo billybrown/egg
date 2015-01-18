@@ -1,0 +1,11 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Very general page scaffolding. Sets measurements and spacial relationships to
+// provide some consitency in page flow. Because we are working from a photoshop
+// comp these numbers are 'magic numbers' and not based on a modular scale or any
+// other type of vertial grid.
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+// default spacing between basic content elements
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0 0 $page-element-spacing;
+}

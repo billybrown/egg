@@ -1,0 +1,27 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// The main CSS file, imports all the other sass partials
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+// import custom mixins
+@import 'global/mixins/ems';
+
+// import some variables used throughout the css (colors, fonts, breakpoints, spacing amounts)
+@import 'global/variables-generic';
+@import 'global/variables';
+
+// import some base utility classes (image replacement, screen reader visible text, etc.)
+@import 'global/utility';
+
+// import normalize - a CSS reset alternative
+// http://necolas.github.io/normalize.css/
+@import 'global/normalize';
+
+@import 'global/type';
+@import 'global/forms';
+@import 'global/body';
+@import 'global/lists';
+@import 'global/scaffolding';
+@import 'global/layout';
+
+@import 'area/header';

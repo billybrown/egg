@@ -1,0 +1,28 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Basic Page structure, grid and layout
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+/////////////////////////////////////-+++-
+// page structure utility classes
+
+
+// this is to center content at large screens
+.constrained {
+  max-width: $page-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: $medium-bp) {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
+
+
+/////////////////////////////////////-+++-
+// Global page elements and their default styling/spacing etc.

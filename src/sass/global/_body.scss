@@ -1,0 +1,15 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// CSS for the body element - has a lot of defaults
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+body {
+  background: $background;
+  color: $text;
+  font-family: $sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  -webkit-font-smoothing: antialiased;
+}

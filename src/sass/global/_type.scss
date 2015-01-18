@@ -1,0 +1,16 @@
+// type styles
+
+
+// links
+///////////////////////////////////////////
+
+a,
+.fakeLink {
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
