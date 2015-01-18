@@ -10,12 +10,12 @@
     "type": "git",
     "url": "https://github.com/billybrown/egg.git"
   },
-  "author": "",
+  "author": "Bill Brown",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/billybrown/egg/issues"
   },
-  "homepage": "https://github.com/billybrown/egg",
+  "homepage": "https://b.illbrown.com/egg",
   "engines": {
     "node": "~0.10.33"
   },
