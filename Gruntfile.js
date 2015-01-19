@@ -49,13 +49,32 @@ module.exports = function(grunt) {
         ]
       },
       custom: {
-        expand: true,
-        flatten: true,
-          src: 'build/css/*.css',
-          dest: 'build/css/'
-        }
-      
+        options: {
+          map: true
+        },
+        src: 'build/css/*.css'
+      }
     },
+
+    uncss: {
+      dist: {
+        files: {
+          'build/css/main.css': ['build/index.html']
+        }
+      }
+    },
+
+    csso: {
+      compress: {
+        options: {
+          report: 'gzip'
+        },
+        files: {
+          'build/css/main.css': ['build/css/main.css']
+        }
+      },
+    },
+
 
     // this task optimizes your images
     imagemin: {
@@ -177,7 +196,9 @@ module.exports = function(grunt) {
     'assemble',
     'copy',
     'sass',
-    'autoprefixer'
+    'autoprefixer',
+    'uncss',
+    'csso'
   ]);
 
   grunt.registerTask('deploy', ['build', 'gh-pages']);
