@@ -7,9 +7,10 @@
 /////////////////////////////////////-+++
 // fonts
 
+$open-sans: 'Open Sans';
 
 $serif				: $georgia;
-$sans-serif			: $helvetica;
+$sans-serif			: $open-sans, $helvetica;
 
 
 
@@ -33,10 +34,10 @@ $link-hover-color	: darken($link-color, 10%);
 // breakpoints
 
 
-$small-bp: em($iphone-4);
-$teen-bp: em($ipad-1);
-$medium-bp: em($chromebook);
-$large-bp: em($imac-21);
+$bp-small: em($iphone-4);
+$bp-teen: em($ipad-1);
+$bp-medium: em($chromebook);
+$bp-large: em($imac-21);
 
 
 

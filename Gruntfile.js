@@ -2,6 +2,10 @@
 
 module.exports = function(grunt) {
 
+  // this needs to go at the top - it will print out how long 
+  // things took. Helps with debugging
+  require('time-grunt')(grunt);
+  
   // this allows you to remove all the 'loadNPMtasks' calls, and speeds up task running
   require('jit-grunt')(grunt, {
     usebanner: 'grunt-banner',
@@ -101,7 +105,7 @@ module.exports = function(grunt) {
     copy: {
       images: {
         files: [
-          {expand: true, cwd: 'src/img', src: ['**/*'], dest: 'build/img/'}
+          {expand: true, cwd: 'src/img', src: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.gif'], dest: 'build/img/'}
         ],
       },
       customjs: {
@@ -136,7 +140,7 @@ module.exports = function(grunt) {
     // files are saved.
     watch: {
       sass: {
-        files: ['src/css/**/**/*.scss'],
+        files: ['src/sass/**/**/*.scss'],
         tasks: ['css']
       },
       templates: {

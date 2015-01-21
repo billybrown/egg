@@ -15,6 +15,11 @@ img {
     height: auto;
 }
 
+// default responsive iframes
+iframe {
+    width: 100%;
+}
+
 // Image replacement - via html5 boilerplate
 .ir {
     background-color: transparent;
