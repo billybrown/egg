@@ -7,9 +7,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
   
   // this allows you to remove all the 'loadNPMtasks' calls, and speeds up task running
-  require('jit-grunt')(grunt, {
-    usebanner: 'grunt-banner',
-  });
+  require('jit-grunt')(grunt);
 
   // Project configuration.
   grunt.initConfig({
@@ -31,7 +29,8 @@ module.exports = function(grunt) {
     sass: {
       dest: {
         options: {
-            outputStyle: 'compressed'
+            outputStyle: 'compressed',
+            map: true
         },
             files: {
                 'build/css/main.css': 'src/sass/main.scss'
@@ -60,6 +59,18 @@ module.exports = function(grunt) {
       }
     },
 
+    csso: {
+      compress: {
+        options: {
+          report: 'gzip',
+          map: true
+        },
+        files: {
+          'build/css/main.css': ['build/css/main.css']
+        }
+      },
+    },
+
     uncss: {
       dist: {
         files: {
@@ -68,17 +79,20 @@ module.exports = function(grunt) {
       }
     },
 
-    csso: {
-      compress: {
-        options: {
-          report: 'gzip'
-        },
-        files: {
-          'build/css/main.css': ['build/css/main.css']
+    critical: {
+        test: {
+            options: {
+                base: './',
+                css: [
+                    'build/css/main.css',
+                ],
+                width: 1200,
+                height: 600
+            },
+            src: 'build/index.html',
+            dest: 'build/index.html'
         }
-      },
     },
-
 
     // this task optimizes your images
     imagemin: {
@@ -183,6 +197,7 @@ module.exports = function(grunt) {
       },
       src: ['**']
     }
+    
 
   });
 
@@ -202,7 +217,8 @@ module.exports = function(grunt) {
     'sass',
     'autoprefixer',
     'uncss',
-    'csso'
+    'csso',
+    'critical'
   ]);
 
   grunt.registerTask('deploy', ['build', 'gh-pages']);
