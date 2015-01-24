@@ -37,7 +37,7 @@ iframe {
 
 // Hide from both screenreaders and browsers: h5bp.com/u
 .hidden {
-    display: none !important;
+    display: none; //consider putting !important in here
     visibility: hidden;
 }
 

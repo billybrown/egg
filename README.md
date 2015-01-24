@@ -5,7 +5,10 @@ Uses assemble for templating, libsass for css, and assumes deployment to github 
 
 ## to do
 
-- Get sass source maps to work properly
-- Break up grunt file into seperate files. For more info see:
--- http://ericnish.io/blog/how-to-neatly-separate-grunt-files
--- http://www.thomasboyt.com/2013/09/01/maintainable-grunt.html
+- integrate grunt favicon generator
+- Create and integrate a coding styleguide and css architecture readme
+
+## on hold
+
+- Sass source maps. There is a bug currently in libsass - waiting for final release of libsass 2.0.
+- Scss linting. The only grunt plugin for scss-lint requires a ruby dependency - which we don't want.
