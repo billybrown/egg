@@ -294,15 +294,17 @@ html input[disabled] {
   cursor: default;
 }
 
-/**
- * Remove inner padding and border in Firefox 4+.
- */
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
+// this causes an erorr in uncss, so just removing for now. If its a problem we can uncomment
+// /**
+//  * Remove inner padding and border in Firefox 4+.
+//  */
+
+// button::-moz-focus-inner,
+// input::-moz-focus-inner {
+//   border: 0;
+//   padding: 0;
+// }
 
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in

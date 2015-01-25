@@ -23,10 +23,10 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', ['node_version']);
-  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'csso', 'csslint']);
+  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'uncss', 'csso', 'csslint']);
   grunt.registerTask('javascript', ['node_version', 'jshint', 'copy:customjs']);
   grunt.registerTask('images', ['node_version', 'imagemin', 'copy:images']);
-  grunt.registerTask('templates', ['node_version', 'assemble', 'uncss', 'critical', 'html-prettyprinter', 'htmllint']);
+  grunt.registerTask('templates', ['node_version', 'assemble', 'html-prettyprinter', 'htmllint']);
   grunt.registerTask('fast', ['node_version', 'takana']);
 
   grunt.registerTask('build', [
@@ -40,7 +40,6 @@ module.exports = function(grunt) {
     'uncss',
     'csso',
     'csslint',
-    'critical',
     'html-prettyprinter', 
     'htmllint'
   ]);

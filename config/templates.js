@@ -18,30 +18,21 @@ module.exports.tasks = {
       }
     },
 
-  // this strips out unused css based on an html input
-  uncss: {
-    dist: {
-      files: {
-        'build/css/main.css': ['build/index.html']
-      }
-    }
-  },
-
   // this generates css based on an html input and injects it in the top of an html file
-  critical: {
-    test: {
-      options: {
-        base: './',
-        css: [
-          'build/css/main.css'
-        ],
-        width: 1200,
-        height: 600
-      },
-      src: 'build/index.html',
-      dest: 'build/index.html'
-    }
-  },
+  // critical: {
+  //   test: {
+  //     options: {
+  //       base: './',
+  //       css: [
+  //         'build/css/main.css'
+  //       ],
+  //       width: 1200,
+  //       height: 600
+  //     },
+  //     src: 'build/index.html',
+  //     dest: 'build/index.html'
+  //   }
+  // },
 
   // reindent, etc. the html to make it good looking
   'html-prettyprinter': {
