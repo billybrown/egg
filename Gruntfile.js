@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', ['node_version']);
-  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'uncss', 'csso', 'csslint']);
+  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'csso', 'csslint']);
   grunt.registerTask('javascript', ['node_version', 'jshint', 'copy:customjs']);
   grunt.registerTask('images', ['node_version', 'imagemin', 'copy:images']);
   grunt.registerTask('templates', ['node_version', 'assemble', 'html-prettyprinter', 'htmllint']);
@@ -37,7 +37,6 @@ module.exports = function(grunt) {
     'copy',
     'sass',
     'autoprefixer',
-    'uncss',
     'csso',
     'csslint',
     'html-prettyprinter', 

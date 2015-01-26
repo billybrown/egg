@@ -51,13 +51,14 @@ module.exports.tasks = {
   },
 
   // this strips out unused css based on an html input
-  uncss: {
-    dist: {
-      files: {
-        'build/css/main.css': ['build/index.html']
-      }
-    }
-  },
+  // commented out for now since its a little buggy and not ready for prime time
+  // uncss: {
+  //   dist: {
+  //     files: {
+  //       'build/css/main.css': ['build/index.html']
+  //     }
+  //   }
+  // },
 
   // this minifies your css
   csso: {
