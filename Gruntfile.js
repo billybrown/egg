@@ -26,14 +26,18 @@ module.exports = function(grunt) {
   grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'csso', 'csslint']);
   grunt.registerTask('javascript', ['node_version', 'jshint', 'copy:customjs']);
   grunt.registerTask('images', ['node_version', 'imagemin', 'copy:images']);
+  grunt.registerTask('makefavicons', ['node_version', 'favicons']);
   grunt.registerTask('templates', ['node_version', 'assemble', 'html-prettyprinter', 'htmllint']);
+  // uncomment this and comment the task above for single page sites that dont need assemble
+  //grunt.registerTask('templates', ['node_version', 'copy:html', 'html-prettyprinter', 'htmllint']);
   grunt.registerTask('fast', ['node_version', 'takana']);
 
   grunt.registerTask('build', [
     'node_version',
     'clean',
+    'favicons',
     'imagemin',
-    'assemble',
+    'assemble', // remove this for single page sites that dont need assemble
     'copy',
     'sass',
     'autoprefixer',

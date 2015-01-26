@@ -18,22 +18,6 @@ module.exports.tasks = {
       }
     },
 
-  // this generates css based on an html input and injects it in the top of an html file
-  // critical: {
-  //   test: {
-  //     options: {
-  //       base: './',
-  //       css: [
-  //         'build/css/main.css'
-  //       ],
-  //       width: 1200,
-  //       height: 600
-  //     },
-  //     src: 'build/index.html',
-  //     dest: 'build/index.html'
-  //   }
-  // },
-
   // reindent, etc. the html to make it good looking
   'html-prettyprinter': {
     single: {
@@ -51,6 +35,33 @@ module.exports.tasks = {
       },
       all: ["build/**/*.html"]
   }
+
+  // for single page sites that dont need assemble this is a task to copy over the index
+  // copy: {
+  //   html: {
+  //     files: [
+  //       {expand: true, cwd: 'src/', src: ['index.html'], dest: 'build/'}
+  //     ]
+  //   }
+  // }
+
+
+  // this generates css based on an html input and injects it in the top of an html file
+  // critical: {
+  //   test: {
+  //     options: {
+  //       base: './',
+  //       css: [
+  //         'build/css/main.css'
+  //       ],
+  //       width: 1200,
+  //       height: 600
+  //     },
+  //     src: 'build/index.html',
+  //     dest: 'build/index.html'
+  //   }
+  // },
+
 
     
 };

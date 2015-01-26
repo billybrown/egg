@@ -5,7 +5,6 @@ Uses assemble for templating, libsass for css, and assumes deployment to github 
 
 ## to do
 
-- integrate grunt favicon generator
 - Consider seperating production and development builds
 - Create and integrate a coding styleguide and css architecture readme
 
