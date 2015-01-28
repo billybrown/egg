@@ -35,7 +35,6 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'node_version',
     'clean:build',
-    'favicons',
     'imagemin',
     'assemble', // remove this for single page sites that dont need assemble
     'copy',
