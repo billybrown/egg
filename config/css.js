@@ -17,7 +17,6 @@ module.exports.tasks = {
   csslint: {
     strict: {
       options: {
-        import: 2,
         "outline-none": false,
         "unqualified-attributes": false,
         "universal-selector": false,
@@ -26,7 +25,9 @@ module.exports.tasks = {
         "box-sizing": false,
         "compatible-vendor-prefixes": false,
         "unique-headings": false,
-        "bulletproof-font-face": false
+        "bulletproof-font-face": false,
+        "box-model": false,
+        "font-sizes": false
       },
       src: ['build/css/main.css']
     }
@@ -60,6 +61,15 @@ module.exports.tasks = {
   //   }
   // },
 
+  // this aggregates all your css files. 
+  // uncomment if you need to include more css
+  // concat: {
+  //   dist: {
+  //     src: ['src/fonts/icomoon/style.css', 'build/css/main.css'],
+  //     dest: 'build/css/main.min.css'
+  //   }
+  // },
+
   // this minifies your css
   csso: {
     compress: {
@@ -67,9 +77,13 @@ module.exports.tasks = {
         report: 'gzip'
       },
       files: {
-        'build/css/main.css': ['build/css/main.css']
+        'build/css/main.min.css': ['build/css/main.css']
       }
     }
+  },
+
+  clean: {
+    css: ['build/css/main.css']
   }
 
 };

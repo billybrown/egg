@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'node_version',
-    'clean',
+    'clean:build',
     'favicons',
     'imagemin',
     'assemble', // remove this for single page sites that dont need assemble
@@ -42,8 +42,10 @@ module.exports = function(grunt) {
     'sass',
     'autoprefixer',
     'csso',
-    'csslint',
+    'clean:css',
     'html-prettyprinter', 
+    'csslint',
+    'jshint',
     'htmllint'
   ]);
 
