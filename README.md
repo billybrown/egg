@@ -6,15 +6,15 @@ Uses assemble for templating, libsass for css, and assumes deployment to github 
 ## to do
 
 - Consider seperating out production and development builds
--- Only have takana script in dev environment
--- unminified and unaggregated js/css/html in dev for easier debugging. In production aggregate and minify everything.
+    - Only have takana script in dev environment
+    - unminified and unaggregated js/css/html in dev for easier debugging. In production aggregate and minify everything.
 - Create and integrate a coding styleguide and css architecture readme. Look at the following for inspiration:
--- https://github.com/gilbox/css-bliss
--- https://github.com/north/north
--- http://css-tricks.com/sass-style-guide/
--- http://css-tricks.com/css-style-guides/
--- http://sass-guidelin.es/
--- http://www.sitepoint.com/css-sass-styleguide/
+    - https://github.com/gilbox/css-bliss
+    - https://github.com/north/north
+    - http://css-tricks.com/sass-style-guide/
+    - http://css-tricks.com/css-style-guides/
+    - http://sass-guidelin.es/
+    - http://www.sitepoint.com/css-sass-styleguide/
 
 ## on hold
 
