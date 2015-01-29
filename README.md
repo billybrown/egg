@@ -5,6 +5,8 @@ Uses assemble for templating, libsass for css, and assumes deployment to github 
 
 ## to do
 
+- **Grid System**. Research and integrate a very simple, default grid system
+- **Vertical Rythem**. Research and integrate a vertical ryhtem sass system
 - **Build Upgrade**. Consider seperating out production and development builds
     - Only have takana script in dev environment
     - unminified and unaggregated js/css/html in dev for easier debugging. In production aggregate and minify everything.

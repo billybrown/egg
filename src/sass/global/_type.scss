@@ -26,6 +26,7 @@ a,
 
 %header {
   font-size: 2em;
+  line-height: 1em;
   margin: 0.67em 0;
 }
 
@@ -44,7 +45,7 @@ a,
 // 
 
 h1 {
-  @extend .header;
+  @extend %header;
 }
 
 

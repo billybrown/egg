@@ -45,8 +45,7 @@ module.exports.tasks = {
         "unique-headings": false,
         "bulletproof-font-face": false,
         "box-model": false,
-        "font-sizes": false,
-        "duplicate-properties": false
+        "font-sizes": false
       },
       src: ['build/css/main.css']
     }
