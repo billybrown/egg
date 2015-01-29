@@ -6,7 +6,7 @@ module.exports.tasks = {
     copy: {
       customjs: {
         files: [
-          {expand: true, cwd: 'src/js', src: ['scripts.js'], dest: 'build/js/'}
+          {expand: true, cwd: 'src/js', src: ['**/*.js'], dest: 'build/js/'}
         ]
       }
     },
@@ -16,8 +16,7 @@ module.exports.tasks = {
 			enforceall: true,
 			nocomma: false
 		},
-		uses_defaults: ['src/js/*.js'],
-		with_overrides: {
+		grunt: {
 		    options: {
 		      node: true,
 		      camelcase: false
@@ -25,7 +24,8 @@ module.exports.tasks = {
 	  		files: {
 	  			src: ['Gruntfile.js', 'config/*.js']
 	  		}
-	  	}
+	  	},
+	  	custom: ['src/js/*.js']
 	}
     
 };

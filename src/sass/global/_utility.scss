@@ -1,9 +1,8 @@
-// some default utility classes
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Utility classes
+/////////////////////////////////////-+++-/////////////////////////////////////////
 
 
-* {
-	box-sizing: border-box;
-}
 
 .nobr {
 	white-space: nowrap;
@@ -103,7 +102,7 @@ iframe {
 
 
 // icomoon helper mixin
-%icomoon {
+%iconfont {
     font-family: 'icomoon';
     speak: none;
     font-style: normal;

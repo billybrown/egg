@@ -9,16 +9,27 @@
 
 
 // this is to center content at large screens
+$cspace_small: 20px;
+$cspace_medium: 40px;
+$cspace_large: 100px;
+
 .constrained {
-  max-width: $page-max-width;
+  max-width: $page-max-width + ($cspace_small * 2);
   margin-right: auto;
   margin-left: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: $cspace_small;
+  padding-left: $cspace_small;
 
-  @media (min-width: $bp-medium) {
-    padding-right: 100px;
-    padding-left: 100px;
+  @media (min-width: $bp-small) {
+    padding-right: $cspace_medium;
+    padding-left: $cspace_medium;
+    max-width: $page-max-width + ($cspace_medium * 2);
+  }
+
+  @media (min-width: $bp-teen) {
+    padding-right: $cspace_large;
+    padding-left: $cspace_large;
+    max-width: $page-max-width + ($cspace_large * 2);
   }
 }
 

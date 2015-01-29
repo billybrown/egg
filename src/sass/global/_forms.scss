@@ -21,3 +21,35 @@ input {
     border: 1px dotted $link-color;
   }
 }
+
+input[type="submit"] {
+}
+
+
+
+/////////////////////////////////////-+++-
+// placeholder overrides
+
+
+//::-webkit-input-placeholder {
+//   color: $off-black2;
+//}
+//:-moz-placeholder { /* Firefox 18- */
+//   color: $off-black2;  
+//}
+//::-moz-placeholder {  /* Firefox 19+ */
+//   color: $off-black2;  
+//}
+//:-ms-input-placeholder {  
+//   color: $off-black2;  
+//}
+
+
+
+/////////////////////////////////////-+++-
+// labels
+
+
+label {
+
+}

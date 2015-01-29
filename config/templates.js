@@ -2,30 +2,32 @@
 
 module.exports.tasks = {
 
-    // Build HTML from templates and data
-    assemble: {
-      site: {
-        options: {
-          layout: ['src/templates/layouts/default.hbs'],
-          partials: ['src/templates/partials/*.hbs'],
-          data: ['src/templates/data/*.yaml'],
-          prettify: { indent: 2 },
-          flatten: true
-        },
-        files: {
-          'build/': ['src/templates/pages/*.hbs']
-        }
+  // Build HTML from templates and data
+  assemble: {
+    site: {
+      options: {
+        layout: ['src/templates/layouts/default.hbs'],
+        partials: ['src/templates/partials/*.hbs'],
+        data: ['src/templates/data/*.yaml'],
+        flatten: true
+      },
+      files: {
+        'build/': ['src/templates/pages/*.hbs']
       }
+    }
+  },
+
+  prettify: {
+    options: {
+      indent: 4,
+      "unformatted": ["script", "a", "span", "strong", "em"]
     },
-
-  // reindent, etc. the html to make it good looking
-  'html-prettyprinter': {
-    single: {
-      // HTML file to beauty
-      src: 'build/index.html',
-
-      // Destination of HTML file
-      dest: 'build/index.html'
+    all: {
+      expand: true,
+      cwd: 'build/',
+      ext: '.html',
+      src: ['*.html'],
+      dest: 'build/'
     }
   },
 
@@ -33,7 +35,7 @@ module.exports.tasks = {
       options: {
           ignore: ['Bad value “X-UA-Compatible” for attribute “http-equiv” on XHTML element “meta”.']
       },
-      all: ["build/**/*.html"]
+      all: ["build/*.html"]
   }
 
   // for single page sites that dont need assemble this is a task to copy over the index
@@ -44,24 +46,5 @@ module.exports.tasks = {
   //     ]
   //   }
   // }
-
-
-  // this generates css based on an html input and injects it in the top of an html file
-  // critical: {
-  //   test: {
-  //     options: {
-  //       base: './',
-  //       css: [
-  //         'build/css/main.css'
-  //       ],
-  //       width: 1200,
-  //       height: 600
-  //     },
-  //     src: 'build/index.html',
-  //     dest: 'build/index.html'
-  //   }
-  // },
-
-
     
 };

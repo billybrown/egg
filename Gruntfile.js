@@ -23,29 +23,33 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', ['node_version']);
-  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'csso', 'csslint']);
-  grunt.registerTask('javascript', ['node_version', 'jshint', 'copy:customjs']);
+  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'csslint', 'concat', 'csso']);
+  grunt.registerTask('javascript', ['node_version', 'copy:customjs', 'jshint:custom']);
   grunt.registerTask('images', ['node_version', 'imagemin', 'copy:images']);
   grunt.registerTask('makefavicons', ['node_version', 'favicons']);
-  grunt.registerTask('templates', ['node_version', 'assemble', 'html-prettyprinter', 'htmllint']);
+  grunt.registerTask('templates', ['node_version', 'assemble', 'prettify', 'htmllint']);
   // uncomment this and comment the task above for single page sites that dont need assemble
   //grunt.registerTask('templates', ['node_version', 'copy:html', 'html-prettyprinter', 'htmllint']);
   grunt.registerTask('fast', ['node_version', 'takana']);
 
   grunt.registerTask('build', [
     'node_version',
+    'jshint:grunt',
     'clean:build',
+    'assemble',
+    'prettify', 
+    'htmllint',
+    'copy:customjs',
+    'jshint:custom',
     'imagemin',
-    'assemble', // remove this for single page sites that dont need assemble
-    'copy',
+    'copy:images',
+    //'copy:fonts', //uncomment if you need fonts (including iconfonts)
     'sass',
     'autoprefixer',
-    'csso',
-    'clean:css',
-    'html-prettyprinter', 
     'csslint',
-    'jshint',
-    'htmllint'
+    'concat',
+    'csso',
+    'clean:css'
   ]);
 
   grunt.registerTask('deploy', ['build', 'gh-pages']);
