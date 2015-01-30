@@ -1,0 +1,28 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Island partial
+// This super simple object is basically a single class used to box off content, 
+// leaving it closed on all sides like, well, an island.
+// via http://csswizardry.com/2011/10/the-island-object/
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+.island,
+.islet,
+.landmark {
+  display: block;
+  padding: $spacing;
+  margin-bottom: $page-element-spacing;
+
+  > :last-child { margin-bottom: 0; }
+}
+
+.island {
+  padding: $spacing;
+}
+
+.islet {
+  padding: $spacing * .5;
+}
+
+.landmark {
+  padding: $spacing * 2;
+}

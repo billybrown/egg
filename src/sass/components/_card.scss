@@ -1,0 +1,21 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Card (sometimes called the 'media' object)
+// usually has an image and title and summary and links off to other places on the site
+// often appears in lists
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+.card { 
+  @extend .clearfix; 
+  margin-bottom: $page-element-spacing;
+
+  > :last-child { margin-bottom: 0; }
+
+  img,
+  video,
+  iframe,
+  object { 
+    display: block; 
+  }
+}

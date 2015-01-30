@@ -32,24 +32,25 @@ module.exports.tasks = {
     }
   },
 
-  csslint: {
-    strict: {
-      options: {
-        "outline-none": false,
-        "unqualified-attributes": false,
-        "universal-selector": false,
-        "star-property-hack": false,
-        "adjoining-classes": false,
-        "box-sizing": false,
-        "compatible-vendor-prefixes": false,
-        "unique-headings": false,
-        "bulletproof-font-face": false,
-        "box-model": false,
-        "font-sizes": false
-      },
-      src: ['build/css/main.css']
-    }
-  },
+  // this is buggy, removing for now
+  // csslint: {
+  //   strict: {
+  //     options: {
+  //       "outline-none": false,
+  //       "unqualified-attributes": false,
+  //       "universal-selector": false,
+  //       "star-property-hack": false,
+  //       "adjoining-classes": false,
+  //       "box-sizing": false,
+  //       "compatible-vendor-prefixes": false,
+  //       "unique-headings": false,
+  //       "bulletproof-font-face": false,
+  //       "box-model": false,
+  //       "font-sizes": false
+  //     },
+  //     src: ['build/css/main.css']
+  //   }
+  // },
 
   // this concatenates the css
   concat: {

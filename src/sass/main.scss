@@ -5,6 +5,7 @@
 
 // import custom mixins
 @import 'global/mixins/ems';
+@import 'global/mixins/placeholder';
 
 // import some variables used throughout the css (colors, fonts, breakpoints, spacing amounts)
 @import 'global/variables-generic';
@@ -27,5 +28,12 @@
 @import 'global/scaffolding';
 @import 'global/layout';
 
+@import 'components/island';
+@import 'components/card';
+
+
 @import 'area/header';
 @import 'area/footer';
+
+// for print stylesheets. Easier and more perfomant to just include it here instead of creating a seperate stylesheet
+@import 'global/print';

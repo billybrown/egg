@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', ['node_version']);
-  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'csslint', 'concat', 'csso']);
+  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'concat', 'csso']);
   grunt.registerTask('javascript', ['node_version', 'copy:customjs', 'jshint:custom']);
   grunt.registerTask('images', ['node_version', 'imagemin', 'copy:images']);
   grunt.registerTask('makefavicons', ['node_version', 'favicons']);
@@ -46,7 +46,6 @@ module.exports = function(grunt) {
     //'copy:fonts', //uncomment if you need fonts (including iconfonts)
     'sass',
     'autoprefixer',
-    'csslint',
     'concat',
     'csso',
     'clean:css'
