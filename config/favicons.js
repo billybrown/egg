@@ -18,6 +18,14 @@ module.exports.tasks = {
       src: 'src/favicons/favicon.png',
       dest: 'build/favicons/'
     }
+  },
+
+  copy: {
+    favicons: {
+      files: [
+        {expand: true, cwd: 'src/favicons/build', src: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.gif'], dest: 'build/favicons/'}
+      ]
+    }
   }
 
 };

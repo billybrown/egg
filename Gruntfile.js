@@ -45,7 +45,8 @@ module.exports = function(grunt) {
     'autoprefixer',
     'concat',
     'csso',
-    'clean:css'
+    'clean:css',
+    'copy:favicons'
   ]);
 
   grunt.registerTask('deploy', ['build', 'gh-pages']);
