@@ -9,6 +9,11 @@ module.exports.tasks = {
           {expand: true, cwd: 'src/js', src: ['**/*.js'], dest: 'build/js/'}
         ]
       }
+      // jquery: {
+      //   files: [
+      //     {expand: true, cwd: 'src/js/vendor', src: ['jquery-2.1.3.min.js'], dest: 'build/js/'}
+      //   ]
+      // }
     },
 
 	jshint: {
