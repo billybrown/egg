@@ -29,7 +29,7 @@ module.exports.tasks = {
       src: ['*.html'],
       dest: 'build/'
     }
-  },
+  }
 
   // new version throws an error. Need to find a better alternative for HTML linting
   // htmllint: {
