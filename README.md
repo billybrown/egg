@@ -18,6 +18,7 @@ Uses assemble for templating, libsass for css, and assumes deployment to github 
     - http://sass-guidelin.es/
     - http://www.sitepoint.com/css-sass-styleguide/
 - **Bower**. Consider integrating Bower. I havent really realized the benefits of this tool yet - but I feel like I'm probably just missing something. Need to research.
+- **HTML Lint**. The newest version of grunt HTML throws a weird error. Need to look into alternative html linting options
 
 ## on hold
 

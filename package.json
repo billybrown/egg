@@ -21,7 +21,6 @@
     "grunt-csso": "^0.7.0",
     "grunt-favicons": "^0.6.4",
     "grunt-gh-pages": "^0.10.0",
-    "grunt-html": "^3.0.0",
     "grunt-node-version": "^1.0.0",
     "grunt-prettify": "^0.4.0",
     "grunt-sass": "^0.18.1",

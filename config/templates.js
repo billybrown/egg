@@ -31,12 +31,13 @@ module.exports.tasks = {
     }
   },
 
-  htmllint: {
-      options: {
-          ignore: ['Bad value “X-UA-Compatible” for attribute “http-equiv” on XHTML element “meta”.']
-      },
-      all: ["build/*.html"]
-  }
+  // new version throws an error. Need to find a better alternative for HTML linting
+  // htmllint: {
+  //     options: {
+  //         ignore: ['Bad value “X-UA-Compatible” for attribute “http-equiv” on XHTML element “meta”.']
+  //     },
+  //     all: ["build/*.html"]
+  // }
 
   // for single page sites that dont need assemble this is a task to copy over the index
   // copy: {

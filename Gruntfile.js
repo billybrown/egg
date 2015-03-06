@@ -8,9 +8,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
   
   // this allows you to remove all the 'loadNPMtasks' calls, and speeds up task running
-  require('jit-grunt')(grunt, {
-    htmllint: 'grunt-html'
-  });
+  require('jit-grunt')(grunt);
 
   // Metadata.
   var options = {
@@ -27,9 +25,9 @@ module.exports = function(grunt) {
   grunt.registerTask('javascript', ['node_version', 'copy:customjs', 'jshint:custom']);
   grunt.registerTask('images', ['node_version', 'imagemin', 'copy:images']);
   grunt.registerTask('makefavicons', ['node_version', 'favicons']);
-  grunt.registerTask('templates', ['node_version', 'assemble', 'prettify', 'htmllint']);
+  grunt.registerTask('templates', ['node_version', 'assemble', 'prettify']);
   // uncomment this and comment the task above for single page sites that dont need assemble
-  //grunt.registerTask('templates', ['node_version', 'copy:html', 'html-prettyprinter', 'htmllint']);
+  //grunt.registerTask('templates', ['node_version', 'copy:html', 'html-prettyprinter']);
   grunt.registerTask('fast', ['node_version', 'takana']);
 
   grunt.registerTask('build', [
@@ -38,7 +36,6 @@ module.exports = function(grunt) {
     'clean:build',
     'assemble',
     'prettify', 
-    'htmllint',
     'copy:customjs',
     'jshint:custom',
     'imagemin',
