@@ -20,13 +20,13 @@ $cspace_large: 100px;
   padding-right: $cspace_small;
   padding-left: $cspace_small;
 
-  @media (min-width: $bp-small) {
+  @media (min-width: $bp-elementary) {
     padding-right: $cspace_medium;
     padding-left: $cspace_medium;
     max-width: $page-max-width + ($cspace_medium * 2);
   }
 
-  @media (min-width: $bp-teen) {
+  @media (min-width: $bp-highschool) {
     padding-right: $cspace_large;
     padding-left: $cspace_large;
     max-width: $page-max-width + ($cspace_large * 2);
