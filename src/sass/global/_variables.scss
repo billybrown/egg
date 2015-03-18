@@ -20,12 +20,12 @@ $sans-serif			: $open-sans, $helvetica;
 
 $gray-dark			: darkgray;
 $gray				: gainsboro;
-$gray-light			: snow;
+$gray-light			: darken(snow, 5%);
 
-$background			: tomato;
-$text				: gold;
+$background			: snow;
+$text				: #333;
 
-$link-color			: tomato;
+$link-color			: dodgerblue;
 $link-hover-color	: darken($link-color, 10%);
 
 
