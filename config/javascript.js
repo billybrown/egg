@@ -6,7 +6,7 @@ module.exports.tasks = {
     copy: {
       customjs: {
         files: [
-          {expand: true, cwd: 'src/js', src: ['**/*.js'], dest: 'build/js/'}
+          {expand: true, cwd: 'src/js', src: ['**/*.js'], dest: '<%= dist %>/js/'}
         ]
       }
       // jquery: {

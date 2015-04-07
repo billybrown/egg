@@ -31,9 +31,9 @@ module.exports.tasks = {
       livereload: {
         options: { livereload: true },
         files: [
-          'build/css/main.min.css',
-          'build/*.html',
-          'build/js/scripts.js'
+          '<%= dist %>/css/main.min.css',
+          '<%= dist %>/*.html',
+          '<%= dist %>/js/scripts.js'
         ]
       }
     },

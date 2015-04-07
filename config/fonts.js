@@ -7,7 +7,7 @@ module.exports.tasks = {
     // copy: {
     //   fonts: {
     //     files: [
-    //      {expand: true, cwd: 'src/fonts/icomoon/fonts', src: ['**'], dest: 'build/css/fonts'}
+    //      {expand: true, cwd: 'src/fonts/icomoon/fonts', src: ['**'], dest: '<%= dist %>/css/fonts'}
     //     ]
     //   }
     // }

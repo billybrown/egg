@@ -12,7 +12,7 @@ module.exports.tasks = {
         flatten: true
       },
       files: {
-        'build/': ['src/templates/pages/*.hbs']
+        '<%= dist %>/': ['src/templates/pages/*.hbs']
       }
     }
   },
@@ -24,10 +24,10 @@ module.exports.tasks = {
     },
     all: {
       expand: true,
-      cwd: 'build/',
+      cwd: '<%= dist %>/',
       ext: '.html',
       src: ['*.html'],
-      dest: 'build/'
+      dest: '<%= dist %>/'
     }
   }
 

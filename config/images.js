@@ -27,7 +27,7 @@ module.exports.tasks = {
     copy: {
       images: {
         files: [
-          {expand: true, cwd: 'src/img', src: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.gif'], dest: 'build/img/'}
+          {expand: true, cwd: 'src/img', src: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.gif'], dest: '<%= dist %>/img/'}
         ]
       }
     }

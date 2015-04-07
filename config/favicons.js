@@ -16,14 +16,14 @@ module.exports.tasks = {
     },
     icons: {
       src: 'src/favicons/favicon.png',
-      dest: 'build/favicons/'
+      dest: '<%= dist %>/favicons/'
     }
   },
 
   copy: {
     favicons: {
       files: [
-        {expand: true, cwd: 'src/favicons/build', src: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.gif'], dest: 'build/favicons/'}
+        {expand: true, cwd: 'src/favicons/build', src: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.gif'], dest: '<%= dist %>/favicons/'}
       ]
     }
   }

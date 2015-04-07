@@ -12,7 +12,8 @@ module.exports = function(grunt) {
 
   // Metadata.
   var options = {
-    pkg: grunt.file.readJSON('package.json')
+    pkg: grunt.file.readJSON('package.json'),
+    dist: 'build'
   };
 
   //loads the various task configuration files
