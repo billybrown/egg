@@ -91,7 +91,7 @@ a,
 	color: #fff;
 
 	&:hover {
-		background: darken($link-color);
+		background: darken($link-color, 10%);
 		color: #fff;
 		cursor: pointer;
 		text-decoration: none;

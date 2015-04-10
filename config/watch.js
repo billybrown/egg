@@ -36,7 +36,7 @@ module.exports.tasks = {
           '<%= dist %>/js/scripts.js'
         ]
       }
-    },
+    }
 
     // takana allows for live as-you-type style injection. AWESOME for designing
     // in the browser. There is a grunt plugin - but i find its more beneficial just to run it locally
