@@ -5,8 +5,7 @@ Uses assemble for templating, libsass for css, and assumes deployment to github 
 
 ## to do
 
-- **Grid System**. Research and integrate a very simple, default grid system
-- **Vertical rhythmm**. Research and integrate a vertical rhythm sass system
+- **Grid System**. Research and integrate a very simple, default grid system. Toast looks like a winner but it doesnt integrate with libsass fully yet.
 - **Build Upgrade**. Consider seperating out production and development builds
     - Only have takana script in dev environment
     - unminified and unaggregated js/css/html in dev for easier debugging. In production aggregate and minify everything.
@@ -20,6 +19,7 @@ Uses assemble for templating, libsass for css, and assumes deployment to github 
 - **Bower**. Consider integrating Bower. I havent really realized the benefits of this tool yet - but I feel like I'm probably just missing something. Need to research.
 - **HTML Lint**. The newest version of grunt HTML throws a weird error. Need to look into alternative html linting options
 - **Assemble Partials**. The handlebars helper "partial" has been updated - but only the older version works for our needs. We should look into an alternative.
+- **CSS review**. Research possibly dropping Sass entirely for PostCSS - https://github.com/postcss/postcss
 
 ## on hold
 
