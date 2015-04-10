@@ -20,18 +20,45 @@ a,
 
 
 
-// headers
+// text
 ///////////////////////////////////////////
 
 
-%header {
-  font-size: 2em;
-  line-height: 1em;
-  margin: 0.67em 0;
+%normalText {
+	font: 500 17px/30px $sans-serif;
 }
 
-.header {
-	@extend %header;
+%smallText {
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 700;
+}
+
+
+%largeText {
+	font-size: 21px;
+	line-height: 24px;
+	font-weight: 700;
+}
+
+
+
+// titles
+///////////////////////////////////////////
+
+
+%title {
+	font: 700 22px/24px $serif;
+}
+
+%largeTitle {
+	font: 700 36px/40px $serif;
+}
+
+%blockTitle {
+	font: 700 12px/14px $sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
 }
 
 
@@ -44,14 +71,64 @@ a,
 // contexts in Firefox 4+, Safari, and Chrome.
 // 
 
-h1 {
-  @extend %header;
-}
+// h1 {
+//   @extend %title;
+// }
 
 
 
 // buttons
 ///////////////////////////////////////////
+
+
+%button {
+	font-size: 16px;
+	line-height: 20px;
+	padding: 8px 19px;
+	border-radius: 2px;
+	font-weight: 700;
+	background: $link-color;
+	color: #fff;
+
+	&:hover {
+		background: darken($link-color);
+		color: #fff;
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
+
+.btn,
+button {
+	@extend %button;
+}
+
+.btn--large {
+	font-size: 18px;
+	line-height: 22px;	
+	padding: 11px 18px;
+	font-weight: 700;
+}
+
+.btn--small {
+	font-size: 13px;
+	line-height: 16px;
+	padding: 3px 6px;
+}
+
+
+
+// tags
+///////////////////////////////////////////
+
+
+%tag {
+	background: $link-color;
+	color: #fff;
+	font-size: 13px;
+	line-height: 16px;
+	border-radius: 2px;
+}
 
 
 

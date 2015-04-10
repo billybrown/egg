@@ -9,6 +9,11 @@ module.exports.tasks = {
     //     files: [
     //      {expand: true, cwd: 'src/fonts/icomoon/fonts', src: ['**'], dest: '<%= dist %>/css/fonts'}
     //     ]
+    //   },
+    //   fontcss: {
+    //     files: [
+    //      {expand: true, cwd: 'src/fonts/icomoon/', src: ['style.css'], dest: '<%= dist %>/css'}
+    //     ]      	
     //   }
     // }
 

@@ -39,11 +39,7 @@ module.exports.tasks = {
     },
 
     // takana allows for live as-you-type style injection. AWESOME for designing
-    // in the browser.
-    takana: {
-      options: {
-        path: 'src/sass'
-      }
-    }
+    // in the browser. There is a grunt plugin - but i find its more beneficial just to run it locally
+    // and only use it at the beginning of a project.
 
 };

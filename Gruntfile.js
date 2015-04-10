@@ -29,7 +29,6 @@ module.exports = function(grunt) {
   grunt.registerTask('templates', ['node_version', 'assemble', 'prettify']);
   // uncomment this and comment the task above for single page sites that dont need assemble
   //grunt.registerTask('templates', ['node_version', 'copy:html', 'html-prettyprinter']);
-  grunt.registerTask('fast', ['node_version', 'takana']);
 
   grunt.registerTask('build', [
     'node_version',
@@ -42,6 +41,7 @@ module.exports = function(grunt) {
     'imagemin',
     'copy:images',
     //'copy:fonts', //uncomment if you need fonts (including iconfonts)
+    // 'copy:fontcss',
     'sass',
     'autoprefixer',
     'concat',
