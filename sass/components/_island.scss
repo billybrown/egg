@@ -5,24 +5,29 @@
 // via http://csswizardry.com/2011/10/the-island-object/
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
-.island,
-.islet,
-.landmark {
-  display: block;
-  padding: $spacing;
-  margin-bottom: $page-element-spacing;
 
-  > :last-child { margin-bottom: 0; }
-}
+
 
 .island {
-  padding: $spacing;
+  display: block;
+  @extend .clearfix; 
+
+  img,
+  video,
+  iframe,
+  object { 
+    display: block; 
+  }
 }
 
-.islet {
-  padding: $spacing * .5;
-}
 
-.landmark {
-  padding: $spacing * 2;
-}
+
+
+/////////////////////////////////////-+++-
+// Island field styles
+
+
+
+/////////////////////////////////////-+++-
+// Full Island styles
+

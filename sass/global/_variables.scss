@@ -34,14 +34,17 @@ $link-hover-color	: darken($link-color, 10%);
 // breakpoints
 
 
-$bp-elementary: em(350);
+$bp-elementary: em(390);
 $bp-middleschool: em(600);
-$bp-highschool: $ipad-1;
+$bp-highschool: em(768);
+$bp-gapyear: em(850);
 $bp-college: em(1080);
 $bp-5thyear: em(1150);
 $bp-masters: $imac-21;
 
 $bp-offcanvas: $bp-college; // if you have an offcanvas menu
+
+
 
 /////////////////////////////////////-+++
 // Misc. values
@@ -51,6 +54,8 @@ $comp-max-width: 1600px; // if working from a PSD or other static comp
 $page-max-width: 1200px;
 $page-element-spacing: 20px;
 $spacing: 20px;
+$grid-gutter: $spacing;
 
-$animation-speed: .1s;
-
+$animation-speed: .2s;
+$animation-easing: .2s;
+$animation: $animation-speed $animation-easing;

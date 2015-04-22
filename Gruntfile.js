@@ -12,8 +12,7 @@ module.exports = function(grunt) {
 
   // Metadata.
   var options = {
-    pkg: grunt.file.readJSON('package.json'),
-    dist: 'build'
+    pkg: grunt.file.readJSON('package.json')
   };
 
   //loads the various task configuration files
@@ -23,33 +22,23 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['node_version']);
   grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'concat', 'csso']);
-  grunt.registerTask('javascript', ['node_version', 'copy:customjs', 'jshint:custom']);
-  grunt.registerTask('images', ['node_version', 'imagemin', 'copy:images']);
+  grunt.registerTask('javascript', ['node_version', 'jshint:custom']);
+  grunt.registerTask('images', ['node_version', 'imagemin']);
   grunt.registerTask('makefavicons', ['node_version', 'favicons']);
-  grunt.registerTask('templates', ['node_version', 'assemble', 'prettify']);
-  // uncomment this and comment the task above for single page sites that dont need assemble
-  //grunt.registerTask('templates', ['node_version', 'copy:html', 'html-prettyprinter']);
+  grunt.registerTask('sprites', ['node_version', 'svg_sprite']);
+
 
   grunt.registerTask('build', [
     'node_version',
     'jshint:grunt',
-    'clean:build',
-    'assemble',
-    'prettify', 
-    'copy:customjs',
     'jshint:custom',
+    'svg_sprite', 
     'imagemin',
-    'copy:images',
-    //'copy:fonts', //uncomment if you need fonts (including iconfonts)
-    // 'copy:fontcss',
     'sass',
     'autoprefixer',
     'concat',
     'csso',
-    'clean:css',
-    'copy:favicons'
+    'clean:css'
   ]);
-
-  grunt.registerTask('deploy', ['build', 'gh-pages']);
-
 };
+

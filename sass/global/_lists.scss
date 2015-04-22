@@ -6,7 +6,9 @@
 
 // Reset lists
 .nolist ul,
-.nolist {
+.nolist,
+.menu,
+.islandList {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -14,12 +16,12 @@
 
 
 //inline lists
-.listInline {
+.inlineList {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 
-	li {
+	> li {
 		display: inline-block;
 	}
 }
@@ -28,3 +30,21 @@
 
 /////////////////////////////////////-+++-
 // Custom lists
+
+
+
+.inlineList--commas {
+
+	> li {
+
+		&:after {
+			content: ',';
+		}
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

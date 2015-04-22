@@ -16,3 +16,10 @@ p,
 blockquote {
 	margin: 0 0 $page-element-spacing;
 }
+
+
+.island {
+  margin-bottom: $page-element-spacing;
+
+  > :last-child { margin-bottom: 0; }
+}

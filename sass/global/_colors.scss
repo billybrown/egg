@@ -1,0 +1,28 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// colors
+// some default classes for adding colors to type, backgrounds or borders
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+/////////////////////////////////////-+++-
+// Colors - for text, etc.
+
+
+// add your colors here.
+// $color-collection: 
+// ('red' $red), 
+// ('blue' $blue), 
+// ('navy' $navy),
+// ('white' #fff);
+
+// @each $color in $color-collection {
+//   $color-name: nth($color, 1);
+//   $color-value: nth($color, 2);
+//   %color-#{$color-name} {
+//     color: #{$color-value};
+//   }
+//   .color-#{$color-name} {
+//   	@extend %color-#{$color-name};
+//   }
+// }

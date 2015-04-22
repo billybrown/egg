@@ -21,15 +21,5 @@ module.exports.tasks = {
           dest: 'src/img'
         }]
       }
-    },
-
-    // this tasks copies over the images to the build directory
-    copy: {
-      images: {
-        files: [
-          {expand: true, cwd: 'src/img', src: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.gif'], dest: '<%= dist %>/img/'}
-        ]
-      }
     }
-
 };

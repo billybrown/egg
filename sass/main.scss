@@ -21,6 +21,13 @@
 // this partial styles the message that warns people that they are using an out dated browser and should upgrad
 @import 'global/browsehappy';
 
+// import our grid - via toast
+// http://daneden.github.io/Toast/
+@import 'global/grid';
+
+// global, atomic elements that are used globally throughout the site
+@import 'global/backgrounds';
+@import 'global/background-images';
 @import 'global/type';
 @import 'global/forms';
 @import 'global/body';
@@ -28,12 +35,20 @@
 @import 'global/scaffolding';
 @import 'global/layout';
 
+// repetitive and contained css objects
 @import 'components/island';
-@import 'components/card';
+@import 'components/islandList';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+@import 'components/ribbon';
+@import 'components/article';
 
-
+// Unreusable styles for specific areas of the site
 @import 'area/header';
 @import 'area/footer';
+
+// Unreusable styles for specific pages
+@import 'pages/patternLibrary'; 
 
 // for print stylesheets. Easier and more perfomant to just include it here instead of creating a seperate stylesheet
 @import 'global/print';

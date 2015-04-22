@@ -1,0 +1,54 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Captioned Images
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+.image {
+	margin: 0 auto $page-element-spacing;
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&.align-right {
+
+		@media (min-width: $bp-highschool) {
+			float: right;
+			max-width: 50%;
+			margin-left: $grid-gutter * .5;
+			padding-left: $grid-gutter * .5;
+		}
+	}
+
+	&.align-left {
+
+		@media (min-width: $bp-highschool) {
+			float: left;
+			max-width: 50%;
+			margin-right: $grid-gutter * .5;
+			padding-right: $grid-gutter * .5;
+		}
+	}
+}
+
+.creditWrapper {
+	position: relative;
+}
+
+.credit {
+	@extend %smallText;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	background: rgba(255,255,255,.8);
+	padding: 8px 11px;
+}
+
+.caption {
+	@extend %smallText;
+	padding: 10px 0;
+	margin: 0;
+}

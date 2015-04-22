@@ -9,7 +9,7 @@ module.exports.tasks = {
         outputStyle: 'compressed'
       },
       files: {
-        '<%= dist %>/css/main.css': 'src/sass/main.scss'
+        'css/main.css': 'sass/main.scss'
       }
     }
   },
@@ -28,7 +28,7 @@ module.exports.tasks = {
       ]
     },
     custom: {
-      src: '<%= dist %>/css/*.css'
+      src: 'css/*.css'
     }
   },
 
@@ -55,8 +55,8 @@ module.exports.tasks = {
   // this concatenates the css
   concat: {
     dist: {
-      src: ['<%= dist %>/css/main.css'], //add more css to concat here. for example 'src/fonts/icomoon/style.css', 
-      dest: '<%= dist %>/css/main.min.css'
+      src: ['css/main.css'], //add more css to concat here. for example 'src/fonts/icomoon/style.css', 
+      dest: 'css/main.min.css'
     }
   },
 
@@ -67,7 +67,7 @@ module.exports.tasks = {
         report: 'gzip'
       },
       files: {
-        '<%= dist %>/css/main.min.css': ['<%= dist %>/css/main.min.css']
+        'css/main.min.css': ['css/main.min.css']
       }
     }
   },
@@ -99,7 +99,7 @@ module.exports.tasks = {
   // },
   
   clean: {
-    css: ['<%= dist %>/css/main.css']
+    css: ['css/main.css']
   }
 
 

@@ -3,13 +3,9 @@
 
 This site uses a few node.js based tools to compile our front end code, mainly:
 
-1. Assemble - http://assemble.io/
-	- A static site generator
-	- Creates static HTML from handlebars template pages (.hbs) and a json or yaml 'database' file
-
-2. Grunt - http://gruntjs.com/
+Grunt - http://gruntjs.com/
 	- a javscript task runner
-	- compiles everything. Assemble templates, CSS from sass, JS minification and aggregation, image optimization (etc.)
+	- compiles everything. CSS from sass, JS minification and aggregation, image optimization (etc.)
 
 
 
@@ -34,4 +30,4 @@ Now run, 'grunt build' to build the theme. Every time you run a grunt task, the 
 
 To build the whole theme run: grunt build
 
-To build specific things on save (CSS, templates, etc.) run: grunt watch
+To build specific things on save (CSS, JS, etc.) run: grunt watch
