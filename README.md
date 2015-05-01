@@ -1,14 +1,9 @@
 # egg
 A starting point for my web projects.
 
-Uses assemble for templating, libsass for css, and assumes deployment to github pages.
 
 ## to do
 
-- **Grid System**. Research and integrate a very simple, default grid system. Toast looks like a winner but it doesnt integrate with libsass fully yet.
-- **Build Upgrade**. Consider seperating out production and development builds
-    - Only have takana script in dev environment
-    - unminified and unaggregated js/css/html in dev for easier debugging. In production aggregate and minify everything.
 - **Coding Styleguide**. Create and integrate a coding styleguide and css architecture readme. Look at the following for inspiration:
     - https://github.com/gilbox/css-bliss
     - https://github.com/north/north
@@ -16,9 +11,11 @@ Uses assemble for templating, libsass for css, and assumes deployment to github 
     - http://css-tricks.com/css-style-guides/
     - http://sass-guidelin.es/
     - http://www.sitepoint.com/css-sass-styleguide/
+- **Build Upgrade**. Consider seperating out production and development builds
+    - Only have takana script in dev environment
+    - unminified and unaggregated js/css/html in dev for easier debugging. In production aggregate and minify everything.
 - **Bower**. Consider integrating Bower. I havent really realized the benefits of this tool yet - but I feel like I'm probably just missing something. Need to research.
 - **HTML Lint**. The newest version of grunt HTML throws a weird error. Need to look into alternative html linting options
-- **Assemble Partials**. The handlebars helper "partial" has been updated - but only the older version works for our needs. We should look into an alternative.
 - **CSS review**. Research possibly dropping Sass entirely for PostCSS - https://github.com/postcss/postcss
 
 ## on hold
@@ -33,3 +30,4 @@ Uses assemble for templating, libsass for css, and assumes deployment to github 
     - Be able to choose to integrate a css grid or not.
     - Be able to choose to integrate icomoon icon font or not.
     - Be able to choose deployment methods (github pages, amazon s3, nothing, etc.)
+- **Grid System**. I like Toast, but it doesnt yet integrate with libsass fully. http://daneden.github.io/Toast/
