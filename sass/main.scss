@@ -3,52 +3,45 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
-// import custom mixins
+// import global partials that effect the whole site. 
 @import 'global/mixins/ems';
 @import 'global/mixins/placeholder';
-
-// import some variables used throughout the css (colors, fonts, breakpoints, spacing amounts)
 @import 'global/variables-generic';
 @import 'global/variables';
-
-// import some base utility classes (image replacement, screen reader visible text, etc.)
 @import 'global/utility';
-
-// import normalize - a CSS reset alternative
-// http://necolas.github.io/normalize.css/
 @import 'global/normalize';
-
-// this partial styles the message that warns people that they are using an out dated browser and should upgrad
-@import 'global/browsehappy';
-
-// import our grid - via toast
-// http://daneden.github.io/Toast/
 @import 'global/grid';
-
-// global, atomic elements that are used globally throughout the site
-@import 'global/backgrounds';
-@import 'global/background-images';
-@import 'global/type';
-@import 'global/forms';
-@import 'global/body';
-@import 'global/lists';
 @import 'global/scaffolding';
 @import 'global/layout';
+@import 'global/color-utility';
 
-// repetitive and contained css objects
-@import 'components/island';
-@import 'components/islandList';
-@import 'components/breadcrumbs';
+// Import atomic singular elements
+@import 'elements/link';
+@import 'elements/horizontal-rule';
+@import 'elements/type';
+@import 'elements/list';
+@import 'elements/button';
+@import 'elements/blockquote';
+@import 'elements/form';
+@import 'elements/checkbox';
+@import 'elements/select';
+@import 'elements/background-image';
+@import 'elements/table';
+
+// repetitive and contained components or objects
+@import 'components/breadcrumb';
+@import 'components/component-list';
+@import 'components/component';
+@import 'components/full-post';
 @import 'components/pagination';
-@import 'components/ribbon';
-@import 'components/article';
+@import 'components/post-image';
 
 // Unreusable styles for specific areas of the site
-@import 'area/header';
-@import 'area/footer';
+@import 'areas/header';
+@import 'areas/footer';
+@import 'areas/browse-happy';
+@import 'areas/page-pattern-library';
 
-// Unreusable styles for specific pages
-@import 'pages/patternLibrary'; 
 
 // for print stylesheets. Easier and more perfomant to just include it here instead of creating a seperate stylesheet
 @import 'global/print';

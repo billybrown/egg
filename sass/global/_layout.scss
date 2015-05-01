@@ -39,6 +39,11 @@ $cspace_large: 100px;
 // Global page elements and their default styling/spacing etc.
 
 
+
+body {
+  background: $background;
+}
+
 .mainConstrained {
   margin-top: $spacing;
 }

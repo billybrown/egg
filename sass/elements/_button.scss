@@ -1,0 +1,39 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Buttons
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+%button {
+	font-size: 16px;
+	line-height: 20px;
+	padding: 8px 19px;
+	border-radius: 2px;
+	font-weight: 700;
+	background: $link-color;
+	color: #fff;
+
+	&:hover {
+		background: darken($link-color, 10%);
+		color: #fff;
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
+
+.btn { @extend %button; }
+
+.btn--large {
+	font-size: 18px;
+	line-height: 22px;	
+	padding: 11px 18px;
+	font-weight: 700;
+}
+
+.btn--small {
+	font-size: 13px;
+	line-height: 16px;
+	padding: 3px 6px;
+}
+
+

@@ -4,6 +4,16 @@
 
 
 
+// All elements will adopt `box-sizing:border-box;`
+// as per paulirish.com/2012/box-sizing-border-box-ftw
+* {
+  &,
+  &:before,
+  &:after { 
+    box-sizing: border-box; 
+  }
+}
+
 .nobr {
 	white-space: nowrap;
 }
@@ -111,7 +121,7 @@ iframe {
 }
 
 
-// icomoon helper mixin
+// icomoon placeholder
 %iconfont {
     font-family: 'icomoon';
     speak: none;
@@ -126,6 +136,16 @@ iframe {
     -moz-osx-font-smoothing: grayscale;
 }
 
+// fontawesome placeholder
+%fontawesome {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
 
 
 // some alignment classes

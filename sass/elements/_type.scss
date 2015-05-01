@@ -1,0 +1,113 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Type
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////-+++-
+// Default styles applied to everything
+
+
+body {
+  color: $text;
+  font-family: $sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+/////////////////////////////////////-+++-
+// Regular text styles
+
+
+%normalText {
+	font: 500 17px/30px $sans-serif;
+}
+
+%smallText {
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 700;
+}
+
+%largeText {
+	font-size: 21px;
+	line-height: 24px;
+	font-weight: 700;
+}
+
+%subduedText {
+	font-size: 12px;
+	line-height: 15px;
+	color: $gray;
+}
+
+// deployment
+.smallText { @extend %smallText; }
+.largeText { @extend %largeText; }
+.subduedText { @extend %subduedText; }
+
+
+
+
+/////////////////////////////////////-+++-
+// Titles
+
+
+%normalTitle {
+	font: 700 22px/24px $serif;
+}
+
+%smallTitle {
+	font: 700 18px/20px $serif;
+}
+
+%largeTitle {
+	font: 700 36px/40px $serif;
+}
+
+%blockTitle {
+	font: 700 12px/14px $sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+// deployment
+.title { @extend %normalTitle }
+.smallTitle { @extend %smallTitle; }
+.largeTitle { @extend %largeTitle; }
+.blockTitle { @extend %blockTitle; }
+
+
+
+/////////////////////////////////////-+++-
+// h1 - h6
+
+// copied from normalize
+// Address variable `h1` font-size and margin within `section` and `article`
+// contexts in Firefox 4+, Safari, and Chrome.
+// 
+
+// h1 {
+//   @extend %title;
+// }
+
+
+
+/////////////////////////////////////-+++-
+// Tags
+
+
+%tag {
+	background: $link-color;
+	color: #fff;
+	font-size: 13px;
+	line-height: 16px;
+	border-radius: 2px;
+}
+
+.tag { @extend %tag; }

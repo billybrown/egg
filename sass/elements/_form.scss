@@ -1,0 +1,90 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Form and input styles
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+
+$placeholder-default: $text;
+
+// default input styles
+input,
+textarea {
+	background: none;
+	border: 1px solid $gray;
+	border-radius: 2px;
+	padding: 8px 16px 9px;
+	-webkit-appearance: none;
+	width: 100%;
+
+	&::-webkit-input-placeholder { color: $placeholder-default; }
+	&:-moz-placeholder { color: $placeholder-default; }
+	&::-moz-placeholder { color: $placeholder-default; }
+	&:-ms-input-placeholder { color: $placeholder-default; }
+
+	&:focus {
+		outline: none;
+	  	border: 1px dotted $link-color;
+	}
+}
+
+input[type="submit"] {
+  @extend %button;
+  width: auto;
+}
+
+button {
+  @extend %button;
+  background: transparent;
+}
+
+
+
+
+
+/////////////////////////////////////-+++-
+// form related text
+
+
+label {
+
+}
+
+.formDescrption {
+  @extend %smallText;
+}
+
+
+
+
+
+/////////////////////////////////////-+++-
+// A common form layout mixin
+
+$form-btn-width: 148px;
+$form-max-width: 444px;
+
+@mixin formLayout--simpleInline($form-btn-width, $form-max-width) {
+  position: relative;
+  max-width: $form-max-width;
+
+  .inputWrapper {
+    @media (min-width: $bp-middleschool) {
+      margin-right: $form-btn-width;
+    }
+  }
+
+  .btn {
+    margin-top: 10px;
+
+    @media (min-width: $bp-middleschool) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      margin-top: 0;
+    }
+  }
+}
+
+
