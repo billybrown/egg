@@ -5,6 +5,7 @@ A starting point for my web projects.
 ## to do
 
 - **Coding Styleguide**. Create and integrate a coding styleguide and css architecture readme. Look at the following for inspiration:
+    - https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
     - https://github.com/gilbox/css-bliss
     - https://github.com/north/north
     - http://css-tricks.com/sass-style-guide/
