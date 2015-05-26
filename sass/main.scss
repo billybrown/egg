@@ -6,42 +6,41 @@
 // import global partials that effect the whole site. 
 @import 'global/mixins/ems';
 @import 'global/mixins/placeholder';
-@import 'global/variables-generic';
+@import 'global/mixins/mq';
+
+// import variables
+@import 'global/variablesDefault';
 @import 'global/variables';
+
+// import all other global partials
 @import 'global/utility';
 @import 'global/normalize';
 @import 'global/grid';
 @import 'global/scaffolding';
-@import 'global/layout';
-@import 'global/color-utility';
+@import 'global/color';
+@import 'global/link';
+@import 'global/horizontalRule';
+@import 'global/list';
+@import 'global/blockquote';
+@import 'global/form';
+@import 'global/checkbox';
+@import 'global/select';
+@import 'global/table';
 
-// Import atomic singular elements
-@import 'elements/link';
-@import 'elements/horizontal-rule';
-@import 'elements/type';
-@import 'elements/list';
-@import 'elements/button';
-@import 'elements/blockquote';
-@import 'elements/form';
-@import 'elements/checkbox';
-@import 'elements/select';
-@import 'elements/background-image';
-@import 'elements/table';
+// import components or objects
+@import 'objects/Text';
+@import 'objects/Title';
+@import 'objects/Tag';
+@import 'objects/Button';
+@import 'objects/Logo';
+@import 'objects/BrowseHappy';
+@import 'objects/SiteMain';
+@import 'objects/SiteFooter';
+@import 'objects/SiteHeader';
 
-// repetitive and contained components or objects
-@import 'components/breadcrumb';
-@import 'components/component-list';
-@import 'components/component';
-@import 'components/full-post';
-@import 'components/pagination';
-@import 'components/post-image';
+// import specific page styles that are not reusable.
+@import 'pages/PatternLibrary';
 
-// Unreusable styles for specific areas of the site
-@import 'areas/header';
-@import 'areas/footer';
-@import 'areas/browse-happy';
-@import 'areas/page-pattern-library';
-
-
-// for print stylesheets. Easier and more perfomant to just include it here instead of creating a seperate stylesheet
+// for print stylesheets. 
+// Easier and more perfomant to just include it here instead of creating a seperate stylesheet
 @import 'global/print';

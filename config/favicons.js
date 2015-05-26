@@ -9,23 +9,23 @@
 // put them in the 
 module.exports.tasks = {
 
-  favicons: {
-    options: {
-      appleTouchBackgroundColor: '#FFFFFF',
-      trueColor: true
-    },
-    icons: {
-      src: 'src/favicons/favicon.png',
-      dest: '<%= dist %>/favicons/'
-    }
-  },
+  // favicons: {
+  //   options: {
+  //     appleTouchBackgroundColor: '#FFFFFF',
+  //     trueColor: true
+  //   },
+  //   icons: {
+  //     src: 'src/favicons/favicon.png',
+  //     dest: '<%= dist %>/favicons/'
+  //   }
+  // },
 
-  copy: {
-    favicons: {
-      files: [
-        {expand: true, cwd: 'src/favicons/build', src: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.gif'], dest: '<%= dist %>/favicons/'}
-      ]
-    }
-  }
+  // copy: {
+  //   favicons: {
+  //     files: [
+  //       {expand: true, cwd: 'src/favicons/build', src: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.gif'], dest: '<%= dist %>/favicons/'}
+  //     ]
+  //   }
+  // }
 
 };

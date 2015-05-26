@@ -1,8 +1,17 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
-// BreadCrumbs
+// Links
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
-// .breadcrumbs {
 
-// }
+a,
+.u-fakeLink {
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+		cursor: pointer;
+		color: $link-hover-color;
+	}
+}

@@ -21,24 +21,19 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', ['node_version']);
-  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'concat', 'csso']);
+  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'cssmin']);
   grunt.registerTask('javascript', ['node_version', 'jshint:custom']);
   grunt.registerTask('images', ['node_version', 'imagemin']);
-  grunt.registerTask('makefavicons', ['node_version', 'favicons']);
-  grunt.registerTask('sprites', ['node_version', 'svg_sprite']);
-
+  grunt.registerTask('sprites', ['node_version', 'dr-svg-sprites']);
 
   grunt.registerTask('build', [
     'node_version',
     'jshint:grunt',
     'jshint:custom',
-    'svg_sprite', 
     'imagemin',
     'sass',
     'autoprefixer',
-    'concat',
-    'csso',
-    'clean:css'
+    'cssmin'
   ]);
 };
 

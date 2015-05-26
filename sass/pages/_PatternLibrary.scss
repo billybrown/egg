@@ -3,15 +3,15 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
-.page-pl {
-	.mainConstrained {
+.Page-patternLibrary {
+	.SiteMain > .u-constrained {
 		max-width: none;
 		padding-right: 0;
 		padding-left: 0;
 	}
 }
 
-.patternLibrary {
+.PatternLibrary {
 
 	& > li {
 		margin-bottom: $spacing * 2;		
@@ -26,7 +26,7 @@
 		}
 
 		& > label,
-		& > .constrained > label {
+		& > .u-constrained > label {
 			border-bottom: 1px solid $gray;
 			display: block;
 			text-align: center;
@@ -36,9 +36,8 @@
 	}
 }
 
-.patternLibrary-grid {
-	.grid__col span {
-		@extend %blockText;
+.PatternLibrary-grid {
+	.u-gridCol span {
 		display: block;
 		padding: 3px 0;
 		text-align: center;

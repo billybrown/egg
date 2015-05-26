@@ -35,16 +35,19 @@ $link-color-hover   : $link-hover-color;
 // breakpoints
 
 
-$bp-elementary: em(390);
-$bp-middleschool: em(600);
-$bp-highschool: em(768);
-$bp-gapyear: em(850);
-$bp-college: em(1080);
-$bp-5thyear: em(1150);
-$bp-masters: $imac-21;
 
-$bp-offcanvas: $bp-college; // if you have an offcanvas menu
+$mq-breakpoints: (
+    elementary:  390px,
+    middleschool:  600px,
+    highschool: 768px,
+    gapyear:    850px,
+    college:    1000px,
+    offcanvas: 	1150px,
+    fifthyear:    1150px,
+    masters:    1250px
+) !default;
 
+$mq-static-breakpoint: masters;
 
 
 /////////////////////////////////////-+++

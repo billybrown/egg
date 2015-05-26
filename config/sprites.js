@@ -2,24 +2,18 @@
 
 module.exports.tasks = {
 
-    svg_sprite : {
-        basic : {
+    // exporting SVGs can be tricky. Here are some good blog posts if you are having trouble
+    // if you can't save its position correctly: http://graphicdesign.stackexchange.com/questions/39505/illustrator-exporting-svg-viewbox-doesnt-match-artboard-size
+    // if the exported scss file can't calculate widht/height - gives you a bunch of 'NaNpx' values: https://github.com/drdk/grunt-dr-svg-sprites/issues/26
 
-            // Target basics
-            expand : true,
-            cwd : 'img/svg',
-            src : ['**/*.svg'],
-            dest : 'css/svgsprites',
-
-            // Target options
-            options : {
-                mode : {
-                    view: {
-                        render: {
-                            scss: true
-                        }
-                    }
-                }
+    "dr-svg-sprites": {
+        basic: {
+            options: {
+                spriteElementPath: "img/svg",
+                spritePath: "img/sprite.svg",
+                cssPath: "sass/sprites.scss",
+                prefix: "svg",
+                layout: "vertical"
             }
         }
     }

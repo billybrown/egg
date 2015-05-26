@@ -4,7 +4,7 @@
 
 
 
-%button {
+%Button {
 	font-size: 16px;
 	line-height: 20px;
 	padding: 8px 19px;
@@ -21,16 +21,16 @@
 	}
 }
 
-.btn { @extend %button; }
+.Button { @extend %button; }
 
-.btn--large {
+.Button--large {
 	font-size: 18px;
 	line-height: 22px;	
 	padding: 11px 18px;
 	font-weight: 700;
 }
 
-.btn--small {
+.Button--small {
 	font-size: 13px;
 	line-height: 16px;
 	padding: 3px 6px;

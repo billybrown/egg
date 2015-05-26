@@ -5,10 +5,9 @@
 
 
 // Reset lists
-.nolist ul,
-.nolist,
-.menu,
-.islandList {
+.u-nolist ul,
+.u-nolist,
+.u-menu {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -16,7 +15,7 @@
 
 
 //inline lists
-.inlineList {
+%u-inlineList {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -26,14 +25,17 @@
 	}
 }
 
+.u-inlineList {
+	@extend %u-inlineList;
+}
+
 
 
 /////////////////////////////////////-+++-
-// Custom lists
+// list of elements seperated by a comma
 
-
-
-.inlineList--commas {
+.u-commaList {
+	@extend %u-inlineList;
 
 	> li {
 

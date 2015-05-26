@@ -6,7 +6,7 @@ module.exports.tasks = {
   sass: {
     dest: {
       options: {
-        outputStyle: 'compressed'
+        sourceMap: true
       },
       files: {
         'css/main.css': 'sass/main.scss'
@@ -25,12 +25,34 @@ module.exports.tasks = {
         'Safari >= 4',
         'iOS >= 5.1',
         'Android >= 4.1'
-      ]
+      ],
+      map: true
     },
     custom: {
       src: 'css/*.css'
     }
   },
+
+  // this concatenates the css
+  // concat: {
+  //   dist: {
+  //     src: ['css/main.css'], //add more css to concat here. for example 'src/fonts/icomoon/style.css', 
+  //     dest: 'css/main.min.css'
+  //   }
+  // },
+
+  // this minifies your css
+  
+  cssmin: {
+    options: {
+      sourceMap: true
+    },
+    target: {
+      files: {
+        'css/main.css': ['css/main.css']
+      }
+    }
+  }
 
   // this is buggy, removing for now
   // csslint: {
@@ -51,27 +73,6 @@ module.exports.tasks = {
   //     src: ['build/css/main.css']
   //   }
   // },
-
-  // this concatenates the css
-  concat: {
-    dist: {
-      src: ['css/main.css'], //add more css to concat here. for example 'src/fonts/icomoon/style.css', 
-      dest: 'css/main.min.css'
-    }
-  },
-
-  // this minifies your css
-  csso: {
-    compress: {
-      options: {
-        report: 'gzip'
-      },
-      files: {
-        'css/main.min.css': ['css/main.min.css']
-      }
-    }
-  },
-
   // this strips out unused css based on an html input
   // commented out for now since its a little buggy and not ready for prime time
   // uncss: {
@@ -98,10 +99,8 @@ module.exports.tasks = {
   //   }
   // },
   
-  clean: {
-    css: ['css/main.css']
-  }
-
-
+  // clean: {
+  //   css: ['css/main.css']
+  // }
 
 };
