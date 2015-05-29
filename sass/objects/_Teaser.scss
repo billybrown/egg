@@ -1,0 +1,18 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Teaser
+// This is a grouping of text and images that links off to a specific page.
+// Often shows up in lists.
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+.Teaser {
+	
+}
+
+.Teaser-title {
+	@extend %Title;
+}
+
+.Teaser-summary {
+	@extend %TextSmall;
+}

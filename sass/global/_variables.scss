@@ -7,27 +7,26 @@
 /////////////////////////////////////-+++
 // fonts
 
-$open-sans: 		'Open Sans';
+$open-sans: 'Open Sans';
 
-$serif				: $georgia;
-$sans-serif			: $open-sans, $helvetica;
-
+$serif: $georgia;
+$sans-serif : $open-sans, $helvetica;
+$titles: $serif;
 
 
 /////////////////////////////////////-+++
 // colors
 
 
-$gray-dark			: darkgray;
-$gray				: gainsboro;
-$gray-light			: darken(snow, 5%);
+$gray-dark: darkgray;
+$gray: gainsboro;
+$gray-light: darken(snow, 5%);
 
-$background			: snow;
-$text				: #333;
+$background: snow;
+$text: #333;
 
-$link-color			: dodgerblue;
-$link-hover-color	: darken($link-color, 10%);
-$link-color-hover   : $link-hover-color;
+$link-color: dodgerblue;
+$link-hover-color: darken($link-color, 10%);
 
 
 
@@ -61,5 +60,5 @@ $spacing: 20px;
 $grid-gutter: $spacing;
 
 $animation-speed: .2s;
-$animation-easing: .2s;
+$animation-easing: ease;
 $animation: $animation-speed $animation-easing;

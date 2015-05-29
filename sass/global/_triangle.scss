@@ -1,0 +1,42 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// triangles
+// Some placeholders for adding small triangles inside of psuedo elements
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+$triangle-size: 19px;
+$triangle-color: #fff;
+
+%u-triangleDefault {
+	content: '';
+	width: 0; 
+	height: 0; 	
+}
+
+%u-triangleDown {
+	@extend %u-triangleDefault;
+	border-left: 	$triangle-size solid transparent;
+	border-right: 	$triangle-size solid transparent;
+	border-top: 	$triangle-size solid $triangle-color;
+}
+
+%u-triangleUp {
+	@extend %u-triangleDefault; 
+	border-left: 	$triangle-size solid transparent;
+	border-right: 	$triangle-size solid transparent;
+	border-bottom: 	$triangle-size solid $triangle-color;
+}
+
+%u-triangleRight {
+	@extend %u-triangleDefault;
+	border-top: 	$triangle-size solid transparent;
+	border-bottom: 	$triangle-size solid transparent;
+	border-left: 	$triangle-size solid $triangle-color;
+}
+
+%u-triangleLeft {
+	@extend %u-triangleDefault; 
+	border-top: 	$triangle-size solid transparent;
+	border-bottom: 	$triangle-size solid transparent;
+	border-right: 	$triangle-size solid $triangle-color;
+}

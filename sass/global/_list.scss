@@ -1,20 +1,14 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
-// List styles
+// Custom List styles
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
 
-// Reset lists
-.u-nolist ul,
-.u-nolist,
-.u-menu {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
+
+/////////////////////////////////////-+++-
+// basic inline list
 
 
-//inline lists
 %u-inlineList {
 	list-style: none;
 	padding: 0;
@@ -25,15 +19,10 @@
 	}
 }
 
-.u-inlineList {
-	@extend %u-inlineList;
-}
+.u-inlineList { @extend %u-inlineList; }
 
 
-
-/////////////////////////////////////-+++-
 // list of elements seperated by a comma
-
 .u-commaList {
 	@extend %u-inlineList;
 

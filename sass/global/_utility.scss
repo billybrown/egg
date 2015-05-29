@@ -4,40 +4,9 @@
 
 
 
-// All elements will adopt `box-sizing:border-box;`
-// as per paulirish.com/2012/box-sizing-border-box-ftw
-* {
-  &,
-  &:before,
-  &:after { 
-    box-sizing: border-box; 
-  }
-}
+/////////////////////////////////////-+++-
+// Utility classes for hiding or replacing text
 
-.nobr {
-	white-space: nowrap;
-}
-
-// Remove gap between elements and the bottom of their containers
-audio,
-canvas,
-img,
-svg,
-video { 
-    vertical-align: middle; 
-}
-
-// default fluid images
-img {
-    max-width: 100%;
-    height: auto;
-    -ms-interpolation-mode: bicubic;
-}
-
-// default responsive iframes
-iframe {
-    width: 100%;
-}
 
 // Image replacement - via html5 boilerplate
 .u-ir {
@@ -47,6 +16,7 @@ iframe {
     /* IE 6/7 fallback */
     *text-indent: -9999px;
 }
+
 .u-ir:before {
     content: "";
     display: block;
@@ -89,9 +59,11 @@ iframe {
     visibility: hidden;
 }
 
-// 
+
+
+/////////////////////////////////////-+++-
 // Clearfix: contain floats - via html5boilerplate
-// 
+
 // For modern browsers
 // 1. The space content is one way to avoid an Opera bug when the
 //    `contenteditable` attribute is included anywhere else in the document.
@@ -102,6 +74,8 @@ iframe {
 // 3. For IE 6/7 only
 //    Include this rule to trigger hasLayout and contain floats.
 // 
+
+
 %u-clearfix {
     *zoom: 1; //3
 
@@ -119,6 +93,11 @@ iframe {
 .u-clearfix {
     @extend %u-clearfix;
 }
+
+
+
+/////////////////////////////////////-+++-
+//  Iconfont placeholders
 
 
 // icomoon placeholder
@@ -148,7 +127,11 @@ iframe {
 }
 
 
-// some alignment classes
+
+/////////////////////////////////////-+++-
+// some alignment utility classes
+
+
 .u-alignRight {
     text-align: right;
 }
@@ -159,4 +142,109 @@ iframe {
 
 .u-alignCenter {
     text-align: center;
+}
+
+
+
+/////////////////////////////////////-+++-
+// some absolute centering utlity placeholders
+
+
+%u-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+%u-absoluteFull {
+    @extend %u-absolute;
+    width: 100%;
+    height: 100%;
+}
+
+%u-absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%u-absoluteLeft {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translatey(-50%);    
+}
+
+%u-absoluteRight {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translatey(-50%);    
+}
+
+%u-absoluteBottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+%u-absoluteTop {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);    
+}
+
+@mixin u-absoluteCenter($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin u-absoluteRight($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@mixin u-absoluteLeft($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+
+/////////////////////////////////////-+++-
+// misc. utility classes
+
+
+// wrap text with a span with this class if you don't want its content
+// to break onto two lines
+.nobr {
+    white-space: nowrap;
+}
+
+// Reset lists
+.u-nolist ul,
+.u-nolist,
+.u-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }

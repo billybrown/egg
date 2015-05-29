@@ -10,22 +10,22 @@
 
 
 // add your colors here.
-// $color-collection: 
-// ('red' $red), 
-// ('blue' $blue), 
-// ('navy' $navy),
-// ('white' #fff);
+$color-collection: 
+('red' $red), 
+('blue' $blue), 
+('navy' $navy),
+('white' #fff);
 
-// @each $color in $color-collection {
-//   $color-name: nth($color, 1);
-//   $color-value: nth($color, 2);
-//   %u-color-#{$color-name} {
-//     color: #{$color-value};
-//   }
-//   .u-color-#{$color-name} {
-//   	@extend %u-color-#{$color-name};
-//   }
-// }
+@each $color in $color-collection {
+  $color-name: nth($color, 1);
+  $color-value: nth($color, 2);
+  %u-#{$color-name}Color {
+    color: #{$color-value};
+  }
+  .u-#{$color-name}Color {
+  	@extend %u-#{$color-name}Color;
+  }
+}
 
 
 
@@ -33,19 +33,19 @@
 // Backgrounds
 
 // add your backgrounds here. the third variable is the text color.
-// $bg-collection: 
-// ('gray' $tan-light $text), 
-// ('navy' $navy #fff);
+$bg-collection: 
+('gray' $tan-light $text), 
+('navy' $navy #fff);
 
-// @each $bg in $bg-collection {
-//   $bg-name: nth($bg, 1);
-//   $bg-value: nth($bg, 2);
-//   $bg-text: nth($bg, 3);
-//   %u-bg-#{$bg-name} {
-//     background: #{$bg-value};
-//     color: #{$bg-text};
-//   }
-//   .u-bg-#{$bg-name} {
-//   	@extend %u-bg-#{$bg-name};
-//   }
-// }
+@each $bg in $bg-collection {
+  $bg-name: nth($bg, 1);
+  $bg-value: nth($bg, 2);
+  $bg-text: nth($bg, 3);
+  %u-#{$bg-name}Background {
+    background: #{$bg-value};
+    color: #{$bg-text};
+  }
+  .u-#{$bg-name}Background {
+  	@extend %u-#{$bg-name}Background;
+  }
+}

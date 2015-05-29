@@ -1,0 +1,35 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Overlays
+// Overlays are when you want to apply a transparent overlay on top of an image or
+// another other element. Its a common visual treatment - this is a simple soluton.
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+%u-overlayDefault {
+	position: relative;
+	color: #fff;
+
+	&:before {
+		content: '';
+		@extend %u-absoluteFull;	
+	}
+}
+
+%u-overlayTomato {
+	@extend %u-overlayDefault;
+
+	&:before {
+	    background: tomato;
+	    opacity: .5;
+	}
+}
+
+%u-overlayPurpleGradient {
+	@extend %u-overlayDefault;
+
+	&:before {
+	    background: linear-gradient(rgba(5,20,96, .3), rgba(5,20,96, .75), rgba(5,20,96, .95));
+	}
+}
+

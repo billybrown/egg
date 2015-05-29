@@ -16,27 +16,32 @@
 @import 'global/utility';
 @import 'global/normalize';
 @import 'global/grid';
+@import 'global/type';
 @import 'global/scaffolding';
-@import 'global/color';
+// @import 'global/color';
 @import 'global/link';
 @import 'global/horizontalRule';
-@import 'global/list';
 @import 'global/blockquote';
 @import 'global/form';
 @import 'global/checkbox';
 @import 'global/select';
 @import 'global/table';
+@import 'global/list';
+//@import 'global/Overlay';
+//@import 'global/Triangle';
 
 // import components or objects
-@import 'objects/Text';
-@import 'objects/Title';
-@import 'objects/Tag';
-@import 'objects/Button';
-@import 'objects/Logo';
 @import 'objects/BrowseHappy';
 @import 'objects/SiteMain';
 @import 'objects/SiteFooter';
 @import 'objects/SiteHeader';
+//@import 'objects/Logo';
+//@import 'objects/Post';
+//@import 'objects/Hero';
+//@import 'objects/Teaser';
+//@import 'objects/Breadcrumbs';
+//@import 'objects/Pagination';
+
 
 // import specific page styles that are not reusable.
 @import 'pages/PatternLibrary';

@@ -7,18 +7,20 @@
 
 // logo in the header
 
-// $bglogo-width: 100px;
-// $bglogo-height: 50px;
-//.Logo {
-//	display: block;
-//	position: relative;
-//	background: transparent url('../img/logo.svg') center center no-repeat;
-//	width: $bglogo-width;
-//	height: $bglogo-height;
-//	background-size: $bglogo-width $bglogo-height;
-//
-//	.no-svg & {
-//		background-image: url('../img/logo.svg');
-//	}
-//}
+$Logo-width: 100px;
+$Logo-height: 50px;
+$Logo-fileName: 'logo';
+
+.Logo {
+	display: block;
+	position: relative;
+	background: transparent url('../img/$Logo-fileName.svg') center center no-repeat;
+	width: $Logo-width;
+	height: $Logo-height;
+	background-size: $Logo-width $Logo-height;
+
+	.no-svg & {
+		background-image: url('../img/$Logo-fileName.png');
+	}
+}
 

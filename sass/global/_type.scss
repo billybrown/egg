@@ -1,0 +1,108 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Type
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+/////////////////////////////////////-+++-
+// Regular text styles
+
+
+%u-text {
+	font: 400 17px/30px $sans-serif;
+}
+
+%u-smallText {
+	font: 400 16px/26px $sans-serif;
+}
+
+%u-largeText {
+	font: 400 21px/32px $sans-serif;
+}
+
+%u-tinyText {
+	font: 400 12px/16px $sans-serif;
+}
+
+%u-subduedText {
+	@extend %u-tinyText;
+	color: $gray;
+}
+
+// some utility classes for easy deployment of these text types
+.u-text { @extend %u-text; }
+.u-textSmall { @extend %u-smallText; }
+.u-textLarge { @extend %u-largeText; }
+.u-textTiny { @extend %u-tinyText; }
+.u-textSubdued { @extend %u-subduedText; }
+
+
+
+/////////////////////////////////////-+++-
+// Titles and headers
+
+
+%u-title {
+	font: 700 21px/28px $sans-serif;
+}
+
+%u-smallTitle {
+	font: 400 26px/32px $titles;
+}
+
+%u-largeTitle {
+	font: 400 30px/34px $titles;
+
+	@include mq($from: middleschool) {
+		font-size: 45px;
+		line-height: 46px;
+	}
+}
+
+
+// some utility classes for easy deployment of these text types
+.u-title { @extend %u-title; }
+.u-smallTitle { @extend %u-smallTitle; }
+.u-largeTitle { @extend %u-largeTitle; }
+
+
+
+/////////////////////////////////////-+++-
+// Buttons
+
+
+%u-buttonDefault {
+	background: $link-color;
+	color: #fff;
+
+	&:hover {
+		background: darken($link-color, 10%);
+		color: #fff;
+		cursor: pointer;
+		text-decoration: none;
+	}	
+}
+
+%u-button {
+	@extend %u-buttonDefault;
+	@extend %u-smallTitle;
+	padding: 8px 19px;
+	border-radius: 2px;
+}
+
+.u-button { @extend %u-button; }
+
+.u-buttonLarge {
+	@extend %u-buttonDefault;
+	@extend %u-title;
+	padding: 11px 18px;
+	border-radius: 3px;
+}
+
+.u-buttonSmall {
+	@extend %u-buttonDefault;
+	@extend %u-text;
+	padding: 3px 6px;
+	border-radius: 2px;
+}
+

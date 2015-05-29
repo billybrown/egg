@@ -28,17 +28,12 @@ textarea {
 	}
 }
 
-input[type="submit"] {
-  @extend %button;
-  width: auto;
-}
-
+input[type="submit"],
 button {
-  @extend %button;
+  @extend %u-button;
+  width: auto;
   background: transparent;
 }
-
-
 
 
 
@@ -47,40 +42,35 @@ button {
 
 
 label {
-
 }
 
-.formDescrption {
-  @extend %smallText;
+.FormDescrption {
+  @extend %TextSmall;
 }
-
-
 
 
 
 /////////////////////////////////////-+++-
 // A common form layout mixin
 
-$form-btn-width: 148px;
-$form-max-width: 444px;
+$FormLayout-buttonWidth: 148px;
+$FormLayout-width: 444px;
 
-@mixin formLayout--simpleInline($form-btn-width, $form-max-width) {
+@mixin FormLayout($FormLayout-buttonWidth, $FormLayout-width) {
   position: relative;
-  max-width: $form-max-width;
+  max-width: $FormLayout-width;
 
-  .inputWrapper {
+  .InputWrapper {
     @media (min-width: $bp-middleschool) {
-      margin-right: $form-btn-width;
+      margin-right: $FormLayout-buttonWidth;
     }
   }
 
   .Button {
     margin-top: 10px;
+    @include u-absoluteRight(middleschool);
 
     @media (min-width: $bp-middleschool) {
-      position: absolute;
-      top: 0;
-      right: 0;
       display: block;
       margin-top: 0;
     }
