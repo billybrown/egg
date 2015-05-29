@@ -5,7 +5,6 @@ A starting point for my web projects.
 ## to do
 
 - **Bower**. Consider integrating Bower. I havent really realized the benefits of this tool yet - but I feel like I'm probably just missing something. Need to research.
-- **CSS review**. Research possibly dropping Sass entirely for PostCSS - https://github.com/postcss/postcss
 
 ## on hold
 
