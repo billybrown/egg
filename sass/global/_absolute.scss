@@ -1,0 +1,212 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Some absolute centering utlity placeholders and mixinx
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+/////////////////////////////////////-+++
+// placeholders to apply absolute positioning
+
+
+%u-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+%u-absoluteTopLeft {
+    @extend %u-absolute;
+}
+
+%u-absoluteTopRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+%u-absoluteBottomLeft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+%u-absoluteBottomRight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+/////////////////////////////////////-+++
+// placeholders to apply absolute positioning and centering
+
+
+%u-absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%u-absoluteLeftCenter {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translatey(-50%);    
+}
+
+%u-absoluteRightCenter {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translatey(-50%);    
+}
+
+%u-absoluteTopCenter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);    
+}
+
+%u-absoluteBottomCenter {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+
+
+/////////////////////////////////////-+++
+// A placeholder to make your absolute element full width of its container
+
+
+%u-absoluteFull {
+    @extend %u-absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/////////////////////////////////////-+++
+// Mixins to apply these classes only at certain breakpoints
+
+
+@mixin u-absolute($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+@mixin u-absoluteTopLeft($media) {
+    @include u-absolute($media);
+}
+
+@mixin u-absoluteTopRight($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@mixin u-absoluteBottomRight($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@mixin u-absoluteBottomRight($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+// full
+
+@mixin u-absoluteFull($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+}
+
+// centering
+
+@mixin u-absoluteCenter($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin u-absoluteLeftCenter($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translatey(-50%);  
+    }
+}
+
+@mixin u-absoluteRightCenter($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translatey(-50%);  
+    }
+}
+
+@mixin u-absoluteTopCenter($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translatex(-50%);    
+    }
+}
+
+@mixin u-absoluteBottomCenter($media) {
+    position: relative;
+    
+    @include mq($from: $media) {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translatex(-50%);    
+    }
+}
+

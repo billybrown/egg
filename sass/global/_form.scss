@@ -5,17 +5,19 @@
 
 
 
-$placeholder-default: $text;
+$placeholder-default: darken($gray, 25%);
 
 // default input styles
 input,
 textarea {
-	background: none;
-	border: 1px solid $gray;
-	border-radius: 2px;
-	padding: 8px 16px 9px;
-	-webkit-appearance: none;
-	width: 100%;
+  @extend %u-smallText;
+  line-height: 22px;
+  background: none;
+  border: 1px solid $gray;
+  border-radius: 2px;
+  padding: 9px 11px 8px;
+  -webkit-appearance: none;
+  width: 100%;
 
 	&::-webkit-input-placeholder { color: $placeholder-default; }
 	&:-moz-placeholder { color: $placeholder-default; }
@@ -24,7 +26,7 @@ textarea {
 
 	&:focus {
 		outline: none;
-	  	border: 1px dotted $link-color;
+    border: 1px dotted $link-color;
 	}
 }
 
@@ -42,39 +44,47 @@ button {
 
 
 label {
+  @extend %u-blockText;
 }
 
-.FormDescrption {
-  @extend %TextSmall;
+.InputGroup-label {
+  display: block;
+  margin-bottom: 3px;
 }
 
+.InputGroup {
+  input {
+    margin-bottom: 10px;
+  }
+}
 
-
-/////////////////////////////////////-+++-
-// A common form layout mixin
-
-$FormLayout-buttonWidth: 148px;
-$FormLayout-width: 444px;
-
-@mixin FormLayout($FormLayout-buttonWidth, $FormLayout-width) {
+.InputLayout.v-absoluteSubmit {
   position: relative;
-  max-width: $FormLayout-width;
 
-  .InputWrapper {
-    @media (min-width: $bp-middleschool) {
-      margin-right: $FormLayout-buttonWidth;
-    }
+  .InputGroup input {
+    margin-bottom: 0;
+    padding-right: 51px;
   }
 
-  .Button {
-    margin-top: 10px;
-    @include u-absoluteRight(middleschool);
+  .InputGroup--submit {
+    display: block;
+    margin-top: 0;
+    position: absolute;
+    bottom: 1px;
+    right: 0;
 
-    @media (min-width: $bp-middleschool) {
-      display: block;
-      margin-top: 0;
+    button {
+      background: $link-color;
+      color: #fff;
+      font-size: 20px;
+      padding: 8px 11px;
+      border-left: 1px solid $gray;
+      border-radius: 0 2px 2px 0;
+
+      &:hover {
+        background: $link-colorHover;
+      }
     }
   }
 }
-
 

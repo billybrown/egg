@@ -5,6 +5,10 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
+
+/////////////////////////////////////-+++-
+// Base grid class
+
 $grid: 60px;
 
 .u-grid {
@@ -29,46 +33,22 @@ $grid: 60px;
 }
 
 
-
 /////////////////////////////////////-+++-
-// example of a 3 up grid area
+// custom grid styles below
 
 
-// .u-grid3 {
-//   .u-gridCol {
-//     max-width: 345px + $grid;
-//     margin-bottom: $grid;
+// 2up grid
+.u-grid2 {
+  .u-gridCol {
+    margin-bottom: $grid;
 
-//     @media (min-width: $bp-highschool) {
-//       width: 50%;
-//     }
+    @include mq($from: highschool) {
+      width: 50%;
+    }
 
-//     @media (min-width: $bp-college) {
-//       width: 33.333333%;
-//     }
+    img {
+      width: 100%;
+    }
+  }
+}
 
-//     img {
-//       width: 100%;
-//     }
-//   }
-// }
-
-
-
-/////////////////////////////////////-+++-
-// No gutter grid. This shows up on the media gallery on the home page
-
-
-// .u-gridNoGutter {
-
-//   @media (min-width: $bp-middleschool) {
-//     margin-left: -.1em;
-//   }  
-
-//   .u-gridCol {
-//     //width: 100%;
-//     @media (min-width: $bp-highschool) {
-//       padding-left: 0;
-//     }
-//   }
-// }

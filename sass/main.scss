@@ -14,6 +14,7 @@
 
 // import all other global partials
 @import 'global/utility';
+@import 'global/absolute';
 @import 'global/normalize';
 @import 'global/grid';
 @import 'global/type';
@@ -41,10 +42,12 @@
 //@import 'objects/Teaser';
 //@import 'objects/Breadcrumbs';
 //@import 'objects/Pagination';
+//@import 'objects/ImageCredit';
 
 
 // import specific page styles that are not reusable.
-@import 'pages/PatternLibrary';
+//@import 'pages/PatternLibrary';
+//@import 'pages/Home';
 
 // for print stylesheets. 
 // Easier and more perfomant to just include it here instead of creating a seperate stylesheet

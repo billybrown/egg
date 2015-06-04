@@ -5,7 +5,7 @@
 
 
 
-.visible-print { display: none !important; }
+.u-visiblePrint { display: none !important; }
 
 @media print {
   * {
@@ -31,6 +31,6 @@
   a[href^="#"]:after { content: ""; }
   */
 
-  .visible-print { display: inherit !important; }
-  .hidden-print { display: none !important; }
+  .u-visiblePrint { display: inherit !important; }
+  .u-hiddenPrint { display: none !important; }
 }

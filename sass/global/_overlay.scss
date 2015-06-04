@@ -5,7 +5,7 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
-
+// base overlay placeholder
 %u-overlayDefault {
 	position: relative;
 	color: #fff;
@@ -16,15 +16,36 @@
 	}
 }
 
-%u-overlayTomato {
+// placeholder for dark overlays
+%u-overlayDark {
 	@extend %u-overlayDefault;
 
 	&:before {
-	    background: tomato;
+	    background: #000;
 	    opacity: .5;
 	}
 }
 
+// mixin for applying overlay at a specific breakpoint
+@mixin u-overlayDark($breakpoint) {
+	position: relative;
+
+	@include mq($from: $breakpoint) {
+		color: #fff;
+	}
+
+	&:before {
+		content: '';
+		@include u-absoluteFull($breakpoint);	
+
+		@include mq($from: $breakpoint) {
+		    background: #000;
+		    opacity: .5;
+		}
+	}
+}
+
+// example of a gradient overlay
 %u-overlayPurpleGradient {
 	@extend %u-overlayDefault;
 

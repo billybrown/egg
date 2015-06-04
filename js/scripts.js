@@ -1,20 +1,42 @@
-// put your javascripts here. Added some starter stuff
+/*global $:false, jQuery:false, document:false, window:false, console:false, setTimeout:false, enquire:false, Waypoint:false, sticky: false */
 
-/*global $:false, document:false, window:false, console:false, setTimeout:false, enquire:false, Waypoint:false, sticky: false */
+jQuery( document ).ready( function( $ ) {
+	"use strict";
 
-// (function(){
-// 	"use strict";
+	var Engine = {
+		ui : {
 
-// 	var Engine = {
+			fitvids : function() {
+				// this makes all videos responsive
+				$(".main").fitVids();
+			},
 
-// 		ui : {
+			offcanvas : function() {
 
-// 			example : function() {
+				var triggerText = '<span class="Offcanvas-triggerText">Menu</span>';
+				var closeText = '<i class="Offcanvas-triggerIcon icon-close"></i>';
 
-// 			}
-// 		}
-// 	};
+				$('#Offcanvas-trigger').click(function() {
+					$('html').toggleClass('is-Offcanvas');
+					if($(this).html() === closeText) {
+						$(this).html(triggerText);
+						$('.PrimaryNav-submenu').slideUp();
+						$('.PrimaryNav-submenuIcon').removeClass('is-open');
+					} else {
+						$(this).html(closeText);
+					}
+				});
 
-// 	Engine.example.names();
+				// this deploys the accordian functionality on the sub menu items in the offcanvas nav
+				$('.PrimaryNav-submenuIcon').click(function() {
+				  $(this).siblings('.PrimaryNav-submenu').slideToggle();
+				  $(this).toggleClass('is-open');
+				});
+			}
+		}
+	};
 
-// })();
+	Engine.ui.fitvids();
+	Engine.ui.offcanvas();
+
+});

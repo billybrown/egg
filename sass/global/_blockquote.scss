@@ -5,7 +5,7 @@
 
 
 blockquote {
-	@extend %title;
+	@extend %u-title;
 	position: relative;
 	padding: $spacing;
 	text-align: center;
@@ -16,7 +16,7 @@ blockquote {
 	}
 
 	cite {
-		@extend %normalText;
+		@extend %u-text;
 
 		&:before {
 			content: '— ';

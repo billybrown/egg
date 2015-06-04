@@ -7,11 +7,11 @@
 a,
 .u-fakeLink {
 	color: $link-color;
-	text-decoration: none;
+	text-decoration: underline;
 
 	&:hover {
-		text-decoration: none;
+		text-decoration: underline;
 		cursor: pointer;
-		color: $link-hover-color;
+		color: $link-colorHover;
 	}
 }

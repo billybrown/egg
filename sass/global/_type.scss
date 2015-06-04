@@ -13,7 +13,7 @@
 }
 
 %u-smallText {
-	font: 400 16px/26px $sans-serif;
+	font: 400 15px/22px $sans-serif;
 }
 
 %u-largeText {
@@ -21,7 +21,13 @@
 }
 
 %u-tinyText {
-	font: 400 12px/16px $sans-serif;
+	font: 600 12px/16px $sans-serif;
+}
+
+%u-blockText {
+	font: 600 14px/22px $sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 %u-subduedText {
@@ -31,10 +37,10 @@
 
 // some utility classes for easy deployment of these text types
 .u-text { @extend %u-text; }
-.u-textSmall { @extend %u-smallText; }
-.u-textLarge { @extend %u-largeText; }
-.u-textTiny { @extend %u-tinyText; }
-.u-textSubdued { @extend %u-subduedText; }
+.u-smallText { @extend %u-smallText; }
+.u-largeText { @extend %u-largeText; }
+.u-tinyText { @extend %u-tinyText; }
+.u-blockText { @extend %u-blockText; }
 
 
 
@@ -43,19 +49,28 @@
 
 
 %u-title {
-	font: 700 21px/28px $sans-serif;
+	font: 700 21px/28px $titles;
 }
 
 %u-smallTitle {
-	font: 400 26px/32px $titles;
+	font: 700 26px/32px $titles;
 }
 
 %u-largeTitle {
-	font: 400 30px/34px $titles;
+	font: 700 26px/32px $titles;
 
 	@include mq($from: middleschool) {
-		font-size: 45px;
-		line-height: 46px;
+		font-size: 30px;
+		line-height: 34px;
+	}
+}
+
+%u-giantTitle {
+	font: 700 30px/34px $titles;
+
+	@include mq($from: middleschool) {
+		font-size: 46px;
+		line-height: 53px;
 	}
 }
 
@@ -64,14 +79,16 @@
 .u-title { @extend %u-title; }
 .u-smallTitle { @extend %u-smallTitle; }
 .u-largeTitle { @extend %u-largeTitle; }
+.u-giantTitle { @extend %u-giantTitle; }
 
 
 
 /////////////////////////////////////-+++-
-// Buttons
+// Buttons and tags
 
 
 %u-buttonDefault {
+	border: none;
 	background: $link-color;
 	color: #fff;
 
@@ -90,19 +107,28 @@
 	border-radius: 2px;
 }
 
-.u-button { @extend %u-button; }
-
-.u-buttonLarge {
+%u-largeButton {
 	@extend %u-buttonDefault;
 	@extend %u-title;
-	padding: 11px 18px;
+	padding: 11px 28px;
 	border-radius: 3px;
 }
 
-.u-buttonSmall {
+%u-smallButton {
 	@extend %u-buttonDefault;
 	@extend %u-text;
 	padding: 3px 6px;
 	border-radius: 2px;
 }
+
+%u-tag {
+	@extend %u-buttonDefault;
+	@extend %u-blockText;
+	display: inline-block;
+}
+
+.u-button { @extend %u-button; }
+.u-smallButton { @extend %u-smallButton; }
+.u-largeButton { @extend %u-largeButton; }
+.u-tag { @extend %u-tag; }
 

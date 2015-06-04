@@ -1,8 +1,14 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
-// Checkboxes and Radio
+// Checkboxes and Radio form elements
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
+
+$checkbox-border: #d1d1d1;
+$checkbox-background: #f8f8f8;
+$checkbox-color: $link-color;
+$checkbox-icon: "\f00c";
+$radio-icon: "\f111";
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -20,23 +26,23 @@ label input[type="radio"] + span {
 
 input[type="checkbox"] + span:after,
 input[type="radio"] + span:after{
-  @extend %iconfont;
+  @extend %icomoon;
   content: '';
   position: absolute;
   left: 0;
   top: 4px;
   text-align: center;
-  border: 1px solid #d1d1d1;
-  background: #f8f8f8;
+  border: 1px solid $checkbox-border;
+  background: $checkbox-background;
   margin-right: 8px;
   width: 18px;
   height: 18px;
-  color: $link-color;
+  color: $checkbox-color;
 }
 
 input[type="checkbox"]:checked + span,
 input[type="radio"]:checked + span {
-  color: $link-color;
+  color: $checkbox-color;
 }
 
 input[type="checkbox"] + span:after {
@@ -44,7 +50,7 @@ input[type="checkbox"] + span:after {
 }
 
 input[type="checkbox"]:checked + span:after {
-  content: "\f00c";
+  content: $checkbox-icon;
   font-size: 13px;
   padding: 1px 0 0 2px;
 }
@@ -54,7 +60,7 @@ input[type="radio"] + span:after {
 }
 
 input[type="radio"]:checked + span:after {
-  content: "\f111";
+  content: $radio-icon;
   font-size: 12px;
   padding: 2px 0 0 3px;
 }

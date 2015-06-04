@@ -5,14 +5,50 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
+
+
+/////////////////////////////////////-+++-
+// Default Teaser style
+
 .Teaser {
-	
+	max-width: 380px;
+	margin-right: auto;
+	margin-left: auto;	
 }
 
+
+
+/////////////////////////////////////-+++-
+// Teaser fields
+
+
 .Teaser-title {
-	@extend %Title;
+	@extend %u-title;
 }
 
 .Teaser-summary {
-	@extend %TextSmall;
+	@extend %u-smallText;
+}
+
+
+
+/////////////////////////////////////-+++-
+// Teaser variants
+
+
+.Teaser.v-horizontal {
+	@extend %u-clearfix;
+	max-width: none;
+
+	.Teaser-imageGroup {
+		float: right;
+		width: 40%;
+		max-width: 200px;
+		margin: 0 0 10px 40px;
+		display: none;
+
+		@include mq($from: middleschool) {
+			display: block;
+		}
+	}	
 }

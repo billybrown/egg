@@ -7,20 +7,29 @@
 
 // logo in the header
 
-$Logo-width: 100px;
-$Logo-height: 50px;
+$Logo-width: 75px;
+$Logo-height: 111px;
+
+$Logo-smallWidth: 50px;
+$Logo-smallHeight: 74px;
+
 $Logo-fileName: 'logo';
 
 .Logo {
 	display: block;
 	position: relative;
-	background: transparent url('../img/$Logo-fileName.svg') center center no-repeat;
-	width: $Logo-width;
-	height: $Logo-height;
-	background-size: $Logo-width $Logo-height;
+	background: $gray url('img/#{$Logo-fileName}.png') center center no-repeat;
+	width: $Logo-smallWidth;
+	height: $Logo-smallHeight;
+	background-size: $Logo-smallWidth $Logo-smallHeight;
+	
+	@include mq($from: offcanvas) {
+		width: $Logo-width;
+		height: $Logo-height;
+		background-size: $Logo-width $Logo-height;	
+	}
 
 	.no-svg & {
-		background-image: url('../img/$Logo-fileName.png');
+		background-image: url('img/#{$Logo-fileName}.png');
 	}
 }
-

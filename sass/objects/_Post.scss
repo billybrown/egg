@@ -11,5 +11,11 @@
 }
 
 .Post-title {
-	@extend %TitleLarge;
+	@extend %u-giantTitle;
+}
+
+.Post-header {
+}
+
+.Post-body {
 }

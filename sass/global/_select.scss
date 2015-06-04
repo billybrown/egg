@@ -4,14 +4,19 @@
 
 
 
+$select-borderColor: $gray;
+$select-borderColorHover: $link-color;
+$select-background: #fff;
+
+
 .u-select {
   position: relative;
   display: block;
   overflow: hidden;
   width: 100%;
   max-width: 100%;
-  background: #fff;
-  border: 1px solid $gray;
+  background: $select-background;
+  border: 1px solid $select-borderColor;
   border-radius: 24px;
   padding: 5px 16px 6px;
   font-size: 15px;

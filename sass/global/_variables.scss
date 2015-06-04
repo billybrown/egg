@@ -7,11 +7,13 @@
 /////////////////////////////////////-+++
 // fonts
 
+
 $open-sans: 'Open Sans';
 
 $serif: $georgia;
 $sans-serif : $open-sans, $helvetica;
-$titles: $serif;
+$titles: $sans-serif;
+
 
 
 /////////////////////////////////////-+++
@@ -26,13 +28,12 @@ $background: snow;
 $text: #333;
 
 $link-color: dodgerblue;
-$link-hover-color: darken($link-color, 10%);
+$link-colorHover: darken($link-color, 10%);
 
 
 
 /////////////////////////////////////-+++
 // breakpoints
-
 
 
 $mq-breakpoints: (
@@ -49,12 +50,15 @@ $mq-breakpoints: (
 $mq-static-breakpoint: masters;
 
 
+
 /////////////////////////////////////-+++
 // Misc. values
 
 
 $comp-max-width: 1600px; // if working from a PSD or other static comp
+$site-max-width: 1542px;
 $page-max-width: 1200px;
+
 $page-element-spacing: 20px;
 $spacing: 20px;
 $grid-gutter: $spacing;
