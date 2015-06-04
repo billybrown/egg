@@ -1,13 +1,13 @@
 # Egg CSS Naming Conventions
 
-_Much of this has been taken and modified from [SUIT CSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) and [this article](https://medium.com/@drublic/css-naming-conventions-less-rules-more-fun-12af220e949b)_
+_Much of this has been taken and modified from [SUIT CSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) and [this article](https://medium.com/@drublic/css-naming-conventions-less-rules-more-fun-12af220e949b)._
 
 Egg relies on _structured class names_ and _meaningful hyphens_ (i.e., not
 using hyphens merely to separate words). This helps to work around the current
 limits of applying CSS to the DOM (i.e., the lack of style encapsulation), and
 to better communicate the relationships between classes.
 
-The primary architectural division is between **components**, **component varients**, **component descendents**, **utilities**, and **state indicators**.
+The primary architectural division is between **components**, **variants**, **descendents**, **utilities**, and **state indicators**.
 
 **Table of contents**
 
@@ -40,7 +40,7 @@ HTML/CSS uses pascal case.
 
 
 <a name="Descendents"></a>
-### Descendents
+## Descendents
 
 A component descendent is a class that is attached to a descendent node of a
 component. It's responsible for applying presentation directly to the
@@ -65,7 +65,7 @@ then the descendent name written in camel case.
 
 
 <a name="Variants"></a>
-### Variants
+## Variants
 
 A variant is a class that modifies the presentation of the base
 component in some form (e.g., for a certain configuration of the component).
@@ -119,9 +119,12 @@ utilities can be used to create a simple structure within a component.
 
 
 <a name="is-stateOfComponent"></a>
-### ComponentName.is-stateOfComponent
+## State Indicators
 
 Use `is-stateName` to reflect changes to a component's state coming from javascript. 
+
+Syntax: `is-stateOfComponent`
+
 The state name must be camel case. **Never style these classes directly; 
 they should always be used as an adjoining class.**
 
