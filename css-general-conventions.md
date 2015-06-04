@@ -2,16 +2,14 @@
 
 The following are some guidelines to writing CSS inside of Egg.
 
-
-## CSS general conventions
-
 * one CSS declaraction per line (except for rare, special circumstances)
 * one empty line after each CSS declaration
 * one CSS element per line (except for rare, special circumstances)
 * one new line at the end of the file
 
 
-# CSS commenting conventions
+
+## CSS Commenting Conventions
 
 This is at the top of a css file to explain what it is:
 
