@@ -1,4 +1,4 @@
-# Getting Started with Egg
+# Getting Started with Grunt and Egg
 
 Egg uses a build process using Grunt (which is built with node.js) to compile our front end code.
 
@@ -19,7 +19,7 @@ Every time you run a grunt task, the first task that gets run is a node version 
 
 
 
-## Grunt tasks available
+## Grunt Tasks Available
 
 **grunt** - Will check to make sure your running the right version of node.
 
