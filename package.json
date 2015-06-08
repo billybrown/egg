@@ -21,7 +21,6 @@
     "grunt-csso": "^0.7.1",
     "grunt-dr-svg-sprites": "^0.9.15",
     "grunt-favicons": "^0.7.0",
-    "grunt-node-version": "^1.0.0",
     "grunt-sass": "^1.0.0",
     "jit-grunt": "^0.9.1",
     "load-grunt-configs": "^0.4.3",

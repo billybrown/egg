@@ -15,13 +15,8 @@ Egg uses a build process using Grunt (which is built with node.js) to compile ou
 * Now in the theme root, run: 'npm install' - this will download all the node modules needed run your build process locally. It will create and put them inside a directoy called "node_modules"
 * Now run, 'grunt build' to build all your front-end files. 
 
-Every time you run a grunt task, the first task that gets run is a node version manager task. This will make sure you are using the right version of node (specified in the package.json file). If you don't have that version installed, NVM will tell you to download it. NVM will handle switching from different versions of node (the same way RVM works), so it is OK to have more then one version of node on your machine.
-
-
 
 ## Grunt Tasks Available
-
-**grunt** - Will check to make sure your running the right version of node.
 
 **grunt css** - Will compile your SCSS into CSS.
 

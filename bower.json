@@ -1,0 +1,22 @@
+{
+  "name": "egg",
+  "version": "0.0.0",
+  "homepage": "https://github.com/billybrown/egg",
+  "authors": [
+    "Bill Brown <bill@echo.co>"
+  ],
+  "description": "A starting point for web projects",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "fitvids": "~1.1.0"
+  }
+}

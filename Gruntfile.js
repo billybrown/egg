@@ -20,14 +20,13 @@ module.exports = function(grunt) {
   grunt.initConfig(configs);
 
 
-  grunt.registerTask('default', ['node_version']);
-  grunt.registerTask('css', ['node_version', 'sass', 'autoprefixer', 'cssmin']);
-  grunt.registerTask('javascript', ['node_version', 'jshint:custom']);
-  grunt.registerTask('images', ['node_version', 'imagemin']);
-  grunt.registerTask('sprites', ['node_version', 'dr-svg-sprites']);
+  grunt.registerTask('default', ['css']);
+  grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('javascript', ['jshint:custom']);
+  grunt.registerTask('images', ['imagemin']);
+  grunt.registerTask('sprites', ['dr-svg-sprites']);
 
   grunt.registerTask('build', [
-    'node_version',
     'jshint:grunt',
     'jshint:custom',
     'imagemin',

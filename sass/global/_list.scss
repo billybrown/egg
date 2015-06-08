@@ -34,13 +34,10 @@
 
 	> li {
 
-		&:after {
-			content: ',';
-		}
+		&:not(:last-child) {
 
-		&:last-child {
 			&:after {
-				display: none;
+				content: ',';
 			}
 		}
 	}
@@ -51,14 +48,11 @@
 	@extend %u-inlineList;
 	
 	li {
-		border-top: 1px solid $gray;
-		margin-top: 30px;
-		padding-top: 30px;
 
-		&:first-child {
-			border-top: none;
-			margin-top: 0;
-			padding-top: 0;
+		&:not(:first-child) {
+			border-top: 1px solid $gray;
+			margin-top: 30px;
+			padding-top: 30px;
 		}
 	}
 }
