@@ -47,7 +47,7 @@ label {
   @extend %u-blockText;
 }
 
-.InputGroup-label {
+.InputGroup__label {
   display: block;
   margin-bottom: 3px;
 }
@@ -58,7 +58,7 @@ label {
   }
 }
 
-.InputLayout.v-absoluteSubmit {
+.InputLayout--absoluteSubmit {
   position: relative;
 
   .InputGroup input {

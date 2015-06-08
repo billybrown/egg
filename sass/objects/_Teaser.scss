@@ -22,11 +22,11 @@
 // Teaser fields
 
 
-.Teaser-title {
+.Teaser__title {
 	@extend %u-title;
 }
 
-.Teaser-summary {
+.Teaser__summary {
 	@extend %u-smallText;
 }
 
@@ -36,11 +36,11 @@
 // Teaser variants
 
 
-.Teaser.v-horizontal {
+.Teaser--horizontal {
 	@extend %u-clearfix;
 	max-width: none;
 
-	.Teaser-imageGroup {
+	.Teaser__imageGroup {
 		float: right;
 		width: 40%;
 		max-width: 200px;

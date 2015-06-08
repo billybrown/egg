@@ -10,12 +10,12 @@ $Offcanvas-width: 80%;
 $Offcanvas-animation: 0.4s;
 $Offcanvas-background: $gray;
 
-#Offcanvas-wrapper1 {
+#Offcanvas__wrapper1 {
   overflow: hidden;
   position: relative;
 }
 
-#Offcanvas-wrapper2 {
+#Offcanvas__wrapper2 {
   transition: $Offcanvas-animation ease;
 
   .js.is-Offcanvas & {
@@ -27,7 +27,7 @@ $Offcanvas-background: $gray;
   }
 }
 
-#Offcanvas-content {
+#Offcanvas__content {
   display: block;
 	background: $Offcanvas-background;
 
@@ -56,8 +56,8 @@ $Offcanvas-background: $gray;
 }
 
 // hide the dropshadow and the trigger button on larger screens
-.Offcanvas-trigger,
-#Offcanvas-content:before {
+.Offcanvas__trigger,
+#Offcanvas__content:before {
     @include mq($from: offcanvas) {
       display: none;
     }  
