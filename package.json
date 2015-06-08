@@ -1,13 +1,10 @@
 {
   "name": "egg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A starting point for web projects",
   "main": "build/index.html",
   "author": "Bill Brown",
   "homepage": "https://b.illbrown.com/egg",
-  "engines": {
-    "node": "~0.12.2"
-  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.0",
