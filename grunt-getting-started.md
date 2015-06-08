@@ -15,6 +15,7 @@ Egg uses a build process using Grunt (which is built with node.js) to compile ou
 * Now in the theme root, run: 'npm install' - this will download all the node modules needed run your build process locally. It will create and put them inside a directoy called "node_modules"
 * Now run, 'grunt build' to build all your front-end files. 
 
+**Note:** Since grunt relies on node.js, we need to document what version of node.js we are using locally, in order to help debug fringe issues. We are using a tool called [node version manager](https://github.com/creationix/nvm) to document, and install the project specific version. There is a file called .nvmrc in the root of the theme that indicates what version we are using. Everything will probably work fine using a different version of node, but if you are getting errors, this would be a good place to start.
 
 ## Grunt Tasks Available
 
