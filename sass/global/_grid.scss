@@ -19,7 +19,7 @@ $grid: 60px;
     margin-left: -$grid;
   }
 
-  .u-gridCol {
+  & > .u-gridCol {
     display: inline-block;
     margin-right: -.25em;
     min-height: 1px;
@@ -39,7 +39,7 @@ $grid: 60px;
 
 // 2up grid
 .u-grid2 {
-  .u-gridCol {
+  & > .u-gridCol {
     margin-bottom: $grid;
 
     @include mq($from: highschool) {
