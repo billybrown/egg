@@ -44,7 +44,8 @@ $mq-breakpoints: (
     college:    1000px,
     offcanvas: 	1150px,
     fifthyear:    1150px,
-    masters:    1250px
+    masters:    1250px,
+    doctorate: 1600px
 ) !default;
 
 $mq-static-breakpoint: masters;

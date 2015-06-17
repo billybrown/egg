@@ -32,9 +32,9 @@ textarea {
 
 input[type="submit"],
 button {
-  @extend %u-button;
   width: auto;
   background: transparent;
+  @extend %u-button;
 }
 
 

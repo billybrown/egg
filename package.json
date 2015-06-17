@@ -7,7 +7,7 @@
   "homepage": "https://b.illbrown.com/egg",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^3.0.0",
+    "grunt-autoprefixer": "^3.0.3",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "^0.8.0",
@@ -15,7 +15,6 @@
     "grunt-contrib-imagemin": "^0.9.4",
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-csso": "^0.7.1",
     "grunt-dr-svg-sprites": "^0.9.15",
     "grunt-favicons": "^0.7.0",
     "grunt-sass": "^1.0.0",
