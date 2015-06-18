@@ -9,7 +9,7 @@ module.exports.tasks = {
         sourceMap: true
       },
       files: {
-        'css/main.css': 'sass/main.scss'
+        'build/css/main.css': 'sass/main.scss'
       }
     }
   },
@@ -29,7 +29,7 @@ module.exports.tasks = {
       map: true
     },
     custom: {
-      src: 'css/*.css'
+      src: 'build/css/*.css'
     }
   },
 
@@ -49,10 +49,10 @@ module.exports.tasks = {
     },
     target: {
       files: {
-        'css/main.css': ['css/main.css']
+        'build/css/main.min.css': ['build/css/main.css']
       }
     }
-  }
+  },
 
   // this is buggy, removing for now
   // csslint: {
@@ -99,8 +99,8 @@ module.exports.tasks = {
   //   }
   // },
   
-  // clean: {
-  //   css: ['css/main.css']
-  // }
+  clean: {
+    css: ['build/css/main.css']
+  }
 
 };

@@ -10,7 +10,7 @@ module.exports.tasks = {
         basic: {
             options: {
                 spriteElementPath: "img/svg",
-                spritePath: "img/sprite.svg",
+                spritePath: "build/img/sprite.svg",
                 cssPath: "sass/sprites.scss",
                 prefix: "svg",
                 layout: "vertical"

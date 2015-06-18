@@ -20,4 +20,8 @@ module.exports.tasks = {
     //   }
     // }
 
+    clean: {
+        build: ['build']
+    }
+
 };

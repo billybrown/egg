@@ -11,7 +11,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="build/css/main.min.css">
 
         <link rel="icon" type="image/png" sizes="64x64" href="favicons/favicon.png">
         <!--[if IE]><link rel="shortcut icon" href="favicons/favicon.ico"><![endif]-->
@@ -23,6 +23,8 @@
           takanaClient.run({host: 'localhost:48626'});
         </script>
         -->
+
+        <script src="build/js/modernizr.js"></script>
 
     </head>
 
@@ -48,6 +50,13 @@
             <div class="u-constrained">
             </div>
         </footer>
+
+
+        <!-- jquery -->
+        <script src="build/js/jquery.min.js"></script>
+
+        <!-- Minified and Concatenated Vendor and Custom Scripts -->
+        <script src="build/js/plugins.min.js"></script>
 
     </body>
 </html>

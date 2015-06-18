@@ -15,8 +15,13 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
+  "Dependencies": {
     "jquery": "~2.1.4",
-    "fitvids": "~1.1.0"
+    "fitvids": "~1.1.0",
+    "waypoints": "~3.1.1",
+    "enquire": "~2.1.2",
+    "matchmedia": "~0.2.0",
+    "matchHeight": "~0.6.0",
+    "modernizr": "~2.8.3"
   }
 }
