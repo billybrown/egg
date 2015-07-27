@@ -5,6 +5,18 @@
 
 
 /////////////////////////////////////-+++-
+// Definition List
+
+
+dt {
+	font-weight: 600;
+}
+
+dd {
+	margin-bottom: $spacing * .5;
+}
+
+/////////////////////////////////////-+++-
 // Custom Lists
 
 // inline list
@@ -38,6 +50,7 @@
 	@extend %u-inlineList;
 	
 	li {
+		display: block;
 
 		&:not(:first-child) {
 			border-top: 1px solid $gray;

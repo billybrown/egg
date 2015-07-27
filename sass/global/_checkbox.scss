@@ -7,8 +7,8 @@
 $checkbox-border: #d1d1d1;
 $checkbox-background: #f8f8f8;
 $checkbox-color: $link-color;
-$checkbox-icon: "\f00c";
-$radio-icon: "\f111";
+$checkbox-icon: "X";  // <- you should replace this with a legit icon
+$radio-icon: "X";  // <- you should replace this with a legit icon
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -21,7 +21,7 @@ label input[type="radio"] + span {
   padding-left: 31px;
   display: block;
   margin-bottom: 9px;
-  padding-top: 8px;
+  padding-top: 3px;
 }
 
 input[type="checkbox"] + span:after,
@@ -52,7 +52,7 @@ input[type="checkbox"] + span:after {
 input[type="checkbox"]:checked + span:after {
   content: $checkbox-icon;
   font-size: 13px;
-  padding: 1px 0 0 2px;
+  padding: 0px 0 0 2px;
 }
 
 input[type="radio"] + span:after {
@@ -62,5 +62,5 @@ input[type="radio"] + span:after {
 input[type="radio"]:checked + span:after {
   content: $radio-icon;
   font-size: 12px;
-  padding: 2px 0 0 3px;
+  padding: 0 0 0 2px;
 }

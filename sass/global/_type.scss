@@ -37,7 +37,7 @@
 
 // some utility classes for easy deployment of these text types
 .u-text { @extend %u-text; }
-.u-smallText { @extend %u-smallText; }
+.u-smallText, small { @extend %u-smallText; }
 .u-largeText { @extend %u-largeText; }
 .u-tinyText { @extend %u-tinyText; }
 .u-blockText { @extend %u-blockText; }
@@ -53,7 +53,7 @@
 }
 
 %u-smallTitle {
-	font: 700 26px/32px $titles;
+	font: 700 17px/24px $titles;
 }
 
 %u-largeTitle {
@@ -81,6 +81,14 @@
 .u-largeTitle { @extend %u-largeTitle; }
 .u-giantTitle { @extend %u-giantTitle; }
 
+// deploy to heading elements
+h1 { @extend %u-giantTitle; }
+h2 { @extend %u-largeTitle; }
+h3 { @extend %u-title; }
+h4 { @extend %u-smallTitle; }
+h5 { @extend %u-blockText; }
+h6 { @extend %u-blockText; }
+
 
 
 /////////////////////////////////////-+++-
@@ -91,6 +99,7 @@
 	border: none;
 	background: $link-color;
 	color: #fff;
+	text-decoration: none;
 
 	&:hover {
 		background: darken($link-color, 10%);
@@ -127,8 +136,8 @@
 	display: inline-block;
 }
 
-.u-button { @extend %u-button; }
-.u-smallButton { @extend %u-smallButton; }
-.u-largeButton { @extend %u-largeButton; }
-.u-tag { @extend %u-tag; }
+.u-button a { @extend %u-button; }
+.u-smallButton a { @extend %u-smallButton; }
+.u-largeButton a { @extend %u-largeButton; }
+.u-tag a { @extend %u-tag; }
 

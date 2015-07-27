@@ -1,46 +1,84 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 // Pattern Library
 /////////////////////////////////////-+++-/////////////////////////////////////////
+// styleguide specific
 
+/*------------------------------------*\
+    $MAIN CONTENT AREA
+\*------------------------------------*/
 
-.Page-patternLibrary {
-	.SiteMain > .u-constrained {
-		max-width: none;
-		padding-right: 0;
-		padding-left: 0;
+.sg-main {
+	padding: 15px 40px 40px;
+}
+
+.sg-label {
+	font-size: 11px;
+	line-height: 10px !important;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.sg-fonts {
+	li {
+		margin-bottom: 30px;
 	}
 }
 
-.PatternLibrary {
+.sg-colors li {
+	width: 8em !important;
+	border: none !important;
+}
 
-	& > li {
-		margin-bottom: $spacing * 2;		
+.sg-pattern-head {
+	padding: 0 !important;
+	font-size: 24px !important;
+	border-bottom-color: #aaa !important;
+	margin: 20px 0 !important;
 
-		& > ul > li {
-			margin-bottom: $spacing;
+	& > h3 {
+		margin: 0;
+	}
 
-			& > label:first-child {
-				display: block;
-				padding-bottom: 6px;
-			}
-		}
-
-		& > label,
-		& > .u-constrained > label {
-			border-bottom: 1px solid $gray;
-			display: block;
-			text-align: center;
-			padding: 0 0 10px;
-			margin: 0 0 $spacing;
-		}
+	a {
+		font-size: 10px;
+		line-height: 10px;
+		margin: 0;
+		padding: 0;
+		color: #fff !important;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 600;
+		padding: 5px 8px;
+		background: #aaa;
+		display: inline-block !important;
 	}
 }
 
-.PatternLibrary-grid {
-	.u-gridCol span {
+.sg-grids {
+	text-align: center;
+	& > * {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	& > *:nth-child(odd) {
+		background: #ccc;
+	}
+	& > *:nth-child(even) {
+		background: #eee;
+	}
+}
+
+.sg-layoutDemo {
+	.u-gridCol > span {
 		display: block;
-		padding: 3px 0;
+		padding: 10px;
 		text-align: center;
-		background: $gray;
+	}
+	.u-gridCol:nth-child(odd) > span {
+		background: #bbb;
+	}
+	.u-gridCol:nth-child(even) > span {
+		background: #ddd;
 	}
 }

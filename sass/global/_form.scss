@@ -7,16 +7,20 @@
 
 $placeholder-default: darken($gray, 25%);
 
-// default input styles
-input,
-textarea {
-  @extend %u-smallText;
+%u-defaultInput {
   line-height: 22px;
-  background: none;
+  background: #fff;
   border: 1px solid $gray;
   border-radius: 2px;
   padding: 9px 11px 8px;
   -webkit-appearance: none;
+}
+
+// default input styles
+input,
+textarea {
+  @extend %u-smallText;
+  @extend %u-defaultInput;
   width: 100%;
 
 	&::-webkit-input-placeholder { color: $placeholder-default; }
@@ -88,3 +92,24 @@ label {
   }
 }
 
+
+/////////////////////////////////////-+++-
+// Styles for advanced html5 form elements
+
+
+input[type="color"],
+input[type="range"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="datetime-local"] {
+  width: auto;
+  display: block;
+}
+
+input[type="color"] {
+  width: 50px;
+  height: 50px;
+}

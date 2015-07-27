@@ -15,25 +15,20 @@ $select-background: #fff;
   overflow: hidden;
   width: 100%;
   max-width: 100%;
+  @extend %u-defaultInput;
   background: $select-background;
-  border: 1px solid $select-borderColor;
-  border-radius: 24px;
-  padding: 5px 16px 6px;
-  font-size: 15px;
-  line-height: 28px;
-  -webkit-appearance: none;
-  width: 100%;
 
   &:after {
     background: none;
     content: ">";
     color: $link-color;
-    font-size: 8px;
+    font-size: 19px;
     position: absolute;
     right: 14px;
-    top: 17px;
+    top: 10px;
     z-index: 1;
     pointer-events: none; // This hack makes the select behind the arrow clickable in some browsers
+    transform: rotate(90deg);
   }
    
   // Hover style - tricky because we're clipping the overflow

@@ -25,9 +25,14 @@ $grid: 60px;
     min-height: 1px;
     vertical-align: top;
     text-align: left;
+    margin-bottom: ($grid * .85);
 
     @include mq($from: highschool) {
       padding-left: $grid;
+    }
+
+    img {
+      width: 100%;
     }
   }
 }
@@ -40,14 +45,39 @@ $grid: 60px;
 // 2up grid
 .u-grid2 {
   & > .u-gridCol {
-    margin-bottom: $grid;
-
     @include mq($from: highschool) {
       width: 50%;
     }
+  }
+}
 
-    img {
-      width: 100%;
+// 3up grid
+.u-grid3 {
+  & > .u-gridCol {
+    @include mq($from: highschool) {
+      width: 33.3333%;
+    }
+  }
+}
+
+// 4up grid
+.u-grid4 {
+  & > .u-gridCol {
+    @include mq($from: highschool) {
+      width: 25%;
+    }
+  }
+}
+
+.u-noGutter {
+  @include mq($from: highschool) {
+    margin-left: 0;
+  }  
+
+  & > .u-gridCol {
+    margin-bottom: 0;
+    @include mq($from: highschool) {
+      padding-left: 0;
     }
   }
 }

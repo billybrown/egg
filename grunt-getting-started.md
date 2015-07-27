@@ -24,3 +24,14 @@ Egg uses a build process using Grunt (which is built with node.js) to compile ou
 **grunt build** - Will compile your entire front-end.
 
 **grunt watch** - Will continually run until your turn it off. Then when you save SCSS files, it will compile them into CSS.
+
+
+# Getting Started with Pattern Library
+
+Learn More:
+* http://patternlab.io/
+* https://github.com/pattern-lab/edition-php-twig-standard
+
+Run this to generate a new version of the pattern library (from the root of the theme):
+cd patternlab; php core/console --generate
+
