@@ -1,0 +1,42 @@
+<header class="SiteHeader">
+	<div class="HorizontalGroup">
+		<div class="BlueGroup">
+			{% include "molecules-header-top-menu" %}
+			{% include "molecules-header-login" %}
+		</div><!-- /.BlueGroup -->
+		<div class="WhiteGroup">
+			{% include "molecules-header-logo" %}
+			<div class="PrimaryMenuAndSearchGroup">
+				{% include "molecules-header-primary-menu" %}
+				{% include "molecules-header-search" %}
+			</div><!-- /.PrimaryMenuAndSearchGroup -->
+			{% include "molecules-mobilemenu-trigger" %}
+		</div><!-- /.WhiteGroup -->
+	</div><!-- /.HorizontalGroup -->
+
+</header>
+
+<div id="MobileMenu__closeTrigger" class="MobileMenu__closeTrigger"><i class="icon-plus"></i><span>Close Menu</span></div>
+
+<div id='MobileMenu__content' class="MobileMenu__content">
+	<div class="MobileMenu__inside">
+		{% include "molecules-header-primary-menu" %}
+		{% include "molecules-header-icon-menu" %}
+		{% include "molecules-runoff-search" %}
+		{% include "molecules-runoff-menu" %}
+	</div><!-- /.MobileMenu__inside -->
+</div><!-- /.MobileMenu__content -->
+
+<div class="VerticalGroup">
+	<div class="VerticalGroup__wrapper">
+		<div class="RunoffGroup">
+			{% include "molecules-runoff-search" %}
+			{% include "molecules-runoff-menu" %}
+		</div><!-- /.RunoffGroup -->
+		<div class="IconsGroup">
+			{% include "molecules-header-icon-login" %}
+			{% include "molecules-header-icon-menu" %}
+			{% include "molecules-header-icon-more" %}
+		</div><!-- /.IconsGroup -->
+	</div><!-- /.VerticalGroup__wrapper -->
+</div><!-- /.VerticalGroup -->

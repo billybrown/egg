@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }}">
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" />
+
+		<script src="//use.typekit.net/ffc3afz.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?{{ cacheBuster }}" media="all" />
+
+		<link rel="stylesheet" href="../../../../build/css/main.min.css?{{ cacheBuster }}" media="all" />
+		
+		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+		{{ patternLabHead | raw }}
+		<!-- End Pattern Lab -->
+
+
+	<script type="text/javascript" src="http://localhost:48626/takana.js"></script>
+     <script type="text/javascript">
+       takanaClient.run({host: 'localhost:48626'});
+     </script>
+
+        <script src="../../../../build/js/modernizr.js"></script>
+
+	</head>
+	<body class="{{ bodyClass }}">
+
+		<div class="PageWrapper">
+	
