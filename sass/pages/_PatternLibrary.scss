@@ -3,44 +3,67 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
-.Page-patternLibrary {
-	.SiteMain > .u-constrained {
-		max-width: none;
-		padding-right: 0;
-		padding-left: 0;
+// styles for the wrapper
+.sg-main {
+	padding: 15px 0 40px;
+
+	[id^="molecules-"], [id*=" molecules-"],
+	[id^="atoms-"], [id*=" atoms-"], {
+		padding: 0 40px;
 	}
 }
 
-.PatternLibrary {
+// styles for the label
+.sg-pattern-head {
+	padding: 0 !important;
+	font-size: 24px !important;
+	border-bottom-color: #aaa !important;
+	margin: 20px 0 !important;
 
-	& > li {
-		margin-bottom: $spacing * 2;		
+	& > h3 {
+		margin: 0;
+	}
 
-		& > ul > li {
-			margin-bottom: $spacing;
-
-			& > label:first-child {
-				display: block;
-				padding-bottom: 6px;
-			}
-		}
-
-		& > label,
-		& > .u-constrained > label {
-			border-bottom: 1px solid $gray;
-			display: block;
-			text-align: center;
-			padding: 0 0 10px;
-			margin: 0 0 $spacing;
-		}
+	a {
+		font-size: 10px;
+		line-height: 10px;
+		margin: 0;
+		padding: 0;
+		color: #fff !important;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 600;
+		padding: 5px 8px;
+		background: #aaa;
+		display: inline-block !important;
 	}
 }
 
-.PatternLibrary-grid {
-	.u-gridCol span {
+// extra styles for demonstrating grids
+.sg-layoutDemo {
+	.u-gridCol > span {
 		display: block;
-		padding: 3px 0;
+		padding: 10px;
 		text-align: center;
-		background: $gray;
+	}
+	.u-gridCol:nth-child(odd) > span {
+		background: #bbb;
+	}
+	.u-gridCol:nth-child(even) > span {
+		background: #ddd;
 	}
 }
+
+// general styles for each pattern
+.sg-pattern-example {
+	@extend %u-clearfix;
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+/////////////////////////////////////-+++-
+// Styles specific to this pattern library for this theme
+
+

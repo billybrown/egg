@@ -4,39 +4,27 @@ jQuery( document ).ready( function( $ ) {
 	"use strict";
 
 	var Engine = {
-		ui : {
+		
+		InitializePlugin : {
 
-			fitvids : function() {
+			Fitvids : function() {
 				// this makes all videos responsive
 				$(".main").fitVids();
-			},
+			}
+		},
 
-			offcanvas : function() {
+		UI: {
 
-				var triggerText = '<span class="Offcanvas-triggerText">Menu</span>';
-				var closeText = '<i class="Offcanvas-triggerIcon icon-close"></i>';
-
-				$('#Offcanvas-trigger').click(function() {
-					$('html').toggleClass('is-Offcanvas');
-					if($(this).html() === closeText) {
-						$(this).html(triggerText);
-						$('.PrimaryNav-submenu').slideUp();
-						$('.PrimaryNav-submenuIcon').removeClass('is-open');
-					} else {
-						$(this).html(closeText);
-					}
-				});
-
-				// this deploys the accordian functionality on the sub menu items in the offcanvas nav
-				$('.PrimaryNav-submenuIcon').click(function() {
-				  $(this).siblings('.PrimaryNav-submenu').slideToggle();
-				  $(this).toggleClass('is-open');
+			ClassTrigger : function(trigger, receiver, classer) {
+				// trigger the adding and removing of classes. Actual animation is handled by CSS.
+				$(trigger).click(function() {
+					$(receiver).toggleClass(classer);
 				});
 			}
 		}
 	};
 
-	Engine.ui.fitvids();
-	Engine.ui.offcanvas();
+	Engine.InitializePlugin.Fitvids();
+	Engine.UI.ClassTrigger('#MobileMenu__trigger, #MobileMenu__closeTrigger', 'html', 'active-MobileMenu');
 
 });

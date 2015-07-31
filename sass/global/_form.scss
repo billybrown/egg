@@ -7,28 +7,33 @@
 
 $placeholder-default: darken($gray, 25%);
 
-// default input styles
-input,
-textarea {
-  @extend %u-smallText;
+%u-defaultInput {
   line-height: 22px;
-  background: none;
+  background: #fff;
   border: 1px solid $gray;
   border-radius: 2px;
   padding: 9px 11px 8px;
   -webkit-appearance: none;
+}
+
+// default input styles
+input,
+textarea {
+  @extend %u-smallText;
+  @extend %u-defaultInput;
   width: 100%;
 
-	&::-webkit-input-placeholder { color: $placeholder-default; }
-	&:-moz-placeholder { color: $placeholder-default; }
-	&::-moz-placeholder { color: $placeholder-default; }
-	&:-ms-input-placeholder { color: $placeholder-default; }
+  &::-webkit-input-placeholder { color: $placeholder-default; }
+  &:-moz-placeholder { color: $placeholder-default; }
+  &::-moz-placeholder { color: $placeholder-default; }
+  &:-ms-input-placeholder { color: $placeholder-default; }
 
-	&:focus {
-		outline: none;
+  &:focus {
+    outline: none;
     border: 1px dotted $link-color;
-	}
+  }
 }
+
 
 input[type="submit"],
 button {
@@ -37,6 +42,9 @@ button {
   @extend %u-button;
 }
 
+input[type="search"] {
+  box-sizing: border-box; // for some reason normalize has this as 'contenet-box'
+}
 
 
 /////////////////////////////////////-+++-
@@ -58,33 +66,34 @@ label {
   }
 }
 
-.InputLayout--absoluteSubmit {
+.InputGroup--search {
   position: relative;
 
-  .InputGroup input {
-    margin-bottom: 0;
-    padding-right: 51px;
+  input[type="submit"] {
+    @extend %u-absoluteTopRight;
   }
+}
 
-  .InputGroup--submit {
-    display: block;
-    margin-top: 0;
-    position: absolute;
-    bottom: 1px;
-    right: 0;
 
-    button {
-      background: $link-color;
-      color: #fff;
-      font-size: 20px;
-      padding: 8px 11px;
-      border-left: 1px solid $gray;
-      border-radius: 0 2px 2px 0;
 
-      &:hover {
-        background: $link-colorHover;
-      }
-    }
-  }
+/////////////////////////////////////-+++-
+// Styles for advanced html5 form elements
+
+
+input[type="color"],
+input[type="range"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="datetime-local"] {
+  width: auto;
+  display: block;
+}
+
+input[type="color"] {
+  width: 50px;
+  height: 50px;
 }
 

@@ -9,28 +9,38 @@
 /////////////////////////////////////-+++-
 // Base grid class
 
-$grid: 60px;
-
-.u-grid {
-  min-width: 100%;
+@mixin u-grid($media, $gutter) {
   text-align: center;
-
-  @include mq($from: highschool) {
-    margin-left: -$grid;
+  padding: 0;
+  margin: 0;
+  
+  @include mq($from: $media) {
+    margin-left: -$gutter;
   }
 
   & > .u-gridCol {
-    display: inline-block;
-    margin-right: -.25em;
-    min-height: 1px;
-    vertical-align: top;
     text-align: left;
-
-    @include mq($from: highschool) {
-      padding-left: $grid;
+    margin-bottom: ($gutter * .85);
+    min-height: 1px;
+    
+    @include mq($from: $media) {
+      margin-right: -.25em;
+      vertical-align: top;
+      display: inline-block;
+      padding-left: $gutter;
     }
   }
+
+  img {
+    width: 100%;
+  }
 }
+
+
+.u-grid {
+  @include u-grid(0px, 60px);
+}
+
 
 
 /////////////////////////////////////-+++-
@@ -40,15 +50,32 @@ $grid: 60px;
 // 2up grid
 .u-grid2 {
   & > .u-gridCol {
-    margin-bottom: $grid;
-
-    @include mq($from: highschool) {
       width: 50%;
-    }
-
-    img {
-      width: 100%;
-    }
   }
 }
+
+// 3up grid
+.u-grid3 {
+  & > .u-gridCol {
+    width: 33.3333%;
+  }
+}
+
+// 4up grid
+.u-grid4 {
+  & > .u-gridCol {
+    width: 25%;
+  }
+}
+
+.u-noGutter {
+  margin-left: -.25em;
+
+  & > .u-gridCol {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+}
+
+
 
