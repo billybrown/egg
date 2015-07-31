@@ -62,7 +62,7 @@ $card-bg: #fff;
 
 
 /////////////////////////////////////-+++-
-// 3up card layout assuming this structure of markup:
+// Multiple card grid layout assuming this structure of markup:
 //
 //	<div class="Cards3up">
 //		<ul class="u-grid">
@@ -74,7 +74,7 @@ $card-bg: #fff;
 //	</div>
 //
 
-.Cards3up {
+.CardList {
 
 	& > .u-grid {
 		

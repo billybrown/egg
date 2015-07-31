@@ -1,42 +1,19 @@
 &lt;header class=&quot;SiteHeader&quot;&gt;
-	&lt;div class=&quot;HorizontalGroup&quot;&gt;
-		&lt;div class=&quot;BlueGroup&quot;&gt;
-			{% include &quot;molecules-header-top-menu&quot; %}
-			{% include &quot;molecules-header-login&quot; %}
-		&lt;/div&gt;&lt;!-- /.BlueGroup --&gt;
-		&lt;div class=&quot;WhiteGroup&quot;&gt;
-			{% include &quot;molecules-header-logo&quot; %}
-			&lt;div class=&quot;PrimaryMenuAndSearchGroup&quot;&gt;
-				{% include &quot;molecules-header-primary-menu&quot; %}
-				{% include &quot;molecules-header-search&quot; %}
-			&lt;/div&gt;&lt;!-- /.PrimaryMenuAndSearchGroup --&gt;
-			{% include &quot;molecules-mobilemenu-trigger&quot; %}
-		&lt;/div&gt;&lt;!-- /.WhiteGroup --&gt;
-	&lt;/div&gt;&lt;!-- /.HorizontalGroup --&gt;
+	&lt;div class=&quot;u-constrained&quot;&gt;
+		{% include &quot;molecules-header-logo&quot; %}
+		{% include &quot;molecules-header-login&quot; %}
+		{% include &quot;molecules-primary-menu&quot; %}
+		{% include &quot;molecules-primary-search&quot; %}
 
+		{% include &quot;molecules-mobilemenu-open&quot; %}
+		{% include 'molecules-mobilemenu-close' %}
+	&lt;/div&gt;&lt;!-- /.u-constrained --&gt;
 &lt;/header&gt;
-
-&lt;div id=&quot;MobileMenu__closeTrigger&quot; class=&quot;MobileMenu__closeTrigger&quot;&gt;&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;&lt;span&gt;Close Menu&lt;/span&gt;&lt;/div&gt;
 
 &lt;div id='MobileMenu__content' class=&quot;MobileMenu__content&quot;&gt;
 	&lt;div class=&quot;MobileMenu__inside&quot;&gt;
-		{% include &quot;molecules-header-primary-menu&quot; %}
-		{% include &quot;molecules-header-icon-menu&quot; %}
-		{% include &quot;molecules-runoff-search&quot; %}
-		{% include &quot;molecules-runoff-menu&quot; %}
+		{% include &quot;molecules-header-login&quot; %}
+		{% include &quot;molecules-primary-menu&quot; %}
+		{% include &quot;molecules-primary-search&quot; %}
 	&lt;/div&gt;&lt;!-- /.MobileMenu__inside --&gt;
 &lt;/div&gt;&lt;!-- /.MobileMenu__content --&gt;
-
-&lt;div class=&quot;VerticalGroup&quot;&gt;
-	&lt;div class=&quot;VerticalGroup__wrapper&quot;&gt;
-		&lt;div class=&quot;RunoffGroup&quot;&gt;
-			{% include &quot;molecules-runoff-search&quot; %}
-			{% include &quot;molecules-runoff-menu&quot; %}
-		&lt;/div&gt;&lt;!-- /.RunoffGroup --&gt;
-		&lt;div class=&quot;IconsGroup&quot;&gt;
-			{% include &quot;molecules-header-icon-login&quot; %}
-			{% include &quot;molecules-header-icon-menu&quot; %}
-			{% include &quot;molecules-header-icon-more&quot; %}
-		&lt;/div&gt;&lt;!-- /.IconsGroup --&gt;
-	&lt;/div&gt;&lt;!-- /.VerticalGroup__wrapper --&gt;
-&lt;/div&gt;&lt;!-- /.VerticalGroup --&gt;
