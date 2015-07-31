@@ -3,14 +3,7 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
+
 .Pagination {
 	@extend %u-blockText;
-	margin-top: 70px;
-	text-align: center;
-	color: darken($gray, 20%);
-
-	span {
-		display: inline-block;
-		margin: 0 6px;
-	}
 }

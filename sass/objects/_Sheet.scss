@@ -1,0 +1,86 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Sheet
+// Sheets are peices of content that span the whole width of the page and typically
+// have a single background color or image. They cover the page like a blanket or
+// 'sheet'. They often have a header, footer and a list of content of some type
+// in the middle.
+// Usually takes markup that looks somewhat like this:
+//
+//	<section class='Sheet'>
+//		<header class="Sheet__header">
+//			<p>Lorem ipsum</p>
+//		</header>
+//		<div class="Sheet__body">
+//			<ul>
+//				<li>Lorem ipsum</li>
+//				...
+//			</ul>
+//		</div>
+//		<footer class="Sheet__footer">
+//			<p>Lorem ipsum</p>
+//		</footer>
+//	</section>
+//
+// and visually should look something like this:
+//
+//    +-------------------------------------------+
+//    |                                           |
+//    |           Example Sheet Title             |
+//    |                  -----                    |
+//    |                                           |
+//    |          - Teaser Lorem ipsum             |
+//    |          - Teaser Lorem ipsum             |
+//    |          - Teaser Lorem ipsum             |
+//    |                                           |
+//    |                  -----                    |
+//    |                read more                  |
+//    |                                           |
+//    +-------------------------------------------+
+//
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////-+++-
+// Variables
+
+
+$sheet-spacing: $spacing*4.5;
+$sheet-smallspacing: $spacing*3;
+
+
+
+/////////////////////////////////////-+++-
+// Default Sheet style
+
+
+.Sheet {
+	@extend %u-clearfix;
+	position: relative;
+	padding-top: $sheet-smallspacing;
+	padding-bottom: $sheet-smallspacing;
+
+	@include mq($from: 600px) {
+		padding-top: $sheet-spacing;
+		padding-bottom: $sheet-spacing; 
+	}
+}
+
+
+
+/////////////////////////////////////-+++-
+// Sheet Children
+
+
+.Sheet__header,
+.Sheet__footer {
+	// center the stuff in the header and footer
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+
+	p:last-child {
+		margin-bottom: 0; // attempt to avoid unnecessary spacing
+	}
+}

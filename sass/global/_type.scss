@@ -36,10 +36,11 @@
 }
 
 // some utility classes for easy deployment of these text types
-.u-text { @extend %u-text; }
-.u-smallText, small { @extend %u-smallText; }
 .u-largeText { @extend %u-largeText; }
+.u-smallText { @extend %u-smallText; }
+.u-text { @extend %u-text; }
 .u-tinyText { @extend %u-tinyText; }
+
 .u-blockText { @extend %u-blockText; }
 
 
@@ -82,12 +83,12 @@
 .u-giantTitle { @extend %u-giantTitle; }
 
 // deploy to heading elements
-h1 { @extend %u-giantTitle; }
-h2 { @extend %u-largeTitle; }
-h3 { @extend %u-title; }
-h4 { @extend %u-smallTitle; }
+h1 { @extend %u-largeTitle; }
+h2 { @extend %u-title; }
+h3 { @extend %u-smallTitle; }
+h4 { @extend %u-text; font-weight: 900; }
 h5 { @extend %u-blockText; }
-h6 { @extend %u-blockText; }
+h6 { @extend %u-text; }
 
 
 
@@ -100,6 +101,8 @@ h6 { @extend %u-blockText; }
 	background: $link-color;
 	color: #fff;
 	text-decoration: none;
+	transition: background .2s ease;
+	display: inline-block;
 
 	&:hover {
 		background: darken($link-color, 10%);
@@ -136,8 +139,32 @@ h6 { @extend %u-blockText; }
 	display: inline-block;
 }
 
-.u-button a { @extend %u-button; }
-.u-smallButton a { @extend %u-smallButton; }
-.u-largeButton a { @extend %u-largeButton; }
-.u-tag a { @extend %u-tag; }
+// button classes should always go on a wrapper to the <a> tag or
+// an element with the class of 'u-fakeLink' since it is sometimes
+// difficult to put classes on <a> tags in some CMS systems.
+.u-button { a, .u-fakeLink { @extend %u-button; }}
+.u-smallButton { a, .u-fakeLink { @extend %u-smallButton; }}
+.u-largeButton { a, .u-fakeLink { @extend %u-largeButton; }}
 
+
+
+/////////////////////////////////////-+++-
+// Tags and Categories
+
+
+%u-tag {
+	@extend %u-smallText;
+	display: inline-block;
+	background: $gray;
+	padding: 3px 10px;
+	margin: 0 0 2px 0;
+	color: $text;
+}
+
+.TagList {
+	span {
+		@extend %u-tag;
+	}
+}
+
+.u-tag { a, .u-fakeLink { @extend %u-tag; }}

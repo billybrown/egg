@@ -60,8 +60,16 @@ dd {
 	}
 }
 
+%u-basicList {
+	@extend %u-nolist;
+
+	li {
+		margin-bottom: $spacing;
+	}
+}
 
 .u-inlineList { @extend %u-inlineList; }
 .u-commaList { @extend %u-commaList; }
 .u-borderList { @extend %u-borderList; }
+.u-basicList { @extend %u-basicList; }
 

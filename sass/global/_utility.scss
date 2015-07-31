@@ -8,12 +8,16 @@
 // Reset lists
 
 
-.u-noList ul,
-.u-noList,
-.u-menu {
+%u-nolist {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.u-nolist ul,
+.u-nolist,
+.u-menu {
+    @extend %u-nolist;
 }
 
 
@@ -166,6 +170,6 @@
 
 // wrap text with a span with this class if you don't want its content
 // to break onto two lines
-.nobr {
+.u-nobr {
     white-space: nowrap;
 }

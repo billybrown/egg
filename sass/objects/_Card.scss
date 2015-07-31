@@ -1,0 +1,102 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Card
+// This is a grouping of text and images that looks like a card. Vertical in appearance
+// and often shows up in groups. Also often acts as a teaser. Often shows up in a grid
+// of some kind when in groups.
+// Usually takes markup that looks somewhat like this:
+//
+//	<div class="Card">
+//		<div class="Card__imageGroup">
+//			<img src="" alt="" />
+//		</div>
+//		<div class="Card__textGroup">
+//			<p>Lorem ipsum</p>
+//		</div>
+//	</div>
+//
+// and visually should look something like this:
+//
+//     +-------------------+
+//     |                   |
+//     |                   |
+//     |       image       |
+//     |                   |
+//     |                   |
+//     +-------------------+
+//     |                   |
+//     | Card Title        |
+//     |                   |
+//     | More example text |
+//     | for what a 'card' |
+//     | might look like.  |
+//     |                   |
+//     |                   |
+//     +-------------------+
+//
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+/////////////////////////////////////-+++-
+// Variables
+
+
+$card-maxwidth: 370px;
+$card-bg: #fff;
+
+
+
+
+/////////////////////////////////////-+++-
+// Default Card style
+
+.Card {
+	max-width: $card-maxwidth;
+	background: $card-bg;
+	margin-right: auto;
+	margin-left: auto;	
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+/////////////////////////////////////-+++-
+// 3up card layout assuming this structure of markup:
+//
+//	<div class="Cards3up">
+//		<ul class="u-grid">
+//			<li class="u-gridCol">
+//				<div class="Card"></div>
+//			</li>
+//			...
+//		</ul>
+//	</div>
+//
+
+.Cards3up {
+
+	& > .u-grid {
+		
+		// remove grid styles on small screens when everything is stacked
+		@include mq($until: 370px) {
+			margin-left: 0;
+			padding: 0;
+		}
+
+		> .u-gridCol {
+			// remove grid styles on small screens when everything is stacked
+			@include mq($until: 370px) {
+				margin-right: 0;
+				padding-left: 0;
+			}
+
+			// activate 3up layout at a large enough breakpoint
+		    @include mq($from: 1100px) {
+		      width: 33.3333%;
+		      max-width: 370px + 60px; // constrain the width at a certain point and center it
+		      margin-bottom: 0;
+		    }
+		}
+	}
+ }
