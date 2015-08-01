@@ -1,19 +1,18 @@
 <header class="SiteHeader">
 	<div class="u-constrained">
-		{% include "molecules-header-logo" %}
-		{% include "molecules-header-login" %}
-		{% include "molecules-primary-menu" %}
-		{% include "molecules-primary-search" %}
-
-		{% include "molecules-mobilemenu-open" %}
-		{% include 'molecules-mobilemenu-close' %}
+		<div class="SiteHeader__inside">
+			{% include "molecules-header-logo" %}
+			{% include "molecules-primary-menu" %}
+			<div class="MobileMenuTriggers">
+				{% include "molecules-mobilemenu-open" %}
+				{% include 'molecules-mobilemenu-close' %}
+			</div><!-- /.MobileMenuTriggers -->
+		</div><!-- /.SiteHeader__inside -->
 	</div><!-- /.u-constrained -->
 </header>
 
 <div id='MobileMenu__content' class="MobileMenu__content">
 	<div class="MobileMenu__inside">
-		{% include "molecules-header-login" %}
 		{% include "molecules-primary-menu" %}
-		{% include "molecules-primary-search" %}
 	</div><!-- /.MobileMenu__inside -->
 </div><!-- /.MobileMenu__content -->

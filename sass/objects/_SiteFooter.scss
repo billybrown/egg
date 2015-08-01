@@ -6,4 +6,16 @@
 
 
 .SiteFooter {
+	background: $link-color;
+	padding: $spacing*5 0;
+
+	a {
+		color: white;
+	}
+}
+
+.FooterMenu {
+	ul {
+		@extend %u-inlineList;
+	}
 }

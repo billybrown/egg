@@ -1,0 +1,34 @@
+
+.PrimaryMenu {
+	padding-top: $spacing *.5;
+	padding-bottom: $spacing *.5;
+
+	@include mq($from: offcanvas) {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	ul {
+		@extend %u-nolist;
+	}
+
+	li {
+		@extend %u-largeText;	
+
+		@include mq($from: offcanvas) {
+			display: inline-block;
+			padding-left: $spacing;
+		}
+	}
+
+	a {
+		display: block;
+		padding: $spacing * .5 $spacing;
+		color: white;
+
+		@include mq($from: offcanvas) {
+			padding: 0;
+			color: $link-color;
+		}
+	}
+}

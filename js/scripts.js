@@ -25,6 +25,6 @@ jQuery( document ).ready( function( $ ) {
 	};
 
 	Engine.InitializePlugin.Fitvids();
-	Engine.UI.ClassTrigger('#MobileMenu__trigger, #MobileMenu__closeTrigger', 'html', 'active-MobileMenu');
+	Engine.UI.ClassTrigger('#MobileMenu__close, #MobileMenu__open', 'html', 'active-MobileMenu');
 
 });
