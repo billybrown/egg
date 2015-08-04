@@ -1,5 +1,10 @@
 # Getting Started with Grunt and Egg
 
+The first thing you need to do is run 'npm start' in the terminal at the root of the theme. This should download all your node packages, bower dependencies and do an innitial build of your frontend.
+
+If you get errors, read more below.
+
+
 Egg uses a build process using Grunt (which is built with node.js) to compile our front end code.
 
 **Grunt - [gruntjs.com](http://gruntjs.com/)**

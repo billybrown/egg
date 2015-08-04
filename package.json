@@ -6,9 +6,11 @@
   "author": "Bill Brown",
   "homepage": "https://b.illbrown.com/egg",
   "devDependencies": {
+    "bower": "^1.4.1",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.3",
     "grunt-bower-concat": "^0.5.0",
+    "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "^0.8.0",
@@ -25,6 +27,7 @@
     "time-grunt": "^1.2.1"
   },
   "scripts": {
+    "start": "npm install; bower install; grunt build;",
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"
   }
 }
