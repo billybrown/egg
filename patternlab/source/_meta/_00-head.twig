@@ -5,25 +5,26 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width" />
 
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,600|Roboto:400,700,700italic' rel='stylesheet' type='text/css'>
-		<!--
-		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?{{ cacheBuster }}" media="all" />
-		-->
+		<!-- Iconfont css from Icomoon -->
+		<!--<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?{{ cacheBuster }}" media="all" />-->
 
+		<!-- Minified and Concatenated Vendor CSS -->
 		<link rel="stylesheet" href="../../../../build/css/plugins.css?{{ cacheBuster }}" media="all" />
 
+		<!-- Custom CSS -->
 		<link rel="stylesheet" href="../../../../build/css/main.min.css?{{ cacheBuster }}" media="all" />
 		
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 		{{ patternLabHead | raw }}
 		<!-- End Pattern Lab -->
 
+		<!-- Takana (delete before moving to production) -->
+		<script type="text/javascript" src="http://localhost:48626/takana.js"></script>
+		<script type="text/javascript">
+		  takanaClient.run({host: 'localhost:48626'});
+		</script>
 
-     <script type="text/javascript" src="http://localhost:48626/takana.js"></script>
-     <script type="text/javascript">
-       takanaClient.run({host: 'localhost:48626'});
-     </script>
-
+		<!-- Modernizr (must be in the head) -->
         <script src="../../../../build/js/modernizr.js"></script>
 
 	</head>
