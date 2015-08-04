@@ -1,0 +1,68 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Roll
+// Rolls are when multiple sheets (see _sheet.scss) need to be grouped within a common
+// wrapper. The Roll typically spans the full width of the browser window and has a 
+// common color/background. Sometimes a border in between each sheet.
+// Usually takes markup that looks somewhat like this:
+//
+//	<div class="Roll">
+//		<section class='Sheet'> ... </section>
+//		<section class='Sheet'> ... </section>
+//		<section class='Sheet'> ... </section>
+//	</div>
+//
+// and visually should look something like this:
+//
+//    +-------------------------------------------+
+//    |                                           |
+//    |           Example Sheet Title             |
+//    |                  -----                    |
+//    |                                           |
+//    |          - Teaser Lorem ipsum             |
+//    |          - Teaser Lorem ipsum             |
+//    |                                           |
+//    |		---------------------------------     |
+//    |                                           |
+//    |              Sheet Title 2                |
+//    |                  -----                    |
+//    |                                           |
+//    |          - Teaser Lorem ipsum             |
+//    |          - Teaser Lorem ipsum             |
+//    |                                           |
+//    |		---------------------------------     |
+//    |                                           |
+//    |              Sheet Title 3                |
+//    |                  -----                    |
+//    |                                           |
+//    |          - Teaser Lorem ipsum             |
+//    |          - Teaser Lorem ipsum             |
+//    |                                           |
+//    +-------------------------------------------+
+//
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////-+++-
+// Variables
+
+
+$roll-spacing: $spacing*4.5;
+$roll-smallspacing: $spacing*3;
+
+
+
+/////////////////////////////////////-+++-
+// Default Sheet style
+
+
+.Roll {
+	padding: $sheet-smallspacing 0;
+	position: relative;
+
+	@include mq($from: 600px) {
+		padding: $sheet-spacing 0; 
+	}
+}
+

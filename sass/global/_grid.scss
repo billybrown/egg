@@ -29,15 +29,39 @@
       display: inline-block;
       padding-left: $gutter;
     }
-
-    img {
-      width: 100%;
-    }
   }
 
   img {
     width: 100%;
   }
+}
+
+
+@mixin u-gridWrapper($media, $gutter) {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  
+  @include mq($from: $media) {
+    margin-left: -$gutter;
+  }
+}
+
+
+@mixin u-gridCol($media, $gutter) {
+  text-align: left;
+  min-height: 1px;
+  
+  @include mq($from: $media) {
+    margin-right: -.25em;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: $gutter;
+  }
+
+  img {
+    width: 100%;
+  }  
 }
 
 

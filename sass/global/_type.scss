@@ -42,6 +42,11 @@
 	font: 400 17px/30px $sans-serif;
 }
 
+%u-strongText {
+	@extend %u-text;
+	font-weight: 700;
+}
+
 %u-smallText {
 	font: 400 15px/22px $sans-serif;
 }
@@ -66,20 +71,21 @@
 .u-giantTitle { @extend %u-giantTitle; }
 .u-largeTitle { @extend %u-largeTitle; }
 .u-largeText { @extend %u-largeText; }
-.u-title { @extend %u-title; }
+.u-smallTitle { @extend %u-smallTitle; }
 .u-text { @extend %u-text; }
+.u-strongText { @extend %u-strongText; }
 .u-smallText { @extend %u-smallText; }
 .u-blockText { @extend %u-blockText; }
 .u-tinyText { @extend %u-tinyText; }
 .u-subduedText { @extend %u-subduedText; }
 
 // deploy to heading elements
-h1 { @extend %u-largeTitle; }
-h2 { @extend %u-title; }
-h3 { @extend %u-smallTitle; }
-h4 { @extend %u-text; font-weight: 900; }
+h1 { @extend %u-humongousTitle; }
+h2 { @extend %u-giantTitle; }
+h3 { @extend %u-largeTitle; }
+h4 { @extend %u-smallTitle; }
 h5 { @extend %u-blockText; }
-h6 { @extend %u-text; }
+h6 { @extend %u-strongText; }
 
 
 

@@ -21,6 +21,7 @@
     "enquire": "~2.1.2",
     "fitvids": "~1.1.0",
     "matchmedia": "~0.2.0",
-    "matchHeight": "~0.6.0"
+    "matchHeight": "~0.6.0",
+    "flickity": "~1.1.0"
   }
 }

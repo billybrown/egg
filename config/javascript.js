@@ -27,6 +27,9 @@ module.exports.tasks = {
                 'jquery',
                 'modernizr'
             ],
+            mainFiles: {
+                'flickity': ['dist/flickity.pkgd.min.js', 'dist/flickity.min.css']
+            },
             bowerOptions: {
                 relative: false
             }

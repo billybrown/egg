@@ -6,9 +6,11 @@
 $MobileMenu-background: $link-color;
 
 
-.active-MobileMenu .SiteMain {
-	@include mq($until: offcanvas) {
-		position: fixed;
+.active-MobileMenu {
+	.SiteMain {
+		@include mq($until: offcanvas) {
+			position: fixed;
+		}
 	}
 }
 
