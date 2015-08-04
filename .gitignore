@@ -6,8 +6,9 @@
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
 
-# for bower package management
-bower_components
+# for bower package management, only ignore the one at the root of the theme
+# in case other tools rely on having it included in the repo
+/bower_components
 
 # for source maps
 *.css.map 
