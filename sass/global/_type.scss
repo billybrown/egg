@@ -5,8 +5,38 @@
 
 
 /////////////////////////////////////-+++-
-// Regular text styles
+// Text styles
 
+
+%u-humongousTitle {
+	font: 700 30px/34px $titles;
+
+	@include mq($from: middleschool) {
+		font-size: 46px;
+		line-height: 53px;
+	}
+}
+
+%u-giantTitle {
+	font: 700 26px/32px $titles;
+
+	@include mq($from: middleschool) {
+		font-size: 30px;
+		line-height: 34px;
+	}
+}
+
+%u-largeTitle {
+	font: 700 21px/28px $titles;
+}
+
+%u-largeText {
+	font: 400 21px/32px $sans-serif;
+}
+
+%u-smallTitle {
+	font: 700 17px/24px $titles;
+}
 
 %u-text {
 	font: 400 17px/30px $sans-serif;
@@ -16,18 +46,14 @@
 	font: 400 15px/22px $sans-serif;
 }
 
-%u-largeText {
-	font: 400 21px/32px $sans-serif;
-}
-
-%u-tinyText {
-	font: 600 12px/16px $sans-serif;
-}
-
 %u-blockText {
 	font: 600 14px/22px $sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+}
+
+%u-tinyText {
+	font: 600 12px/16px $sans-serif;
 }
 
 %u-subduedText {
@@ -36,51 +62,16 @@
 }
 
 // some utility classes for easy deployment of these text types
-.u-largeText { @extend %u-largeText; }
-.u-smallText { @extend %u-smallText; }
-.u-text { @extend %u-text; }
-.u-tinyText { @extend %u-tinyText; }
-
-.u-blockText { @extend %u-blockText; }
-
-
-
-/////////////////////////////////////-+++-
-// Titles and headers
-
-
-%u-title {
-	font: 700 21px/28px $titles;
-}
-
-%u-smallTitle {
-	font: 700 17px/24px $titles;
-}
-
-%u-largeTitle {
-	font: 700 26px/32px $titles;
-
-	@include mq($from: middleschool) {
-		font-size: 30px;
-		line-height: 34px;
-	}
-}
-
-%u-giantTitle {
-	font: 700 30px/34px $titles;
-
-	@include mq($from: middleschool) {
-		font-size: 46px;
-		line-height: 53px;
-	}
-}
-
-
-// some utility classes for easy deployment of these text types
-.u-title { @extend %u-title; }
-.u-smallTitle { @extend %u-smallTitle; }
-.u-largeTitle { @extend %u-largeTitle; }
+.u-humongousTitle { @extend %u-humongousTitle; }
 .u-giantTitle { @extend %u-giantTitle; }
+.u-largeTitle { @extend %u-largeTitle; }
+.u-largeText { @extend %u-largeText; }
+.u-title { @extend %u-title; }
+.u-text { @extend %u-text; }
+.u-smallText { @extend %u-smallText; }
+.u-blockText { @extend %u-blockText; }
+.u-tinyText { @extend %u-tinyText; }
+.u-subduedText { @extend %u-subduedText; }
 
 // deploy to heading elements
 h1 { @extend %u-largeTitle; }
