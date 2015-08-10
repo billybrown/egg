@@ -1,0 +1,40 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Table grid layout
+// This is 1 of 2 grid layouts in this theme. A table grid is perfect for single
+// row grids. Situations where the grid only spans one row. If it breaks to
+// multiple rows we should use an inline grid - see '_layout-inlineGrid.scss'
+//
+// This layout is based on 'ungrid': http://chrisnager.github.io/ungrid/
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+/////////////////////////////////////-+++-
+// A mixing for applying a table based grid
+// the immediate children of the mixin become the grid columns
+
+@mixin u-tableGrid($breakpoint) {
+  @extend %u-nolist;
+  
+  @include mq($from: $breakpoint) {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+  }
+
+  & > div,
+  & > li {
+
+    @include mq($from: $breakpoint) {
+      display: table-cell;
+      vertical-align: top;
+    }
+  }
+}
+
+
+// default table grid
+
+.u-tableGrid {
+  @include u-tableGrid( mobilemenu );
+}

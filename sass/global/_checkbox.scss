@@ -1,5 +1,16 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 // Checkboxes and Radio form elements
+// The CSS below assumes we will be totally removing the default checkbox/radio styles
+// and creating our own look. It also assumes we're using Icomoon as an iconfont, and
+// loading our 'check' icons from there.
+//
+// They take markup like this:
+//
+//    <label>
+//        <input type="checkbox">
+//        <span>About Us</span>
+//    </label>
+//
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
@@ -7,8 +18,9 @@
 $checkbox-border: #d1d1d1;
 $checkbox-background: #f8f8f8;
 $checkbox-color: $link-color;
-$checkbox-icon: "X";  // <- you should replace this with a legit icon
-$radio-icon: "X";  // <- you should replace this with a legit icon
+$checkbox-icon: "\f00c";
+$radio-icon: "\f111";
+
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -18,30 +30,24 @@ input[type="radio"] {
 label input[type="checkbox"] + span,
 label input[type="radio"] + span {
   position: relative;
-  padding-left: 31px;
+  padding-left: 27px;
   display: block;
-  margin-bottom: 9px;
-  padding-top: 3px;
+  margin-bottom: 4px;
 }
 
 input[type="checkbox"] + span:after,
 input[type="radio"] + span:after{
-  @extend %icomoon;
+  @extend %u-icomoon;
   content: '';
   position: absolute;
   left: 0;
   top: 4px;
   text-align: center;
-  border: 1px solid $checkbox-border;
+  border: none;
   background: $checkbox-background;
   margin-right: 8px;
-  width: 18px;
-  height: 18px;
-  color: $checkbox-color;
-}
-
-input[type="checkbox"]:checked + span,
-input[type="radio"]:checked + span {
+  width: 15px;
+  height: 15px;
   color: $checkbox-color;
 }
 
@@ -51,8 +57,10 @@ input[type="checkbox"] + span:after {
 
 input[type="checkbox"]:checked + span:after {
   content: $checkbox-icon;
-  font-size: 13px;
-  padding: 0px 0 0 2px;
+  font-size: 12px;
+  padding: 1px 0 0 1px;
+  color: black;
+  background: $link-color;
 }
 
 input[type="radio"] + span:after {
@@ -61,6 +69,8 @@ input[type="radio"] + span:after {
 
 input[type="radio"]:checked + span:after {
   content: $radio-icon;
-  font-size: 12px;
-  padding: 0 0 0 2px;
+  font-size: 9px;
+  padding: 3px 0 0 1px;
+  background: $link-color;
+  color: black;
 }

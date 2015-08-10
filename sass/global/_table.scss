@@ -6,15 +6,19 @@
 
 table {
 	background: $gray;
+	width: 100%;
+	text-align: left;
 }
 
 th,
 td {
-	padding: 8px 18px;
-	border-bottom: 1px solid #fff;
-	border-right: 1px solid #fff;
+	padding: 6px 0;
 }
 
-th {
-	background: $gray;
+tr {
+	border-top: 1px solid $gray;
+
+	&:last-child {
+		border-bottom: 1px solid $gray;
+	}
 }

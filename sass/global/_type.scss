@@ -5,22 +5,13 @@
 
 
 /////////////////////////////////////-+++-
-// Text styles
+// Placeholders for all text styles used throughout the site
 
-
-%u-humongousTitle {
-	font: 700 30px/34px $titles;
-
-	@include mq($from: middleschool) {
-		font-size: 46px;
-		line-height: 53px;
-	}
-}
 
 %u-giantTitle {
 	font: 700 26px/32px $titles;
 
-	@include mq($from: middleschool) {
+	@include mq($from: 600px) {
 		font-size: 30px;
 		line-height: 34px;
 	}
@@ -67,25 +58,22 @@
 }
 
 // some utility classes for easy deployment of these text types
-.u-humongousTitle { @extend %u-humongousTitle; }
-.u-giantTitle { @extend %u-giantTitle; }
-.u-largeTitle { @extend %u-largeTitle; }
+.u-giantText { @extend %u-giantTitle; }
 .u-largeText { @extend %u-largeText; }
-.u-smallTitle { @extend %u-smallTitle; }
-.u-text { @extend %u-text; }
 .u-strongText { @extend %u-strongText; }
+.u-text { @extend %u-text; }
 .u-smallText { @extend %u-smallText; }
 .u-blockText { @extend %u-blockText; }
 .u-tinyText { @extend %u-tinyText; }
 .u-subduedText { @extend %u-subduedText; }
 
 // deploy to heading elements
-h1 { @extend %u-humongousTitle; }
-h2 { @extend %u-giantTitle; }
-h3 { @extend %u-largeTitle; }
-h4 { @extend %u-smallTitle; }
+h1 { @extend %u-giantText; }
+h2 { @extend %u-largeText; }
+h3 { @extend %u-strongText; }
+h4 { @extend %u-blockText; }
 h5 { @extend %u-blockText; }
-h6 { @extend %u-strongText; }
+h6 { @extend %u-blockText; }
 
 
 

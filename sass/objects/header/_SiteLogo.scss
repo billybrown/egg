@@ -1,3 +1,9 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Site logo
+// this is the main site logo
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
 
 $Logo-smallWidth: 80px;
 $Logo-smallHeight: 72px;
@@ -10,7 +16,7 @@ $Logo-fileName: 'logo';
 .SiteLogo {
 	display: block;
 	position: relative;
-	background: transparent url('../../img/#{$Logo-fileName}.svg') center center no-repeat;
+	background: transparent url('../../img/svg/#{$Logo-fileName}.svg') center center no-repeat;
 	width: $Logo-smallWidth;
 	height: $Logo-smallHeight;
 	background-size: $Logo-smallWidth $Logo-smallHeight;

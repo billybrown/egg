@@ -4,23 +4,6 @@
 
 
 
-/////////////////////////////////////-+++-
-// Reset lists
-
-
-%u-nolist {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.u-nolist ul,
-.u-nolist,
-.u-menu {
-    @extend %u-nolist;
-}
-
-
 
 /////////////////////////////////////-+++-
 // Utility classes for hiding or replacing text

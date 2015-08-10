@@ -43,7 +43,7 @@
 }
 
 // hide these menu elements at small screens (their offcanvas counterparts then become accessible)
-@include mq($until: offcanvas) {
+@include mq($until: mobilemenu) {
 	.SiteHeader .PrimaryMenu {
 		display: none;
 	}

@@ -39,18 +39,11 @@ $link-colorHover: darken($link-color, 10%);
 
 
 $mq-breakpoints: (
-    elementary:  390px,
-    middleschool:  600px,
-    highschool: 768px,
-    gapyear:    850px,
-    college:    1000px,
-    offcanvas: 	1150px,
-    fifthyear:    1150px,
-    masters:    1250px,
-    doctorate: 1600px
+    mobilemenu: 	940px,
+    desktop:    	1250px
 ) !default;
 
-$mq-static-breakpoint: masters;
+$mq-static-breakpoint: desktop;
 
 
 
@@ -59,12 +52,9 @@ $mq-static-breakpoint: masters;
 
 
 $comp-max-width: 1600px; // if working from a PSD or other static comp
-$site-max-width: 1542px;
 $page-max-width: 1200px;
 
-$page-element-spacing: 20px;
 $spacing: 20px;
-$grid-gutter: $spacing;
 
 $animation-speed: .2s;
 $animation-easing: ease;

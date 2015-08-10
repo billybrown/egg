@@ -15,3 +15,10 @@ a,
 		color: $link-colorHover;
 	}
 }
+
+// remove the link color from the link
+.u-decolorLink {
+	a {
+		color: $text;
+	}
+}

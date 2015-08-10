@@ -1,13 +1,8 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 // Pattern Library
 /////////////////////////////////////-+++-/////////////////////////////////////////
-// styleguide specific
 
-/*------------------------------------*\
-    $MAIN CONTENT AREA
-\*------------------------------------*/
 
-// styles for the wrapper
 .sg-main {
 	padding: 15px 0 40px;
 
@@ -17,7 +12,24 @@
 	}
 }
 
-// styles for the label
+.sg-label {
+	font-size: 11px;
+	line-height: 10px !important;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.sg-fonts {
+	li {
+		margin-bottom: 30px;
+	}
+}
+
+.sg-colors li {
+	width: 8em !important;
+	border: none !important;
+}
+
 .sg-pattern-head {
 	padding: 0 !important;
 	font-size: 24px !important;
@@ -44,22 +56,37 @@
 	}
 }
 
-// extra styles for demonstrating grids
+.sg-grids {
+	text-align: center;
+	& > * {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	& > *:nth-child(odd) {
+		background: #ccc;
+	}
+	& > *:nth-child(even) {
+		background: #eee;
+	}
+}
+
 .sg-layoutDemo {
-	.u-gridCol > span {
+	> div > div > span {
 		display: block;
 		padding: 10px;
 		text-align: center;
 	}
-	.u-gridCol:nth-child(odd) > span {
+
+	> div > div:nth-child(odd) > span {
 		background: #bbb;
 	}
-	.u-gridCol:nth-child(even) > span {
+	
+	> div > div:nth-child(even) > span {
 		background: #ddd;
 	}
 }
 
-// general styles for each pattern
 .sg-pattern-example {
 	@extend %u-clearfix;
 	position: relative;
@@ -67,8 +94,5 @@
 }
 
 
-
 /////////////////////////////////////-+++-
-// Styles specific to this pattern library for this theme
-
-
+// Styles specific to this project

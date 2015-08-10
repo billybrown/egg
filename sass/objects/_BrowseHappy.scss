@@ -1,13 +1,15 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 // Styles for the browsehappy message for people still using old versions if ie
-// This message only shows up for users who are using a version of ie that we
-// don't support, via a bit of html that looks like this immediately following
-// the opening <body> tag:
-//        <!--[if lte IE 9]>
+// it directs them here: http://browsehappy.com/
+//
+// Markup for this section looks like this:
+//
+//    <!--[if lte IE 9]>
 //        <div class="BrowseHappy">
 //            <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 //        </div>
-//        <![endif]-->
+//    <![endif]-->
+//
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 

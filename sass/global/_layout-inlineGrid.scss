@@ -1,0 +1,77 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Inline grid layout
+// This is 1 of 2 grid layouts in this theme. An inline grid is necessary when the
+// grid takes more then 1 row. When the grid has a variable amount of rows, an
+// inline grid is necsesary.
+//
+// This layout is based on the toast grid: http://daneden.github.io/Toast/
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+/////////////////////////////////////-+++-
+// A mixing for applying an inline based grid
+// the immediate children of the mixin become the grid columns
+
+@mixin u-inlineGrid($breakpoint, $gutter) {
+  @extend %u-nolist;
+
+  @include mq($from: $breakpoint) {
+    margin-left: -$gutter;
+  }
+
+  & > div,
+  & > li {
+    min-height: 1px;
+    
+    @include mq($from: $breakpoint) {
+      margin-right: -.25em;
+      vertical-align: top;
+      display: inline-block;
+      padding-left: $gutter;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+
+// default inline grid
+
+$inlineGrid--breakpoint: mobilemenu;
+
+.u-inlineGrid {
+  @include u-inlineGrid($inlineGrid--breakpoint, 30px)
+}
+
+// some default inline grid layouts
+
+.u-inlineGrid--50percent > div {
+  margin-bottom: $spacing;
+  @include mq($from: $inlineGrid--breakpoint) {
+    width: 50%;
+  }
+}
+
+.u-inlineGrid--33percent > div {
+  margin-bottom: $spacing;
+  @include mq($from: $inlineGrid--breakpoint) {
+    width: 33.3333%;
+  }
+}
+
+.u-inlineGrid--25percent > div {
+  margin-bottom: $spacing;
+  @include mq($from: $inlineGrid--breakpoint) {
+    width: 25%;
+  }
+}
+
+.u-inlineGrid--20percent > div {
+  margin-bottom: $spacing;
+  @include mq($from: $inlineGrid--breakpoint) {
+    width: 20%;
+  }
+}

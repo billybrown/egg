@@ -5,16 +5,35 @@
 
 
 /////////////////////////////////////-+++-
+// Reset lists
+
+%u-nolist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.u-nolist ul,
+.u-nolist {
+    @extend %u-nolist;
+}
+
+
+/////////////////////////////////////-+++-
 // Definition List
 
+dl {
+	margin: 0; 
+}
 
 dt {
 	font-weight: 600;
 }
 
-dd {
-	margin-bottom: $spacing * .5;
+dt, dd {
+	margin: 0 0 $spacing*.2;
 }
+
 
 /////////////////////////////////////-+++-
 // Custom Lists
@@ -45,20 +64,6 @@ dd {
 	}
 }
 
-// list of elements seperated by a border
-%u-borderList {
-	@extend %u-inlineList;
-	
-	li {
-		display: block;
-
-		&:not(:first-child) {
-			border-top: 1px solid $gray;
-			margin-top: 30px;
-			padding-top: 30px;
-		}
-	}
-}
 
 %u-basicList {
 	@extend %u-nolist;
@@ -68,8 +73,8 @@ dd {
 	}
 }
 
+// deploy list placeholder classes as utility classes
 .u-inlineList { @extend %u-inlineList; }
 .u-commaList { @extend %u-commaList; }
-.u-borderList { @extend %u-borderList; }
 .u-basicList { @extend %u-basicList; }
 

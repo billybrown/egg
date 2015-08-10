@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['css']);
   grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin', 'clean:css']);
-  grunt.registerTask('javascript', ['clean:js_all', 'jshint:custom', 'bower_concat', 'uglify', 'copy:jquery', 'copy:modernizr', 'clean:js_after']);
+  grunt.registerTask('javascript', ['clean:js_all', 'jshint:custom', 'bower_concat', 'uglify', 'copy:jquery', 'copy:modernizr']);
   grunt.registerTask('images', ['imagemin']);
   //grunt.registerTask('sprites', ['dr-svg-sprites']);
 
@@ -32,5 +32,9 @@ module.exports = function(grunt) {
     'javascript',
     'images'
   ]);
+
+  // this javascript task only gets called in the watch task
+  // its here to avoid having to recompile all the bower scripts
+  grunt.registerTask('custom-javascript', ['jshint:custom', 'uglify' ]);
 };
 

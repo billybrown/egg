@@ -5,14 +5,14 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width" />
 
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,600|Roboto:400,700,700italic' rel='stylesheet' type='text/css'>
-		<!--
-		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?1438702983" media="all" />
-		-->
+		<!-- Iconfont css from Icomoon -->
+		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?1439237964" media="all" />
 
-		<link rel="stylesheet" href="../../../../build/css/plugins.css?1438702983" media="all" />
+		<!-- Minified and Concatenated Vendor CSS -->
+		<link rel="stylesheet" href="../../../../build/css/plugins.css?1439237964" media="all" />
 
-		<link rel="stylesheet" href="../../../../build/css/main.min.css?1438702983" media="all" />
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="../../../../build/css/main.min.css?1439237964" media="all" />
 		
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 		<!-- never cache patterns -->
@@ -26,12 +26,13 @@
 
 		<!-- End Pattern Lab -->
 
+		<!-- Takana (delete before moving to production) -->
+		<script type="text/javascript" src="http://localhost:48626/takana.js"></script>
+		<script type="text/javascript">
+		  takanaClient.run({host: 'localhost:48626'});
+		</script>
 
-     <script type="text/javascript" src="http://localhost:48626/takana.js"></script>
-     <script type="text/javascript">
-       takanaClient.run({host: 'localhost:48626'});
-     </script>
-
+		<!-- Modernizr (must be in the head) -->
         <script src="../../../../build/js/modernizr.js"></script>
 
 	</head>
@@ -123,10 +124,10 @@
 	}
 </script>
 
-<script id="pl-js-polyfill-insert-1438702983">
+<script id="pl-js-polyfill-insert-1439237964">
 	(function() {
 		if (self != top) {
-			var cb = '1438702983';
+			var cb = '1439237964';
 			var js = [];
 			if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 				js.push("styleguide/bower_components/classList.min.js");
@@ -136,10 +137,10 @@
 	})();
 </script>
 
-<script id="pl-js-insert-1438702983">
+<script id="pl-js-insert-1439237964">
 	(function() {
 		if (self != top) {
-			var cb = '1438702983';
+			var cb = '1439237964';
 			var js = [ { "src": "styleguide/bower_components/jwerty.min.js", "dep": [ { "src": "annotations/annotations.js", "dep": [ "styleguide/js/patternlab-pattern.min.js" ] } ] } ];
 			scriptLoader.run(js,cb,'pl-js-insert');
 		}

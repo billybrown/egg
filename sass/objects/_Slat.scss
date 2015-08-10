@@ -52,13 +52,13 @@ $slat-smallimagewidth: 170px;
 	.Slat__imageGroup {
 		display: none; // hide image alltogether on mobie
 
-		@include mq($from: middleschool) {
+		@include mq($from: 600px) {
 			float: left;
 			display: block;
 			width: $slat-smallimagewidth;
 		}
 
-		@include mq($from: college) {
+		@include mq($from: 1100px) {
 			width: $slat-imagewidth;
 		}
 
@@ -66,13 +66,13 @@ $slat-smallimagewidth: 170px;
 
 	.slat__textGroup {
 
-		@include mq($from: middleschool) {
+		@include mq($from: 600px) {
 			padding: 0 $spacing $spacing;
 			margin-left: 170px;
 			display: table;
 		}
 
-		@include mq($from: college) {
+		@include mq($from: 1100px) {
 			margin-left: $slat-imagewidth;
 			padding-top: $spacing;
 		}

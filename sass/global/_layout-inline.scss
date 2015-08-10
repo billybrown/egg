@@ -1,0 +1,42 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// InlineGroup
+// These are some custom grid-esque classes for inline Layouts
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+
+
+/////////////////////////////////////-+++-
+// Default inline layout classes
+
+.u-inlineLayout__cell {
+	display: inline-block;
+	vertical-align: top;
+
+	&:not(:last-child) {
+		margin-right: $spacing*.6;
+	}
+}
+
+
+
+/////////////////////////////////////-+++-
+// Layout varients
+
+$inlineLayout--breakpoint: mobilemenu ;
+// apply a block layout on small screens
+.u-inlineLayout--desktop {
+
+	@include mq($until: mobilemenu) {
+
+		.InlineLayout__cell {
+			display: block;
+			margin-bottom: $spacing *.5;
+
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+		}
+	}
+}

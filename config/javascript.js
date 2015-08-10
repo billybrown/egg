@@ -28,7 +28,7 @@ module.exports.tasks = {
                 'modernizr'
             ],
             mainFiles: {
-                'flickity': ['dist/flickity.pkgd.min.js', 'dist/flickity.min.css']
+                //'jquery-waypoints': ['lib/jquery.waypoints.min.js', 'lib/shortcuts/sticky.min.js'] // we have a sticky nav here
             },
             bowerOptions: {
                 relative: false
@@ -59,7 +59,6 @@ module.exports.tasks = {
     },
 
     clean: {
-        js_after: ['build/js/plugins.js'],
         js_all: ['build/js/**']
     }
     

@@ -45,6 +45,15 @@ body {
   background: $background;
 }
 
+.PageWrapper {
+  height: 100%;
+  position: relative;
+
+  @include mq($from: mobilemenu) {
+    overflow: hidden;
+  }
+}
+
 
 
 /////////////////////////////////////-+++-
@@ -64,13 +73,13 @@ $cspace_large: 100px;
   padding-right: $cspace_small;
   padding-left: $cspace_small;
 
-  @include mq($from: elementary) {
+  @include mq($from: 600px) {
     padding-right: $cspace_medium;
     padding-left: $cspace_medium;
     max-width: $page-max-width + ($cspace_medium * 2);
   }
 
-  @include mq($from: highschool) {
+  @include mq($from: mobilemenu) {
     padding-right: $cspace_large;
     padding-left: $cspace_large;
     max-width: $page-max-width + ($cspace_large * 2);
@@ -90,5 +99,5 @@ h5,
 h6, 
 p,
 blockquote {
-	margin: 0 0 $page-element-spacing;
+	margin: 0 0 $spacing;
 }

@@ -5,15 +5,6 @@
 
 $MobileMenu-background: $link-color;
 
-
-.active-MobileMenu {
-	.SiteMain {
-		@include mq($until: offcanvas) {
-			position: fixed;
-		}
-	}
-}
-
 .MobileMenu__content {
 	@extend %u-absoluteTopLeft;
 	z-index: 100;
@@ -25,7 +16,7 @@ $MobileMenu-background: $link-color;
 	transition: visibility .5s ease, opacity .5s ease;
 	
 	.active-MobileMenu & {
-		@include mq($until: offcanvas) {
+		@include mq($until: mobilemenu) {
 			opacity: 1;
 			visibility: visible;
 		}
@@ -51,12 +42,12 @@ $MobileMenu-background: $link-color;
 .MobileMenu__close,
 .MobileMenu__open,
 .MobileMenu {
-	@include mq($from: offcanvas) {
+	@include mq($from: mobilemenu) {
 		display: none;
 	}
 }
 
-@include mq($until: offcanvas) {
+@include mq($until: mobilemenu) {
 
 	.MobileMenu__close {
 		display: none;
