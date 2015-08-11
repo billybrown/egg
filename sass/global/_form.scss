@@ -44,6 +44,8 @@ button {
 
 input[type="search"] {
   box-sizing: border-box; // for some reason normalize has this as 'contenet-box'
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 
