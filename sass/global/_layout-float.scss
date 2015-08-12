@@ -19,7 +19,7 @@ $floatLayout-breakpoint: mobilemenu;
 
 		@include mq($from: $floatLayout-breakpoint) {
 			float: left;
-			margin-right: $spacing*2;
+			margin-right: 60px;
 		}
 	}
 

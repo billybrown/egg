@@ -8,72 +8,48 @@
 // Placeholders for all text styles used throughout the site
 
 
-%u-giantTitle {
-	font: 700 26px/32px $titles;
-
-	@include mq($from: 600px) {
-		font-size: 30px;
-		line-height: 34px;
-	}
+%u-text {
+	font: 400 17px/30px $sans-serif;
 }
 
-%u-largeTitle {
-	font: 700 21px/28px $titles;
+%u-text--strong {
+	@extend %u-text;
+	font-weight: 700;
 }
 
 %u-largeText {
 	font: 400 21px/32px $sans-serif;
 }
 
-%u-smallTitle {
-	font: 700 17px/24px $titles;
-}
-
-%u-text {
-	font: 400 17px/30px $sans-serif;
-}
-
-%u-strongText {
-	@extend %u-text;
-	font-weight: 700;
-}
-
 %u-smallText {
 	font: 400 15px/22px $sans-serif;
 }
 
-%u-blockText {
-	font: 600 14px/22px $sans-serif;
+%u-smallText--blocked {
+	@extend %u-smallText;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
 
-%u-tinyText {
-	font: 600 12px/16px $sans-serif;
-}
+// a sass loop to turn the placeholder classes above
+// into utility classes for easy deployment of these text types
+$text-collection: 
+text 
+text--strong
+smallText 
+smallText--blocked 
+largeText;
 
-%u-subduedText {
-	@extend %u-tinyText;
-	color: $gray;
-}
+@each $i in $text-collection { .u-#{$i} { @extend %u-#{$i}; } }
 
-// some utility classes for easy deployment of these text types
-.u-giantText { @extend %u-giantTitle; }
-.u-largeText { @extend %u-largeText; }
-.u-strongText { @extend %u-strongText; }
-.u-text { @extend %u-text; }
-.u-smallText { @extend %u-smallText; }
-.u-blockText { @extend %u-blockText; }
-.u-tinyText { @extend %u-tinyText; }
-.u-subduedText { @extend %u-subduedText; }
 
 // deploy to heading elements
-h1 { @extend %u-giantText; }
-h2 { @extend %u-largeText; }
-h3 { @extend %u-strongText; }
-h4 { @extend %u-blockText; }
-h5 { @extend %u-blockText; }
-h6 { @extend %u-blockText; }
+h1 { @extend %u-largeText; }
+h2 { @extend %u-text--strong; }
+h3 { @extend %u-smallText--blocked; }
+h4 { @extend %u-smallText--blocked; }
+h5 { @extend %u-smallText--blocked; }
+h6 { @extend %u-smallText--blocked; }
 
 
 
@@ -127,9 +103,12 @@ h6 { @extend %u-blockText; }
 // button classes should always go on a wrapper to the <a> tag or
 // an element with the class of 'u-fakeLink' since it is sometimes
 // difficult to put classes on <a> tags in some CMS systems.
-.u-button { a, .u-fakeLink { @extend %u-button; }}
-.u-smallButton { a, .u-fakeLink { @extend %u-smallButton; }}
-.u-largeButton { a, .u-fakeLink { @extend %u-largeButton; }}
+$button-collection: 
+button
+smallButton
+largeButton;
+
+@each $i in $button-collection { .u-#{$i} { a, .u-fakeLink { @extend %u-#{$i}; } } }
 
 
 

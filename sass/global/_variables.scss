@@ -10,11 +10,11 @@
 // import from google fonts
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,600|Roboto:400,700,700italic);
 
-$roboto: 'Roboto';
-$railway: 'Raleway';
+$Roboto: 'Roboto';
+$Railway: 'Raleway';
 
-$sans-serif : $roboto, $helvetica;
-$titles: $railway, $sans-serif;
+$sans-serif : $Roboto, $helvetica;
+$TitleText: $Railway, $sans-serif;
 
 
 
@@ -52,9 +52,7 @@ $mq-static-breakpoint: desktop;
 
 
 $comp-max-width: 1600px; // if working from a PSD or other static comp
-$page-max-width: 1200px;
-
-$spacing: 20px;
+$content-max-width: 1200px;
 
 $animation-speed: .2s;
 $animation-easing: ease;

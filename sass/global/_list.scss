@@ -13,7 +13,7 @@
     margin: 0;
 }
 
-.u-nolist ul,
+.u-nolist > ul,
 .u-nolist {
     @extend %u-nolist;
 }
@@ -31,7 +31,7 @@ dt {
 }
 
 dt, dd {
-	margin: 0 0 $spacing*.2;
+	margin: 0;
 }
 
 
@@ -68,13 +68,15 @@ dt, dd {
 %u-basicList {
 	@extend %u-nolist;
 
-	li {
-		margin-bottom: $spacing;
+	> li {
+		margin-bottom: 30px;
 	}
 }
 
 // deploy list placeholder classes as utility classes
-.u-inlineList { @extend %u-inlineList; }
-.u-commaList { @extend %u-commaList; }
-.u-basicList { @extend %u-basicList; }
+$list-collection: 
+inlineList
+commaList
+basicList;
+@each $i in $list-collection { .u-#{$i} { @extend %u-#{$i}; } }
 

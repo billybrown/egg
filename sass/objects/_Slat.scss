@@ -67,14 +67,14 @@ $slat-smallimagewidth: 170px;
 	.slat__textGroup {
 
 		@include mq($from: 600px) {
-			padding: 0 $spacing $spacing;
+			padding: 0 20px 20px;
 			margin-left: 170px;
 			display: table;
 		}
 
 		@include mq($from: 1100px) {
 			margin-left: $slat-imagewidth;
-			padding-top: $spacing;
+			padding-top: 20px;
 		}
 	}
 }

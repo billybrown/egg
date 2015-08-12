@@ -29,7 +29,7 @@ module.exports.tasks = {
       map: true
     },
     custom: {
-      src: 'build/css/*.css'
+      src: 'build/css/main.css'
     }
   },
 

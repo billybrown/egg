@@ -5,8 +5,8 @@
 
 
 .PrimaryMenu {
-	padding-top: $spacing *.5;
-	padding-bottom: $spacing *.5;
+	padding-top: 20px;
+	padding-bottom: 20px;
 
 	@include mq($from: mobilemenu) {
 		padding-top: 0;
@@ -22,13 +22,13 @@
 
 		@include mq($from: mobilemenu) {
 			display: inline-block;
-			padding-left: $spacing;
+			padding-left: 30px;
 		}
 	}
 
 	a {
 		display: block;
-		padding: $spacing * .5 $spacing;
+		padding: 20px 30px;
 		color: white;
 
 		@include mq($from: mobilemenu) {

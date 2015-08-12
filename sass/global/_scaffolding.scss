@@ -45,16 +45,6 @@ body {
   background: $background;
 }
 
-.PageWrapper {
-  height: 100%;
-  position: relative;
-
-  @include mq($from: mobilemenu) {
-    overflow: hidden;
-  }
-}
-
-
 
 /////////////////////////////////////-+++-
 // Constrained class to center content so text does run the full width of the screen
@@ -67,7 +57,7 @@ $cspace_medium: 40px;
 $cspace_large: 100px;
 
 .u-constrained {
-  max-width: $page-max-width + ($cspace_small * 2);
+  max-width: $content-max-width + ($cspace_small * 2);
   margin-right: auto;
   margin-left: auto;
   padding-right: $cspace_small;
@@ -76,13 +66,13 @@ $cspace_large: 100px;
   @include mq($from: 600px) {
     padding-right: $cspace_medium;
     padding-left: $cspace_medium;
-    max-width: $page-max-width + ($cspace_medium * 2);
+    max-width: $content-max-width + ($cspace_medium * 2);
   }
 
   @include mq($from: mobilemenu) {
     padding-right: $cspace_large;
     padding-left: $cspace_large;
-    max-width: $page-max-width + ($cspace_large * 2);
+    max-width: $content-max-width + ($cspace_large * 2);
   }
 }
 
@@ -99,5 +89,5 @@ h5,
 h6, 
 p,
 blockquote {
-	margin: 0 0 $spacing;
+	margin: 0 0 30px;
 }

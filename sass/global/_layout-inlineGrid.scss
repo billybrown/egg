@@ -49,28 +49,28 @@ $inlineGrid--breakpoint: mobilemenu;
 // some default inline grid layouts
 
 .u-inlineGrid--50percent > div {
-  margin-bottom: $spacing;
+  margin-bottom: 30px;
   @include mq($from: $inlineGrid--breakpoint) {
     width: 50%;
   }
 }
 
 .u-inlineGrid--33percent > div {
-  margin-bottom: $spacing;
+  margin-bottom: 30px;
   @include mq($from: $inlineGrid--breakpoint) {
     width: 33.3333%;
   }
 }
 
 .u-inlineGrid--25percent > div {
-  margin-bottom: $spacing;
+  margin-bottom: 30px;
   @include mq($from: $inlineGrid--breakpoint) {
     width: 25%;
   }
 }
 
 .u-inlineGrid--20percent > div {
-  margin-bottom: $spacing;
+  margin-bottom: 30px;
   @include mq($from: $inlineGrid--breakpoint) {
     width: 20%;
   }

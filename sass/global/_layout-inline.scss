@@ -15,7 +15,7 @@
 	vertical-align: top;
 
 	&:not(:last-child) {
-		margin-right: $spacing*.6;
+		margin-right: 30px;
 	}
 }
 
@@ -32,7 +32,7 @@ $inlineLayout--breakpoint: mobilemenu ;
 
 		.InlineLayout__cell {
 			display: block;
-			margin-bottom: $spacing *.5;
+			margin-bottom: 30px;
 
 			&:not(:last-child) {
 				margin-right: 0;
