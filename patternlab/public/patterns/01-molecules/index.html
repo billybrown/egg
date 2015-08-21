@@ -5,14 +5,17 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width" />
 
-		<!-- Iconfont css from Icomoon -->
-		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?1439405463" media="all" />
+		<!-- google webfonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,600,600italic,700,700italic,800,800italic" media="all" />
 
-		<!-- Minified and Concatenated Vendor CSS -->
-		<link rel="stylesheet" href="../../../../build/css/plugins.css?1439405463" media="all" />
+		<!-- Iconfont css from Icomoon -->
+		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?1440184432" media="all" />
+
+		<!-- Minified and Concatenated Vendor CSS from bower -->
+		<link rel="stylesheet" href="../../../../build/css/plugins.css?1440184432" media="all" />
 
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="../../../../build/css/main.min.css?1439405463" media="all" />
+		<link rel="stylesheet" href="../../../../build/css/main.min.css?1440184432" media="all" />
 		
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 		<!-- never cache patterns -->
@@ -47,24 +50,30 @@
 	<div id="sg-patterns">
 									<div id="molecules-card" class="sg-pattern">
 	<div class="sg-pattern-head">
-		<h3><a href="../../patterns/01-molecules-01-teasers-01-card/01-molecules-01-teasers-01-card.html" class="patternLink" data-patternpartial="molecules-card">Card</a></h3>
+		<h3><a href="../../patterns/01-molecules-10-custom-objects-10-card/01-molecules-10-custom-objects-10-card.html" class="patternLink" data-patternpartial="molecules-card">Card</a></h3>
 		<div class="sg-pattern-head-actions">
 			<!--Pattern header options-->
 		</div>
 	</div>
 		<div class="sg-pattern-example">
-		<article class="Card">
+		<article class="Card ">
 	<div class="Card__imageGroup">
 		<a href="">
-			<img src="http://dummyimage.com/400x300/000/fff.png" alt="" />
+			<img src="http://dummyimage.com/570x320/000/fff.png" alt="" />
 		</a>
 	</div><!-- /.Card__imageGroup -->
 	<div class='Card__textGroup'>
-		<h3 class="Card__title">
-			<a href="">Lorem ipsum dolor sit amet</a>
-		</h3>
-		<p class="Card__Summary">Sed vel scelerisque diam. In ultricies eros urna, vitae pharetra urna maximus vitae. Maecenas iaculis neque eget maximus semper. Etiam vel interdum urna. Phasellus sit amet cursus erat. Integer maximus at quam vitae maximus.</p>
-	</div><!-- /.Card__textGroup -->
+		<header class="Card__header">
+			<h3 class="Card__title ">
+				<a href="">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				</a>
+			</h3>
+		</header>
+					<div class="Card__summary">
+				<p>Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. </p>
+			</div>
+			</div><!-- /.Card__textGroup -->
 </article>
 	</div>
 		<div class="sg-pattern-extra">
@@ -93,31 +102,40 @@
 										<div class="sg-pattern-extra-lineage">
 					The <span class="sg-pattern-extra-lineage-name">molecules-card</span> pattern is included in the following pattern(s): 
 					<ul>
+											<li> <a href="../../patterns/02-organisms-01-custom-objects-01-list-box/02-organisms-01-custom-objects-01-list-box.html" class="" data-patternpartial="organisms-list-box">organisms-list-box</a></li>
 										</ul>
 				</div>
 								</div>
 			</div>
 </div>												<div id="molecules-slat" class="sg-pattern">
 	<div class="sg-pattern-head">
-		<h3><a href="../../patterns/01-molecules-01-teasers-10-slat/01-molecules-01-teasers-10-slat.html" class="patternLink" data-patternpartial="molecules-slat">Slat</a></h3>
+		<h3><a href="../../patterns/01-molecules-10-custom-objects-20-slat/01-molecules-10-custom-objects-20-slat.html" class="patternLink" data-patternpartial="molecules-slat">Slat</a></h3>
 		<div class="sg-pattern-head-actions">
 			<!--Pattern header options-->
 		</div>
 	</div>
 		<div class="sg-pattern-example">
 		<article class="Slat">
-	<div class="Slat__imageGroup">
-		<a href="">
-			<img src="http://dummyimage.com/300x300/000/fff.png" alt="" />
-		</a>
-	</div>
 	<div class="Slat__textGroup">
-		<h3 class="Slat__title">
-			<a href="">Lorem ipsum dolor sit amet</a>
-		</h3>
-		<p class="Slat__Summary">Sed vel scelerisque diam. In ultricies eros urna, vitae pharetra urna maximus vitae. Maecenas iaculis neque eget maximus semper. Etiam vel interdum urna. Phasellus sit amet cursus erat. Integer maximus at quam vitae maximus.</p>
-	</div>
-</article>
+		<header class="Slat__header">
+			<h3 class="Slat__title">
+				<a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a>
+			</h3>
+			<div class="u-pipeList u-smallText">
+				<div class="Slat__author">Jane Smith</div>
+				<div class="Slat__date">02.31.14</div>
+			</div><!-- /u-pipeList -->
+		</header>
+		<div class="Slat__summary u-smallText">
+			<p>Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. </p>
+		</div><!-- /.Slat__Summary -->
+	</div><!-- /.Slat__textGroup -->
+			<div class="Slat__imageGroup">
+			<a href="">
+				<img src="http://dummyimage.com/250x180/000/fff.png" alt="" />
+			</a>
+		</div>
+	</article>
 	</div>
 		<div class="sg-pattern-extra">
 		<div class="sg-pattern-extra-annotations" style="display: none">
@@ -145,78 +163,14 @@
 										<div class="sg-pattern-extra-lineage">
 					The <span class="sg-pattern-extra-lineage-name">molecules-slat</span> pattern is included in the following pattern(s): 
 					<ul>
-											<li> <a href="../../patterns/02-organisms-02-lists-10-slats/02-organisms-02-lists-10-slats.html" class="" data-patternpartial="organisms-slats">organisms-slats</a></li>
-										</ul>
-				</div>
-								</div>
-			</div>
-</div>												<div id="molecules-in-page-menu" class="sg-pattern">
-	<div class="sg-pattern-head">
-		<h3><a href="../../patterns/01-molecules-05-menus-01-in-page-menu/01-molecules-05-menus-01-in-page-menu.html" class="patternLink" data-patternpartial="molecules-in-page-menu">In Page Menu</a></h3>
-		<div class="sg-pattern-head-actions">
-			<!--Pattern header options-->
-		</div>
-	</div>
-		<div class="sg-pattern-example">
-		<div class="u-basicList">
-	<ul>
-		<li>
-			<a href="">Multimedia</a>
-		</li>
-		<li>
-			<a href="">Artifacts</a>
-		</li>
-		<li>
-			<a href="">Activities </a>
-		</li>
-		<li>
-			<a href="">Case Studies</a>
-		</li>
-		<li>
-			<a href="">Lessons</a>
-		</li>
-		<li>
-			<a href="">Units</a>
-		</li>
-		<li>
-			<a href="">+ More</a>
-		</li>
-	</ul>
-</div>
-	</div>
-		<div class="sg-pattern-extra">
-		<div class="sg-pattern-extra-annotations" style="display: none">
-			<span class="sg-pattern-extra-name">Annotations</span>
-			<div id="sg-pattern-extra-annotations-container">
-			</div>
-		</div>
-		<div class="sg-pattern-extra-html" style="display: none">
-			<span class="sg-pattern-extra-name">HTML</span>
-			<pre>
-				<code id="sg-pattern-extra-html-container">
-					
-				</code>
-			</pre>
-		</div>
-		<div class="sg-pattern-extra-engine" style="display: none">
-			<span class="sg-pattern-extra-name"></span>
-			<pre>
-				<code id="sg-pattern-extra-engine-container">
-				</code>
-			</pre>
-		</div>
-		<div class="sg-pattern-extra-lineage" style="display: none">
-			<span class="sg-pattern-extra-name">Lineages</span>
-										<div class="sg-pattern-extra-lineage">
-					The <span class="sg-pattern-extra-lineage-name">molecules-in-page-menu</span> pattern is included in the following pattern(s): 
-					<ul>
+											<li> <a href="../../patterns/05-pages-01-homepage/05-pages-01-homepage.html" class="" data-patternpartial="pages-homepage">pages-homepage</a></li>
 										</ul>
 				</div>
 								</div>
 			</div>
 </div>												<div id="molecules-breadcrumbs" class="sg-pattern">
 	<div class="sg-pattern-head">
-		<h3><a href="../../patterns/01-molecules-09-misc-10-breadcrumbs/01-molecules-09-misc-10-breadcrumbs.html" class="patternLink" data-patternpartial="molecules-breadcrumbs">Breadcrumbs</a></h3>
+		<h3><a href="../../patterns/01-molecules-99-misc-10-breadcrumbs/01-molecules-99-misc-10-breadcrumbs.html" class="patternLink" data-patternpartial="molecules-breadcrumbs">Breadcrumbs</a></h3>
 		<div class="sg-pattern-head-actions">
 			<!--Pattern header options-->
 		</div>
@@ -224,8 +178,8 @@
 		<div class="sg-pattern-example">
 		<nav class="Breadcrumbs">
 	<ul class="u-inlineList">
-		<li><a href="">Breadcrumb 1</li>
-		<li><a href="">Breadcrumb 2</li>
+		<li><a href="">Breadcrumb 1</a></li>
+		<li><a href="">Breadcrumb 2</a></li>
 	</ul>
 </nav>
 	</div>
@@ -261,7 +215,7 @@
 			</div>
 </div>												<div id="molecules-pagination" class="sg-pattern">
 	<div class="sg-pattern-head">
-		<h3><a href="../../patterns/01-molecules-09-misc-25-pagination/01-molecules-09-misc-25-pagination.html" class="patternLink" data-patternpartial="molecules-pagination">Pagination</a></h3>
+		<h3><a href="../../patterns/01-molecules-99-misc-25-pagination/01-molecules-99-misc-25-pagination.html" class="patternLink" data-patternpartial="molecules-pagination">Pagination</a></h3>
 		<div class="sg-pattern-head-actions">
 			<!--Pattern header options-->
 		</div>
@@ -311,6 +265,97 @@
 			<span class="sg-pattern-extra-name">Lineages</span>
 										<div class="sg-pattern-extra-lineage">
 					The <span class="sg-pattern-extra-lineage-name">molecules-pagination</span> pattern is included in the following pattern(s): 
+					<ul>
+										</ul>
+				</div>
+								</div>
+			</div>
+</div>												<div id="molecules-image-with-caption" class="sg-pattern">
+	<div class="sg-pattern-head">
+		<h3><a href="../../patterns/01-molecules-99-misc-30-image-with-caption/01-molecules-99-misc-30-image-with-caption.html" class="patternLink" data-patternpartial="molecules-image-with-caption">Image With Caption</a></h3>
+		<div class="sg-pattern-head-actions">
+			<!--Pattern header options-->
+		</div>
+	</div>
+		<div class="sg-pattern-example">
+		<div class="ImageCredit__wrapper">
+	<img src="http://dummyimage.com/980x560/000/fff.png" alt="">
+	<div class="ImageCredit">Jane Doe</div>
+</div><!-- /.ImageCredit__wrapper -->
+<div class="ImageCaption"><p>Lorem ipsum ... </p></div>
+	</div>
+		<div class="sg-pattern-extra">
+		<div class="sg-pattern-extra-annotations" style="display: none">
+			<span class="sg-pattern-extra-name">Annotations</span>
+			<div id="sg-pattern-extra-annotations-container">
+			</div>
+		</div>
+		<div class="sg-pattern-extra-html" style="display: none">
+			<span class="sg-pattern-extra-name">HTML</span>
+			<pre>
+				<code id="sg-pattern-extra-html-container">
+					
+				</code>
+			</pre>
+		</div>
+		<div class="sg-pattern-extra-engine" style="display: none">
+			<span class="sg-pattern-extra-name"></span>
+			<pre>
+				<code id="sg-pattern-extra-engine-container">
+				</code>
+			</pre>
+		</div>
+		<div class="sg-pattern-extra-lineage" style="display: none">
+			<span class="sg-pattern-extra-name">Lineages</span>
+										<div class="sg-pattern-extra-lineage">
+					The <span class="sg-pattern-extra-lineage-name">molecules-image-with-caption</span> pattern is included in the following pattern(s): 
+					<ul>
+										</ul>
+				</div>
+								</div>
+			</div>
+</div>												<div id="molecules-social" class="sg-pattern">
+	<div class="sg-pattern-head">
+		<h3><a href="../../patterns/01-molecules-99-misc-40-social/01-molecules-99-misc-40-social.html" class="patternLink" data-patternpartial="molecules-social">Social</a></h3>
+		<div class="sg-pattern-head-actions">
+			<!--Pattern header options-->
+		</div>
+	</div>
+		<div class="sg-pattern-example">
+		<nav class="SocialMenu">
+	<ul>
+		<li><a href=""><span class="u-visuallyHidden">facebook</span><i class="icon-facebook"></i></a></li>
+		<li><a href=""><span class="u-visuallyHidden">twitter</span><i class="icon-twitter"></i></a></li>
+		<li><a href=""><span class="u-visuallyHidden">google plus</span><i class="icon-google-plus"></i></a></li>
+		<li><a href=""><span class="u-visuallyHidden">email</span><i class="icon-envelope"></i></a></li>
+	</ul>
+</nav>
+	</div>
+		<div class="sg-pattern-extra">
+		<div class="sg-pattern-extra-annotations" style="display: none">
+			<span class="sg-pattern-extra-name">Annotations</span>
+			<div id="sg-pattern-extra-annotations-container">
+			</div>
+		</div>
+		<div class="sg-pattern-extra-html" style="display: none">
+			<span class="sg-pattern-extra-name">HTML</span>
+			<pre>
+				<code id="sg-pattern-extra-html-container">
+					
+				</code>
+			</pre>
+		</div>
+		<div class="sg-pattern-extra-engine" style="display: none">
+			<span class="sg-pattern-extra-name"></span>
+			<pre>
+				<code id="sg-pattern-extra-engine-container">
+				</code>
+			</pre>
+		</div>
+		<div class="sg-pattern-extra-lineage" style="display: none">
+			<span class="sg-pattern-extra-name">Lineages</span>
+										<div class="sg-pattern-extra-lineage">
+					The <span class="sg-pattern-extra-lineage-name">molecules-social</span> pattern is included in the following pattern(s): 
 					<ul>
 										</ul>
 				</div>
@@ -371,10 +416,10 @@
 	}
 </script>
 
-<script id="pl-js-polyfill-insert-1439405463">
+<script id="pl-js-polyfill-insert-1440184432">
 	(function() {
 		if (self != top) {
-			var cb = '1439405463';
+			var cb = '1440184432';
 			var js = [];
 			if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 				js.push("styleguide/bower_components/classList.min.js");
@@ -384,10 +429,10 @@
 	})();
 </script>
 
-<script id="pl-js-insert-1439405463">
+<script id="pl-js-insert-1440184432">
 	(function() {
 		if (self != top) {
-			var cb = '1439405463';
+			var cb = '1440184432';
 			var js = [ { "src": "styleguide/bower_components/jwerty.min.js", "dep": [ { "src": "annotations/annotations.js", "dep": [ "styleguide/js/patternlab-pattern.min.js" ] } ] } ];
 			scriptLoader.run(js,cb,'pl-js-insert');
 		}

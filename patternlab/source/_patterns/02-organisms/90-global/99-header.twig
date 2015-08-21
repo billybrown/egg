@@ -1,0 +1,26 @@
+<header class="SiteHeader">
+	<div class="Frame Frame--tinySpacing Frame--gray">
+		<div class="u-constrained">
+			{{ headernewsletter.input("Enter email for alerts") }}
+			{{ headersecondarymenu.input() }}
+			{{ headersearch.input() }}
+		</div>
+	</div><!-- /.Frame -->
+	<div class="Frame Frame--tinySpacing Frame--lightGray">
+		<div class="u-constrained u-constrained--noMobilePadding">
+			<div class="Frame__inside">
+				{{ headerlogo.input() }}
+				{{ headerprimarymenu.input() }}
+				{{ mobiletriggers.input() }}
+			</div><!-- /.Frame__inside -->
+		</div>
+	</div><!-- /.Frame -->
+</header>
+
+<div id='MobileMenu__content' class="MobileMenu__content MobileMenu">
+	<div class="MobileMenu__inside">
+		{{ headersecondarymenu.input() }}
+		{{ headersearch.input() }}
+		{{ headernewsletter.input("Enter email") }}
+	</div><!-- /.MobileMenu__inside -->
+</div><!-- /.MobileMenu__content -->

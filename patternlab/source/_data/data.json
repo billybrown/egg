@@ -1,75 +1,76 @@
 {
-	"key": "value",
-	"key2": "use this for variables you want to load globally",
-	"title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
-	"img": {
-		"avatar": {
-			"src": "http://placeimg.com/100/100/people",
-			"alt": "Avatar"
+	"post": {
+		"words": {
+			"1" : "Lorem",
+			"2" : "Lorem ipsum",
+			"3" : "Lorem ipsum sit",
+			"4" : "Lorem ipsum sit dolar",
+			"5" : "Lorem ipsum sit dolar amet"
 		},
-		"square": {
-			"src": "http://placeimg.com/300/300/nature",
-			"alt": "Square"
+		"heading": {
+			"tiny" : "Lorem Ipsum Sit",
+			"short": "Lorem ipsum dolor sit amet ",
+			"medium": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+			},
+		"excerpt": {
+			"tiny" : "Ut malesuada felis vitae mattis imperdiet.",
+			"short": "Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis.",
+			"medium": "Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. ",
+			"long": "Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. Proin imperdiet ac nisi et porttitor. Sed sodales metus sit amet consequat placerat."
 		},
-		"rectangle": {
-			"src": "http://placeimg.com/400/300/tech",
-			"alt": "Rectangle"
+		"link" : {
+			"tiny": "lorem",
+			"short": "lorem ipsum",
+			"medium": "lorem ipsum sit dolar",
+			"long": "lorem ipsum dolor sit amet consectetur adipiscing elit"
 		},
-		"landscape-4x3": {
-			"src": "http://placeimg.com/400/300/tech",
-			"alt": "4x3 Image"
+		"img": {
+			"rectangle": {
+				"src": "http://dummyimage.com/570x320/000/fff.png",
+				"alt": "image"	
+			},
+			"smallRectangle": {
+				"src": "http://dummyimage.com/250x180/000/fff.png",
+				"alt": "image"	
+			}
 		},
-		"landscape-16x9": {
-			"src": "http://placeimg.com/640/360/tech",
-			"alt": "16x9 Image"
-		}
-	},
-	"headline": {
-		"short": "Lorizzle pimpin' dolizzle sit amet I",
-		"medium": "Rizzle adipiscing elizzle. Nullam sapien velizzle, shit volutpizzle, my"
-	},
-	"excerpt": {
-		"short": "Shizz fo shizzle mah nizzle fo rizzle, mah home g-dizzle, gravida vizzle, arcu. Pellentesque crunk tortizzle. Sed erizzle. Black izzle sheezy telliv.",
-		"medium": "Izzle crazy tempizzle sizzle. We gonna chung gangsta get down get down fo shizzle turpizzle. Away break it down black. Pellentesque bling bling rhoncus fo shizzle. In hac the bizzle platea dictumst. Black dapibizzle. Crackalackin.",
-		"long": "Curabitizzle fo shizzle diam quizzle nisi nizzle mollizzle. Suspendisse boofron. Morbi odio. Sure pizzle. Crazy orci. Shut the shizzle up maurizzle get down get down, check out this a, go to hizzle sit amizzle, malesuada izzle, pede. Pellentesque gravida. Vestibulizzle check it out mi, volutpat izzle, shiz sed, shiznit sempizzle, da bomb. Funky fresh in ipsum. Da bomb volutpat felis vizzle daahng dawg. Crizzle quis dope izzle fo shizzle my ni."
-	},
-	"description": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo.",
-	"url": "http://lorizzle.nl/",
-	"name": {
-		"first": "Junius",
-		"firsti": "J",
-		"middle": "Marius",
-		"middlei": "M",
-		"last": "Koolen",
-		"lasti": "K"
-	},
-	"year": {
-		"long": "2013",
-		"short": "13"
-	},
-	"month": {
-		"long": "January",
-		"short": "Jan",
-		"digit": "01"
-	},
-	"dayofweek": {
-		"long": "Sunday",
-		"short": "Sun"
-	},
-	"day": {
-		"long": "01",
-		"short": "1",
-		"ordinal": "st"
-	},
-	"hour": {
-		"long": "06",
-		"short": "6",
-		"military": "06",
-		"ampm": "am"
-	},
-	"minute": {
-		"long": "20",
-		"short": "20"
-	},
-	"seconds": "31"
+		"tag" : "Lorem",
+		"taglist" : [
+			{
+				"title" : "Lorem"
+			},
+			{
+				"title" : "Ipsum"
+			},
+			{
+				"title" : "Sit"
+			}
+		],
+		"icon": "grain",
+		"graphic": "badge-community",
+		"author" : "Jane Smith",
+		"position" : "Regional Organizer",
+		"phone" : "323-843-2500",
+		"fax" : "323-843-2500",
+		"date" : "02.31.14",
+		"eventDate" : "March 31, 2015",
+		"eventButton" : "Register",
+		"inpagemenu" : [
+			{ 
+				"heading" : { "short" : "Lorem Ipsum sit" },
+				"excerpt" : { "medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex lorem, lobortis et turpis faucibus, tempus efficitur tellus. In mollis, lacus porta fringilla cursus." },
+				"graphic" : "badge-healthy"
+			},
+			{ 
+				"heading" : { "short" : "Sit Dolar cconsectetur" },
+				"excerpt" : { "medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex lorem, lobortis et turpis faucibus, tempus efficitur tellus. In mollis, lacus porta fringilla cursus." },
+				"graphic" : "badge-community"
+			},
+			{ 
+				"heading" : { "short" : "Ipsum sit Dolar" },
+				"excerpt" : { "medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex lorem, lobortis et turpis faucibus, tempus efficitur tellus. In mollis, lacus porta fringilla cursus." },
+				"graphic" : "badge-organizer"
+			}
+		]
+	}
 }

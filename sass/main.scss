@@ -1,63 +1,80 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 // The main CSS file, imports all the other sass partials
+//
+// Please read the two READMEs if you have any questions about the naming or
+// organization of the css. If you have no time to read things - just add your
+// css to _shame.scss and let somebody who does have time know.
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
-// import global partials that effect the whole site. 
-@import 'global/mixins/ems';
-@import 'global/mixins/placeholder';
-@import 'global/mixins/mq';
+// import mixins 
+@import 'base/mixins/ems';
+@import 'base/mixins/placeholder';
+@import 'base/mixins/mq';
+@import 'base/mixins/triangles';
+@import 'base/mixins/absolute';
 
 // import variables
-@import 'global/variablesDefault';
-@import 'global/variables';
+@import 'base/variables';
 
-// import sprites
-//@import 'sprites/sprites';
+// import sprites 
+@import 'sprites/sprites';
+ 
+// import css reset or normalize (and your custom reset additions)
+@import 'base/normalize';
+@import 'base/normalizeAdditions';
 
-// import all other global partials
-@import 'global/utility';
-@import 'global/normalize';
-@import 'global/type';
-@import 'global/scaffolding';
-// @import 'global/color';
-@import 'global/link';
-@import 'global/horizontalRule';
-@import 'global/blockquote';
-//@import 'global/overlay';
-//@import 'global/triangle';
-@import 'global/list';
-@import 'global/layout-absolute';
-@import 'global/layout-float';
-@import 'global/layout-inline';
-@import 'global/layout-tableGrid';
-@import 'global/layout-inlineGrid';
-@import 'global/form';
-@import 'global/checkbox';
-@import 'global/select';
-@import 'global/table';
+// import utilities
+@import 'utilities/misc';
+@import 'utilities/clearfix';
+@import 'utilities/alignment';
+@import 'utilities/constrained';
+@import 'utilities/iconfonts';
+@import 'utilities/text';
+@import 'utilities/links';
+@import 'utilities/tableGrid';
+@import 'utilities/inlineGrid';
+@import 'utilities/grid';
+@import 'utilities/lists';
+@import 'utilities/spacing';
+//@import 'utilities/nub';
 
-// import components or objects
-@import 'objects/BrowseHappy';
-@import 'objects/SiteMain';
-@import 'objects/SiteFooter';
-@import 'objects/SiteHeader';
-@import 'objects/MobileMenu';
-@import 'objects/Quilt';
-@import 'objects/Patch';
+// import html elements
+@import 'elements/body';
+@import 'elements/headings';
+@import 'elements/lists';
+@import 'elements/a';
+@import 'elements/blockquote';
+@import 'elements/horizontalRule';
+@import 'elements/input';
+@import 'elements/input--checkbox';
+@import 'elements/select--chosen';
+@import 'elements/table';
+@import 'elements/small';
+@import 'elements/mark';
+
+// import CSS objects
+@import 'objects/Frame';
+@import 'objects/ListBox';
+@import 'objects/Post';
 @import 'objects/Card';
 @import 'objects/Slat';
-@import 'objects/PatternLibrary';
-//@import 'objects/SocialList';
-//@import 'objects/Cover';
-//@import 'objects/Post';
-//@import 'objects/Breadcrumbs';
-//@import 'objects/Pagination';
-//@import 'objects/ImageCredit';
 
-// import utility classes that override object and page level css
-@import 'global/utility-overrides';
+// import CSS areas
+@import 'areas/PageWrapper';
+@import 'areas/BrowseHappy';
+@import 'areas/MobileMenu';
+@import 'areas/PatternLibrary';
+@import 'areas/Social';
+@import 'areas/SiteMain';
+@import 'areas/SiteFooter';
+@import 'areas/SiteHeader';
+@import 'areas/InputGroup';
+@import 'areas/Pagination';
+@import 'areas/Breadcrumb';
 
-// for print stylesheets. 
-// Easier and more perfomant to just include it here instead of creating a seperate stylesheet
-@import 'global/print';
+// import print styles 
+@import 'base/print';
+
+// import your shame css
+@import 'shame';

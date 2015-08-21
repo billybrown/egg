@@ -1,0 +1,85 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// <input/> and <form> styles.
+//
+// http://html5doctor.com/element-index/#input
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+
+$placeholder-default: $gray;
+
+%u-defaultInput {
+    line-height: 22px;
+    background: #fff;
+    border: 1px solid $gray;
+    border-radius: 0;
+    padding: 7px 14px;
+    -webkit-appearance: none;
+}
+
+// default input styles
+input,
+textarea {
+    @extend %u-smallText;
+    @extend %u-defaultInput;
+    width: 100%;
+    transition: background $animation, border $animation;
+
+    &::-webkit-input-placeholder {  color: $placeholder-default; }
+    &:-moz-placeholder {            color: $placeholder-default; }
+    &::-moz-placeholder {           color: $placeholder-default; }
+    &:-ms-input-placeholder {       color: $placeholder-default; }
+
+    &:focus {
+        outline: none;
+        border-color: $link-color;
+    }
+}
+
+
+input[type="submit"],
+button {
+    @extend %u-button;
+    width: auto;
+}
+
+input[type="search"] {
+    box-sizing: border-box; // for some reason normalize has this as 'contenet-box'
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+// default label style
+label {
+    @extend %u-smallText--strong;
+}
+
+
+
+/////////////////////////////////////-+++-
+// Styles for advanced html5 form elements
+
+
+input[type="color"],
+input[type="range"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="datetime-local"] {
+    width: auto;
+    display: block;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 50px;
+    padding: 6px 8px;
+}
+
+input[type="range"] {
+    -webkit-appearance: slider-horizontal;
+    appearance: slider-horizontal;
+}

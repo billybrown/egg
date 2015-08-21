@@ -1,0 +1,39 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Site logo
+// this is the main site logo
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+$Logo-smallWidth: 50px;
+$Logo-smallHeight: 50px;
+
+$Logo-width: 100px;
+$Logo-height: 100px;
+
+$Logo-file: 'logo';
+
+$Logo-bp: mobilemenu-bp;
+
+.SiteLogo {
+    @include u-absoluteCenter(left, $Logo-bp);
+
+    display: block;
+    position: relative;
+    background: transparent url('../../img/svg/#{$Logo-file}.svg') center center no-repeat;
+    width: $Logo-smallWidth;
+    height: $Logo-smallHeight;
+    background-size: $Logo-smallWidth $Logo-smallHeight;
+    margin: 0 0 20px 20px;
+    
+    @include mq($from: $Logo-bp) {
+        width: $Logo-width;
+        height: $Logo-height;
+        background-size: $Logo-width $Logo-height;    
+        margin: 0;
+    }
+
+    .no-svg & {
+        background-image: url('../../img/#{$Logo-file}.png');
+    }
+}

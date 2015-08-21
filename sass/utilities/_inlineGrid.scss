@@ -1,0 +1,42 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Inline grid layout
+// This is 1 of 2 grid layouts in this theme. An inline grid is necessary when the
+// grid takes more then 1 row. When the grid has a variable amount of rows, an
+// inline grid is necsesary.
+//
+// This layout is based on the toast grid: http://daneden.github.io/Toast/
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+/////////////////////////////////////-+++-
+// A mixing for applying an inline based grid
+// the immediate children of the mixin become the grid columns
+
+@mixin u-inlineGrid($breakpoint, $gutter) {
+
+    @include mq($from: $breakpoint) {
+        margin-left: -$gutter;
+    }
+
+    & > div,
+    & > li {
+        min-height: 1px;
+        
+        @include mq($from: $breakpoint) {
+            margin-right: -.25em;
+            vertical-align: top;
+            display: inline-block;
+            padding-left: $gutter;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $gutter;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+

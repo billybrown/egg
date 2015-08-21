@@ -1,37 +1,26 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 // Card
-// This is a grouping of text and images that looks like a card. Vertical in appearance
-// and often shows up in groups. Also often acts as a teaser. Often shows up in a grid
-// of some kind when in groups.
-// Usually takes markup that looks somewhat like this:
+// This is a grouping of text and images that looks like a card. It has a container
+// with a background image and padding around the text - but the image goes to the
+// edge of the container.
+// Often shows up in a grid of some kind when in groups.
 //
-//	<div class="Card">
-//		<div class="Card__imageGroup">
-//			<img src="" alt="" />
-//		</div>
-//		<div class="Card__textGroup">
-//			<p>Lorem ipsum</p>
-//		</div>
-//	</div>
 //
-// and visually should look something like this:
-//
-//     +-------------------+
-//     |                   |
-//     |                   |
-//     |       image       |
-//     |                   |
-//     |                   |
-//     +-------------------+
-//     |                   |
-//     | Card Title        |
-//     |                   |
-//     | More example text |
-//     | for what a 'card' |
-//     | might look like.  |
-//     |                   |
-//     |                   |
-//     +-------------------+
+//     +---------------------+
+//     |                     |
+//     |                     |
+//     |        image        |
+//     |                     |
+//     |                     |
+//     +---------------------+
+//     |                     |
+//     |  Card Title         |
+//     |                     |
+//     |  More example text  |
+//     |  for what a 'card'  |
+//     |  might look like.   |
+//     |                     |
+//     +---------------------+
 //
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
@@ -41,9 +30,9 @@
 // Variables
 
 
-$card-maxwidth: 370px;
-$card-bg: #fff;
-
+$Card-maxWidth: 570px;
+$Card-bg: #fff;
+$Card-spacing: 30px;
 
 
 
@@ -51,10 +40,24 @@ $card-bg: #fff;
 // Default Card style
 
 .Card {
-	max-width: $card-maxwidth;
-	background: $card-bg;
-	margin-right: auto;
-	margin-left: auto;	
-	position: relative;
-	overflow: hidden;
+    max-width: $Card-maxWidth;
+    background: $Card-bg;
+    margin-right: auto;
+    margin-left: auto;    
+
+    &__textGroup {
+        padding: $Card-spacing;
+    }
 }
+
+
+/////////////////////////////////////-+++-
+// Card grid
+
+
+// for single row grids of cards
+.CardGrid {
+    @include u-tableGrid--gutter(1120px, 16px);
+}
+
+

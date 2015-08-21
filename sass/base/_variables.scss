@@ -1,0 +1,66 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Global Variables
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+
+// import some default variables. You shouldn't need to change anything in this file
+@import 'variablesDefault';
+
+
+
+/////////////////////////////////////-+++
+// fonts
+
+
+$OpenSans: 'Open Sans';
+
+$SansSerif : $OpenSans, $helvetica;
+
+
+
+/////////////////////////////////////-+++
+// colors
+
+
+$blue: dodgerblue;
+$red: tomato;
+
+$gray: #888888;
+$gray-light: #eeeeee;
+
+$background: #fff;
+$text: #202020;
+
+$link-color: $blue;
+$link-colorHover: lighten($blue, 10%);
+
+
+
+/////////////////////////////////////-+++
+// breakpoints
+
+
+$mq-breakpoints: (
+    small-bp:        600px,
+    mobilemenu-bp: 	 1100px,
+    desktop-bp:    	 1250px
+) !default;
+
+$mq-static-breakpoint: desktop-bp;
+
+
+
+/////////////////////////////////////-+++
+// Misc. values
+
+
+$comp-max-width: 1588px; // if working from a PSD or other static comp
+$content-max-width: 1160px; // content cap. Lines of text shouldnt ever span longer then this.
+$page-max-width: 2000px;  // if the page doesn't span to the windows edge at very large screens
+
+$animation-speed: .2s;
+$animation-easing: ease;
+$animation: $animation-speed $animation-easing;
+

@@ -1,0 +1,27 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// The newsletter signup in the header
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+.HeaderNewsletter {
+
+    .InputGroup {
+        display: inline-block;
+        vertical-align: top;
+
+        input {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+// desktop only
+.SiteHeader .HeaderNewsletter {
+}
+
+
+// mobile menu only
+.MobileMenu .HeaderNewsletter {
+}

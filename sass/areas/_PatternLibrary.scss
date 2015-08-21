@@ -1,0 +1,115 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Pattern Library
+//
+// These are some styles that overrides things in the pattern library
+//
+// @todo - move these styles into their own stylesheet and don't load them on the
+// production site
+
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+.sg-main {
+    padding: 15px 0 40px;
+
+    [id^="molecules-"], [id*=" molecules-"],
+    [id^="atoms-"], [id*=" atoms-"], {
+        padding: 0 40px;
+    }
+}
+
+.sg-label {
+    font-size: 11px;
+    line-height: 10px !important;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sg-fonts {
+    li {
+        margin-bottom: 30px;
+    }
+}
+
+.sg-colors li {
+    width: 8em !important;
+    border: none !important;
+}
+
+.sg-pattern-head {
+    padding: 0 !important;
+    font-size: 24px !important;
+    border-bottom-color: #aaa !important;
+    margin: 20px 0 !important;
+
+    & > h3 {
+
+        margin: 0;
+
+    }
+
+    a {
+        font-family: $SansSerif;
+        font-size: 10px;
+        line-height: 10px;
+        margin: 0;
+        padding: 0;
+        color: #fff !important;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        padding: 5px 8px;
+        background: #aaa;
+        display: inline-block !important;
+        text-decoration: none;
+    }
+}
+
+.sg-grids {
+    text-align: center;
+    & > * {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    & > *:nth-child(odd) {
+        background: #ccc;
+    }
+    & > *:nth-child(even) {
+        background: #eee;
+    }
+}
+
+.sg-layoutDemo {
+    > div > div > span {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    > div > div:nth-child(odd) > span {
+        background: #bbb;
+    }
+    
+    > div > div:nth-child(even) > span {
+        background: #ddd;
+    }
+}
+
+.sg-pattern-example {
+    @extend %u-clearfix;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/////////////////////////////////////-+++-
+// Styles specific to this project
+
+#atoms-select-menu-small,
+#atoms-select-menu,
+#atoms-select-menu-with-arrow {
+    .sg-pattern-example {
+        overflow: visible;
+    }
+}

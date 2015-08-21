@@ -1,0 +1,26 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// FooterLogo
+// this is the gray logo in the footer
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+
+$FooterLogo-width: 100px;
+$FooterLogo-height: 100px;
+
+$FooterLogo-file: 'logo';
+
+
+.FooterLogo {
+    display: block; 
+    position: relative;
+    background: transparent url('../../img/svg/#{$FooterLogo-file}.svg') center center no-repeat;
+    width: $FooterLogo-width;
+    height: $FooterLogo-height;
+    background-size: $FooterLogo-width $FooterLogo-height;    
+
+    .no-svg & {
+        background-image: url('../../img/#{$FooterLogo-file}.png');
+    }
+}

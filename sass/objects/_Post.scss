@@ -1,21 +1,39 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 // Post
+//
 // Styles for the main article or post. On a blog page this would be the actual
-// blog text
+// blog text.
+//
+//
+//
+//    +--------------------------------+
+//    |                                |
+//    |  Post Title                    |
+//    |                                |
+//    |  Lorem ipsum ...               |
+//    |                                |
+//    |                                |
+//    |                                |
+//    |                                |
+//    |                                |
+//    +--------------------------------+
+//
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
 
 
+
+$Post-bp: mobilemenu;
+$Post-border: 1px solid $gray-light;
+$Post-marginBottom: 75px;
+$Post-headerMargin: 100px;
+
+
+
 .Post {
+    margin-bottom: $Post-marginBottom;
 
-}
-
-.Post__title {
-	@extend %u-giantTitle;
-}
-
-.Post__header {
-}
-
-.Post__body {
+    &__header {
+        margin-bottom: $Post-headerMargin;
+    }
 }

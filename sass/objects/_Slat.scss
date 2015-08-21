@@ -1,30 +1,19 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 // Slat
 // This is a grouping of text and images that looks like a slat (a horizontal
-// material sometimes used in architecture/building). Horizontal in appearance.
-// Often shows up in groups. Also often acts as a teaser. Usually full width, not
-// in grids.
-// Usually takes markup that looks somewhat like this:
+// material sometimes used in architecture/building). It also is borderless - no
+// wrapping container or background color (like a card might have).
+// Often shows up in groups. Also often acts as a teaser.
 //
-//	<div class="Slat">
-//		<div class="Slat__imageGroup">
-//			<img src="" alt="" />
-//		</div>
-//		<div class="Slat__textGroup">
-//			<p>Lorem ipsum</p>
-//		</div>
-//	</div>
 //
-// and visually should look something like this:
-//
-//     +---------------+
-//     |               |  Example Title of Slat
-//     |               |
-//     |     image     |  More example text for what a 'slat' looks like.
-//     |               |  Does this visual example help you understand
-//     |               |  what this element is? I sure hope so.
-//     |               |
-//     +---------------+
+//     
+//     Example Title of Slat                             +---------+  
+//                                                       |         |  
+//     More example text for what a 'slat' looks like.   |  image  |       
+//     Does this visual example help you understand      |         |       
+//     what this element is? I sure hope so.             +---------+     
+//     
+//     
 //
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
@@ -34,47 +23,43 @@
 // Variables
 
 
-$slat-imagewidth: 270px;
-$slat-smallimagewidth: 170px;
-
-
+$Slat-bp: mobilemenu-bp;
+$Slat-imagewidth: 250px;
+$Slat-imageGutter: 30px;
 
 /////////////////////////////////////-+++-
 // Default Slat style
 
 
 .Slat {
-	@extend %u-clearfix;
-	width: 100%;
-	position: relative;
-	background: #fff;
+    @include u-tableGrid--gutter($Slat-bp, $Slat-imageGutter);
 
-	.Slat__imageGroup {
-		display: none; // hide image alltogether on mobie
+    &__imageGroup {
+        display: none; // hide images on mobie
 
-		@include mq($from: 600px) {
-			float: left;
-			display: block;
-			width: $slat-smallimagewidth;
-		}
+        @include mq($from: $Slat-bp) {
+            width: $Slat-imagewidth;
+        }
+    }
 
-		@include mq($from: 1100px) {
-			width: $slat-imagewidth;
-		}
+    &__header {
+        margin-bottom: 20px;
+    }
 
-	}
-
-	.slat__textGroup {
-
-		@include mq($from: 600px) {
-			padding: 0 20px 20px;
-			margin-left: 170px;
-			display: table;
-		}
-
-		@include mq($from: 1100px) {
-			margin-left: $slat-imagewidth;
-			padding-top: 20px;
-		}
-	}
+    .SlatGrid & {
+        .Slat__imageGroup {
+            display: none; // hide images when slats show up in grids
+        }
+    }
 }
+
+
+
+/////////////////////////////////////-+++-
+// Slat grid
+
+// for single row grids of slats
+.SlatGrid {
+    @include u-tableGrid--border(1120px, 40px, $gray-light);
+}
+

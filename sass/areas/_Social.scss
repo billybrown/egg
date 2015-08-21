@@ -1,0 +1,27 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Social menu
+// Shows up in the header and footer
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+.SocialMenu {
+
+    ul {
+        @extend %u-inlineList--spacing;
+    }
+ 
+    a {
+        color: $text;
+
+        &:hover {
+            color: $link-color;
+        }
+    }
+}
+
+
+// .SocialLinks {
+//     .facebook a:hover         { background: $color--facebook;}
+//     .twitter a:hover         { background: $color--twitter;}
+//     .google-plus a:hover     { background: $color--google;}
+// }
