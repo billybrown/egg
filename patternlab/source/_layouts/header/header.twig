@@ -2,16 +2,16 @@
 	<div class="Frame Frame--tinySpacing Frame--gray">
 		<div class="u-constrained">
 			{{ headernewsletter.input("Enter email for alerts") }}
-			{{ headersecondarymenu.input() }}
-			{{ headersearch.input() }}
+			{% include 'header/secondarymenu.twig' %}
+			{% include 'header/search.twig' %}
 		</div>
 	</div><!-- /.Frame -->
 	<div class="Frame Frame--tinySpacing Frame--lightGray">
 		<div class="u-constrained u-constrained--noMobilePadding">
 			<div class="Frame__inside">
-				{{ headerlogo.input() }}
-				{{ headerprimarymenu.input() }}
-				{{ mobiletriggers.input() }}
+				{% include 'header/logo.twig' %}
+				{% include 'header/primarymenu.twig' %}
+				{% include 'header/mobiletriggers.twig' %}
 			</div><!-- /.Frame__inside -->
 		</div>
 	</div><!-- /.Frame -->
@@ -19,8 +19,8 @@
 
 <div id='MobileMenu__content' class="MobileMenu__content MobileMenu">
 	<div class="MobileMenu__inside">
-		{{ headersecondarymenu.input() }}
-		{{ headersearch.input() }}
+		{% include 'header/secondarymenu.twig' %}
+		{% include 'header/search.twig' %}
 		{{ headernewsletter.input("Enter email") }}
 	</div><!-- /.MobileMenu__inside -->
 </div><!-- /.MobileMenu__content -->

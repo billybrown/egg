@@ -1,6 +1,6 @@
-{% include 'organisms-header' %}
+{% extends "main.twig" %}
 
-<main class="SiteMain">
+{% block main %}
 
 	<div class="Frame">
 		<div class="u-constrained">
@@ -22,6 +22,4 @@
 		</div><!-- /.u-constrained -->
 	</div><!-- /.Frame -->
 
-</main>
-
-{% include 'organisms-footer' %}
+{% endblock %}
