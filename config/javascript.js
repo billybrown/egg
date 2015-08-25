@@ -47,6 +47,11 @@ module.exports.tasks = {
             files: [
                 { expand: true, cwd: 'bower_components/modernizr', src: ['modernizr.js'], dest: 'build/js/'}
             ]
+        },
+        custom_modernizr: {
+            files: [
+                { expand: true, cwd: 'js/vendor', src: ['modernizr.custom.js'], dest: 'build/js/'}
+            ]
         }
     },
 
