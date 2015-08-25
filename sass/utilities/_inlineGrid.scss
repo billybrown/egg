@@ -13,9 +13,9 @@
 // A mixing for applying an inline based grid
 // the immediate children of the mixin become the grid columns
 
-@mixin u-inlineGrid($breakpoint, $gutter) {
+@mixin u-inlineGrid($bp, $gutter) {
 
-    @include mq($from: $breakpoint) {
+    @include mq($from: $bp) {
         margin-left: -$gutter;
     }
 
@@ -23,7 +23,7 @@
     & > li {
         min-height: 1px;
         
-        @include mq($from: $breakpoint) {
+        @include mq($from: $bp) {
             margin-right: -.25em;
             vertical-align: top;
             display: inline-block;
