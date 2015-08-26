@@ -20,7 +20,7 @@
         text-shadow: none !important;
     }
 
-    @page { margin: .5cm; }
+    @page { margin: 1.5cm .5cm 2cm; }
     thead { display: table-header-group; }
     table, tr, img { page-break-inside: avoid; }
     p, h2, h3 { orphans: 3; widows: 3; }
