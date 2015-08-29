@@ -1,8 +1,3 @@
-# Hey! Listen!
-Active development on Egg is now happening on the 'patternlab' branch. So go there for the most recent stuff. If I decide to move away from pattern library I'll go back to this branch.
-
-
-
 # egg
 A starting point for my web projects.
 
