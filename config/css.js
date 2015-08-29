@@ -11,6 +11,11 @@ module.exports.tasks = {
       files: {
         'build/css/main.css': 'sass/main.scss'
       }
+    },
+    ie: {
+      files: {
+        'build/css/ie8.css': 'sass/ie8.scss'
+      }
     }
   },
 
@@ -29,7 +34,7 @@ module.exports.tasks = {
       map: true
     },
     custom: {
-      src: 'build/css/*.css'
+      src: ['build/css/main.css', 'build/css/ie8.css']
     }
   },
 
@@ -100,7 +105,7 @@ module.exports.tasks = {
   // },
   
   clean: {
-    css: ['build/css/main.css']
+    css: ['build/css/main.css', 'build/css/main.css.map']
   }
 
 };

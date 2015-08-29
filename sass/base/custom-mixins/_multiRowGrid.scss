@@ -1,0 +1,50 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Multi-row grid
+//
+// This is a mixin for applying grids to multiple rows. It uses flexbox with an 
+// inline-block fallback using modernizr.
+//
+// The inline-block layout is based on the toast grid: http://daneden.github.io/Toast/
+//
+// use the mixin like so:
+//
+//      .MyExampleClass {
+//          @include u-multiRowGrid( 800px, 30px );
+//      }
+//
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+// $bp: the breakpoint for when the grid is triggered
+// $gutter: the space in between the elements
+// $width: the width of the columns (defaults to 100% and can be overridden)
+
+@mixin u-multiRowGrid($bp, $gutter, $width: 100%) {
+
+    @include mq($from: $bp) {
+        margin-left: -$gutter;
+    }
+
+    & > div,
+    & > li {
+        min-height: 1px;
+        
+        @include mq($from: $bp) {
+            margin-right: -.25em;
+            vertical-align: top;
+            display: inline-block;
+            padding-left: $gutter;
+            width: $width;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $gutter;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+

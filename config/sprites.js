@@ -9,13 +9,12 @@ module.exports.tasks = {
     "dr-svg-sprites": {
         basic: {
             options: {
-                spriteElementPath: "img/svg",
+                spriteElementPath: "img/svg-sprites",
                 spritePath: "build/img/sprite.svg",
-                cssPath: "sass/sprites.scss",
+                cssPath: "sass/sprites/sprites.scss",
                 prefix: "svg",
                 layout: "vertical"
             }
         }
     }
-
 };

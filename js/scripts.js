@@ -8,9 +8,14 @@ jQuery( document ).ready( function( $ ) {
 		InitializePlugin : {
 
 			Fitvids : function() {
-				// this makes all videos responsive
-				$(".main").fitVids();
+				// this makes all videos responsive inside the main content area
+				$(".SiteMain").fitVids();
 			}
+
+			// ChosenSelect : function() {
+			// 	// this makes all select elements with this wrapping class have the chosen style
+			// 	$(".u-select select").chosen();
+			// }	
 		},
 
 		UI: {
@@ -21,6 +26,19 @@ jQuery( document ).ready( function( $ ) {
 					$(receiver).toggleClass(classer);
 				});
 			}
+
+			// EqualizeHeights: function() {
+			// 	// using enquire to only trigger match height at a certain breakpoint
+			//  enquire.register("screen and (min-width:940px)", {
+			//		match : function() {
+			//			$('.CardColorGrid .Card').matchHeight();
+			//               }, unmatch : function() {
+			//                   $('.CardColorGrid .Card').matchHeight('remove');
+			//               }
+			//           }, true);
+			//       }
+			//	}
+
 		}
 	};
 

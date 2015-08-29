@@ -1,0 +1,104 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Some absolute centering utlity placeholders and mixins
+//
+// These are here to easily position things elsewhere in your CSS. The mixins towards
+// the bottom take a media query breakpoint value and apply the positioning at that
+// breakpoint.
+//
+// @todo - these are not DRY. Need work on them.
+//
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+
+// an experimental mixin for applying absolute positioning via a mixin
+@mixin u-absolute($top, $right, $bottom, $left, $bp:"") {
+
+    @if $bp != "" {
+        position: relative;
+
+        @include mq($from: $bp) {
+            position: absolute;
+            @if ($top != null) { top: $top; }
+            @if ($right != null) { right: $right; }
+            @if ($bottom != null) { bottom: $bottom; }
+            @if ($left != null) { left: $left; }
+        }
+    } @else {
+        position: absolute;
+        @if ($top != null) { top: $top; }
+        @if ($right != null) { right: $right; }
+        @if ($bottom != null) { bottom: $bottom; }
+        @if ($left != null) { left: $left; }
+    }
+}
+
+@mixin u-absoluteCenter($position, $bp:"") {
+
+    @if $bp != "" {
+        position: relative;
+
+        @include mq($from: $bp) {
+    
+            position: absolute;
+
+            @if ($position == "center") { 
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+            } @else if ($position == "left") { 
+                top: 50%;
+                left: 0;
+                transform: translatey(-50%);  
+
+            } @else if ($position == "right") {
+                top: 50%;
+                right: 0;
+                transform: translatey(-50%);    
+
+            } @else if ($position == "top") {
+                top: 0;
+                left: 50%;
+                transform: translatex(-50%);     
+
+            } @else if ($position == "bottom") {
+                bottom: 0;
+                left: 50%;
+                transform: translatex(-50%);   
+            }
+        }
+    } @else {
+        position: absolute;
+
+            @if ($position == "center") { 
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+  
+            } @else if ($position == "left") { 
+                top: 50%;
+                left: 0;
+                transform: translatey(-50%);  
+
+            } @else if ($position == "right") {
+                top: 50%;
+                right: 0;
+                transform: translatey(-50%);    
+
+            } @else if ($position == "top") {
+                top: 0;
+                left: 50%;
+                transform: translatex(-50%);     
+
+            } @else if ($position == "bottom") {
+                bottom: 0;
+                left: 50%;
+                transform: translatex(-50%);   
+            }
+    }
+
+    //.no-csstransforms & { top: 0; left: 0; } 
+}
+

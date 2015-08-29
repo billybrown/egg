@@ -1,0 +1,42 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Text
+// This is the default, sitewide font and its varients
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+%u-text {
+	font: 400 20px/30px $SansSerif;
+}
+
+%u-text--strong {
+	@extend %u-text;
+	font-weight: 700;
+}
+
+%u-smallText {
+	font: 400 18px/26px $SansSerif;
+}
+
+%u-smallText--strong {
+	@extend %u-smallText;
+	font-weight: 700;
+}
+
+%u-largeText {
+	font: 400 23px/30px $SansSerif;
+}
+
+
+// a sass loop to turn the placeholder classes above
+// into utility classes for easy deployment of these text types
+$text-collection: 
+text 
+text--strong
+smallText 
+smallText--strong 
+largeText 
+;
+
+@each $i in $text-collection { .u-#{$i} { @extend %u-#{$i}; } }
+

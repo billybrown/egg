@@ -1,1 +1,0 @@
-// put your svg images that you want turned into a sprite here

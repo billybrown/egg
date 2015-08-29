@@ -16,7 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
     "modernizr": "~2.8.3",
     "enquire": "~2.1.2",
     "fitvids": "~1.1.0",

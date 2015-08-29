@@ -1,0 +1,25 @@
+{% extends &quot;main.twig&quot; %}
+
+{% block main %}
+
+	&lt;div class=&quot;Frame&quot;&gt;
+		&lt;div class=&quot;u-constrained&quot;&gt;
+
+			{% embed &quot;organisms-list-box&quot; %}
+			    {% block listbox_title %}
+			        This is an example &lt;strong&gt;List Box&lt;/strong&gt;
+			    {% endblock %}
+			    {% block listbox_content %}
+					&lt;div class=&quot;SlatGrid&quot;&gt;
+						&lt;div&gt;{% include 'molecules-slat' %}&lt;/div&gt;
+						&lt;div&gt;{% include 'molecules-slat' %}&lt;/div&gt;
+						&lt;div&gt;{% include 'molecules-slat' %}&lt;/div&gt;
+					&lt;/div&gt;
+				{% endblock %}
+				{% block listbox_footer %}{% endblock %}
+			{% endembed %}
+
+		&lt;/div&gt;&lt;!-- /.u-constrained --&gt;
+	&lt;/div&gt;&lt;!-- /.Frame --&gt;
+
+{% endblock %}
