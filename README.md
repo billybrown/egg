@@ -1,5 +1,5 @@
 # egg
-A starting point for my web projects.
+A framework for building frameworks - currently in active development.
 
 
 ## to do
