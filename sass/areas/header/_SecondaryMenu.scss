@@ -9,7 +9,7 @@
 
 
     a {
-        @extend %u-smallText;
+        @extend %u-text--blocked;
         display: block;
     }
 }
@@ -26,6 +26,6 @@
 // mobile only version
 .MobileMenu .SecondaryMenu {
     ul {
-        @extend %u-stackedList--spacing;
+        @extend %u-stackedList--smallSpacing;
     }
 }

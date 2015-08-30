@@ -1,39 +1,67 @@
 /////////////////////////////////////-+++-//////////////////////////////////////
-// Mixin for creating an image col layout where the first child is the image
-// and the second child is the text. 
+// Mixin for creating an image col layout where the image takes one column
+// and the text takes another. The text side is fluid - the image is the
+// width of the image (or you can specifically define it in the mixin)
+//
+// @todo: this is not DRY. Needs some research and refactoring depending on
+// the position of the image col.
 //
 // based on the bootstrap media object: http://getbootstrap.com/components/#media
 /////////////////////////////////////-+++-//////////////////////////////////////
 
 
+
+// $imgSide = takes either 'right' or 'left' and is the side the image is on
 // $gutter = space inbetween image and text column
 // $imgWidth = if you need your imagecolumn to have a hard width, add it here.
 // otherwise it gets calculated automatically
 
-@mixin u-imageCol($gutter: 0, $imgWidth: '') {
+@mixin u-imageCol($imgSide, $gutter: 0, $imgWidth: '') {
     overflow: hidden;
     zoom: 1;
     width: 100%;
     display: table;
 
-    & > div:first-child {
-        display: table-cell;
-        vertical-align: top;
+    @if $imgSide == "left" {
+        & > div:first-child {
+            display: table-cell;
+            vertical-align: top;
 
-        img {
-            display: block;
-            max-width: none;
-            @if $imgWidth != '' { width: $imgWidth; }
+            img {
+                display: block;
+                max-width: none;
+                @if $imgWidth != '' { width: $imgWidth; }
+            }
         }
-    }
 
-    & > div:last-child {
-        display: table-cell;
-        vertical-align: middle;
-        overflow: hidden;
-        zoom: 1;
-        width: 10000px;
-        @if $gutter != 0 { padding-left: $gutter; }
+        & > div:last-child {
+            display: table-cell;
+            vertical-align: middle;
+            overflow: hidden;
+            zoom: 1;
+            width: 10000px;
+            @if $gutter != 0 { padding-left: $gutter; }
+        }
+    } @else {
+        & > div:last-child {
+            display: table-cell;
+            vertical-align: top;
+
+            img {
+                display: block;
+                max-width: none;
+                @if $imgWidth != '' { width: $imgWidth; }
+            }
+        }
+
+        & > div:first-child {
+            display: table-cell;
+            vertical-align: middle;
+            overflow: hidden;
+            zoom: 1;
+            width: 10000px;
+            @if $gutter != 0 { padding-right: $gutter; }
+        }        
     }
 }
 
@@ -41,10 +69,10 @@
 // $bp = if you want your image column layout to only happen after a certain
 // breakpoint, use this version of the mixin
 
-@mixin u-imageCol--bp($bp, $gutter, $imgWidth: '') {
+@mixin u-imageCol--bp($bp, $imgSide, $gutter, $imgWidth: '') {
     display: block; // incase you apply this mixin to an <a> tag
 
      @include mq($from: $bp) {
-        @include u-imageCol($gutter, $imgWidth);
+        @include u-imageCol($imgSide, $gutter, $imgWidth);
      }
 }

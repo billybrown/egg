@@ -33,11 +33,19 @@ $SiteHeader-bp: mobilemenu-bp;
     .HeaderNewsletter,
     .SecondaryMenu {
         display: inline-block;
-        vertical-align: top;
+        vertical-align: middle;
 
         &:not(:last-child) {
             margin-right: 40px;
         }
+    }
+
+    .HeaderSearch {
+        float: right;
+    }
+
+    .InputGroup {
+        margin-bottom: 0;
     }
 }
 
@@ -46,6 +54,10 @@ $SiteHeader-bp: mobilemenu-bp;
     .HeaderNewsletter,
     .SecondaryMenu {
         margin-bottom: 20px;
+    }
+
+    .InputGroup {
+        margin-bottom: -2px;
     }
 }
 

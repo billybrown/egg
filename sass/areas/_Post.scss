@@ -22,16 +22,16 @@
 
 
 $Post-bp: mobilemenu-bp;
-$Post-border: 1px solid $gray-light;
-$Post-marginBottom: 75px;
-$Post-headerMargin: 100px;
 
 
 
 .Post {
-    margin-bottom: $Post-marginBottom;
+    margin-bottom: 100px;
 
     &__header {
-        margin-bottom: $Post-headerMargin;
+        margin-bottom: 40px;
+        border-bottom: 10px solid $text;
+        padding-bottom: 30px;
+        text-align: center;
     }
 }

@@ -24,17 +24,20 @@
 
 // a special list with special brand dots
 %u-brandList {
+    overflow: auto;
+
     li {
         list-style: none;
         position: relative;
-        padding-left: 20px;
 
         &:before {
-            @include u-absolute(11px, null, null, 0);
-            @extend .u-icomoon;
+            @extend %u-icomoon;
             content: '\f111';
             color: $link-color;
-            font-size: 5px;
+            font-size: 6px;
+            position: relative;
+            top: -4px;
+            padding-right: 10px;
         }
     }
 }
@@ -45,7 +48,7 @@
 $inlineList-bp: small-bp;
 $inlineList-spacing: 40px;
 $inlineList-smallSpacing: 10px;
-$inlineList-pipeBorder: 1px solid $gray;
+$inlineList-pipeBorder: 1px solid $text;
 
 // default inline list
 %u-inlineList {

@@ -33,13 +33,12 @@ $Slat-imageGutter: 30px;
 
 
 .Slat {
-    @include u-imageCol--bp($Slat-bp, 30px);
+    @include u-imageCol--bp($Slat-bp, "right", 30px);
 
     &__imageGroup {
-        display: none; // hide images on mobie
 
-        @include mq($from: $Slat-bp) {
-            width: $Slat-imagewidth;
+        @include mq($until: $Slat-bp) {
+            display: none; // hide images on mobile
         }
     }
 
@@ -47,10 +46,8 @@ $Slat-imageGutter: 30px;
         margin-bottom: 20px;
     }
 
-    .SlatGrid & {
-        .Slat__imageGroup {
-            display: none; // hide images when slats show up in grids
-        }
+    .u-pipeList {
+        @extend %u-tinyText;
     }
 }
 
@@ -61,6 +58,10 @@ $Slat-imageGutter: 30px;
 
 // for single row grids of slats
 .SlatGrid {
-    @include u-equalColRow--border(1120px, 70px, #ccc);
+    @include u-equalColRow--border(1120px, 70px, $text, 10px);
+
+    .Slat__imageGroup {
+        display: none; // hide images when slats show up in grids
+    }
 }
 

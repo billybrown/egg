@@ -26,10 +26,9 @@
 // fonts
 
 
-$OpenSans: 'Open Sans';
 
-$SansSerif : $OpenSans, $helvetica;
-
+$SansSerif : 'Raleway', $helvetica;
+$Serif: 'Neuton', $georgia;
 
 
 /////////////////////////////////////-+++
@@ -43,10 +42,10 @@ $gray: #888888;
 $gray-light: #eeeeee;
 
 $background: #fff;
-$text: #202020;
+$text: black;
 
-$link-color: $blue;
-$link-colorHover: lighten($blue, 10%);
+$link-color: tomato;
+$link-colorHover: goldenrod;
 
 
 

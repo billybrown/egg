@@ -7,6 +7,7 @@
 .Breadcrumbs {
     
     li {
+        @extend %u-smallText;
 
         &:not(:last-child) {
 
@@ -14,6 +15,7 @@
                 @extend %u-icomoon;
                 content: '\f054';
                 padding: 0 6px 0 10px;
+                font-size: 10px;
             }
         }
     }

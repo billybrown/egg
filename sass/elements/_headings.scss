@@ -13,9 +13,9 @@
 
 
 
-h1 { @extend %u-largeText; }
-h2 { @extend %u-largeText; }
-h3 { @extend %u-largeText; }
-h4 { @extend %u-largeText; }
-h5 { @extend %u-largeText; }
-h6 { @extend %u-largeText; }
+h1 { @extend %u-giantSerifText; }
+h2 { @extend %u-largeSerifText; }
+h3 { @extend %u-serifText; }
+h4 { @extend %u-text--blocked; }
+h5 { @extend %u-text--strong; }
+h6 { @extend %u-smallText--strong; }

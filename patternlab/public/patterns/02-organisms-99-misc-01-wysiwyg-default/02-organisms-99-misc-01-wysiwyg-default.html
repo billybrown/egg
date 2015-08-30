@@ -7,16 +7,17 @@
 		<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1" />
 
 		<!-- google webfonts -->
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,600,600italic,700,700italic,800,800italic" media="all" />
+		<link href='https://fonts.googleapis.com/css?family=Raleway:800,500|Neuton:400,800,700' rel='stylesheet' type='text/css'>
 
 		<!-- Iconfont css from Icomoon -->
-		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?1440886423" media="all" />
+		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?1440951902" media="all" />
 
-		<!-- Minified and Concatenated Vendor CSS from bower -->
-		<link rel="stylesheet" href="../../../../build/css/plugins.css?1440886423" media="all" />
+		<!-- Minified and Concatenated Vendor CSS from bower
+		<link rel="stylesheet" href="../../../../build/css/plugins.css?1440951902" media="all" />
+		-->
 
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="../../../../build/css/main.min.css?1440886423" media="all" />
+		<link rel="stylesheet" href="../../../../build/css/main.min.css?1440951902" media="all" />
 		
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 		<!-- never cache patterns -->
@@ -50,8 +51,16 @@
 		<div class="SiteWrapper">
 	<div class="WYSIWYG">
 
-<p>The markup here should replicate the markup a wordpress WYSIWYG would output for things like blockquotes, floated images, text alignment, etc.</p>
+<p>The markup here should replicate the markup a basic WYSIWYG might output for things like blockquotes, floated images, text alignment, etc.</p>
 
+
+<div class="Image align-left">
+    <div class="Image__creditWrapper">
+	   <img src="http://dummyimage.com/400x300/888/fff.png" alt="">
+	   <div class="Image__credit">Jane Smith</div>
+    </div><!-- /.Image__creditWrapper -->
+    <div class="Image__caption"><p>Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. Proin imperdiet ac nisi et porttitor. Sed sodales metus sit amet consequat placerat. </p></div>
+</div><!-- /.Image -->
 <p>Lorem ipsum dolor sit amet, <strong>bold example</strong>&nbsp;adipiscing elit. Cras semper <em>italics example</em>, at venenatis lacus semper eget <del>strikethrough example</del>. Praesent vestibulum ac lectus vel maximus. Nunc vitae nibh quis mi porttitor scelerisque nec sed sem. <a href="http://google.com">Link example</a>, tincidunt purus ac, lacinia nunc. <span style="text-decoration: underline;">Underline example</span> Praesent felis sapien, eleifend a urna id, dictum commodo lacus.<span style="color: #ff0000;"> Example of text with color</span>. Ut varius sagittis ex, in tincidunt dolor viverra laoreet. Maecenas nibh neque, mollis quis luctus eleifend, aliquet at magna. Nam blandit leo pretium, pretium neque id, scelerisque nunc. Sed sit amet vulputate sem. Sed at purus et justo aliquam tristique ut et nulla. Quisque quis erat non urna pulvinar feugiat. Nulla facilisi. Sed rutrum nisl erat.</p>
 
 <ul>
@@ -63,13 +72,6 @@
 <p>Curabitur ac nunc nibh. Nunc accumsan finibus tincidunt. Donec ornare nisi sapien. Vestibulum tempus mauris ut orci luctus mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent mattis neque et velit imperdiet, in venenatis lacus tempus. Mauris id gravida risus.</p>
 
 <h1>Heading 1 example</h1>
-
-<div id="attachment_95" style="width: 300px" class="wp-caption alignright">
-	<a href="/">
-		<img class="size-medium wp-image-95" src="http://dummyimage.com/300x237/000/fff.png" alt="Phasellus interdum diam eu nisi fringilla, quis tempor nisi vestibulum. Interdum et malesuada fames ac ante ipsum primis in faucibus" width="300" height="237"/>
-	</a>
-	<p class="wp-caption-text">Phasellus interdum diam eu nisi fringilla, quis tempor nisi vestibulum. Interdum et malesuada fames ac ante ipsum primis in faucibus</p>
-</div>
 
 <p>Pellentesque quis ipsum velit. Morbi dolor risus, porttitor eu ipsum in, efficitur egestas magna. Mauris tincidunt elementum tempus. Sed eget bibendum ligula. Ut ac risus vitae orci aliquam tincidunt id et neque. Nunc id risus diam. Aliquam semper leo libero, vel tincidunt felis iaculis nec. Sed faucibus tellus eget imperdiet euismod.</p>
 
@@ -97,10 +99,6 @@
 
 <p>Ut ac felis dui. Aliquam ut sem imperdiet, condimentum magna vitae, pellentesque ligula. Praesent condimentum dictum ante, vel ultricies odio porttitor ut. Donec vitae magna in tortor auctor sollicitudin. Vestibulum dapibus mattis magna, a interdum nulla efficitur sed. Proin blandit sem at eleifend eleifend. Aenean egestas, neque rutrum tincidunt ullamcorper, lacus dolor molestie est, nec vulputate velit lacus dapibus augue.</p>
 
-<a href="/">
-	<img class="alignleft size-medium wp-image-142" src="http://dummyimage.com/251x300/000/fff.png" alt="accordian-woman" width="251" height="300">
-</a>
-
 <h3>Heading 3 example</h3>
 
 <p>Vestibulum dapibus mattis magna, a interdum nulla efficitur sed. Proin blandit sem at eleifend eleifend.</p>
@@ -117,27 +115,6 @@
 
 <p>Cras ut massa sit amet turpis congue ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer nulla nibh, imperdiet non mauris nec, lobortis euismod lorem. Proin aliquet odio ipsum, sed ornare quam laoreet ac. Suspendisse at augue ac mi imperdiet dictum. Etiam placerat sollicitudin lacus eu dictum. In imperdiet est eget tincidunt porttitor.</p>
 
-<p style="text-align: right;">Example of left aligned text</p>
-
-<p style="text-align: center;">Example of center aligned text</p>
-
-<p style="text-align: justify;">Curabitur ac nunc nibh. Nunc accumsan finibus tincidunt. Donec ornare nisi sapien. Vestibulum tempus mauris ut orci luctus mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent mattis neque et velit imperdiet, in venenatis lacus tempus. Mauris id gravida risus.</p>
-
-<div id="attachment_96" style="width: 300px" class="wp-caption aligncenter">
-	<a href="/">
-		<img class="size-medium wp-image-96" src="http://dummyimage.com/300x220/000/fff.png" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in hendrerit felis." width="300" height="220">
-	</a>
-	<p class="wp-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in hendrerit felis.</p>
-</div>
-
-<pre style="text-align: left;">Example of Preformated text.</pre>
-
-<div id="attachment_94" style="width: 300px" class="wp-caption alignnone">
-	<a href="">
-		<img class="size-medium wp-image-94" src="http://dummyimage.com/300x230/000/fff.png" alt="Interdum et malesuada fames ac ante ipsum primis in faucibus" width="300" height="230">
-	</a>
-	<p class="wp-caption-text">Interdum et malesuada fames ac ante ipsum primis in faucibus</p>
-</div>
 
 </div><!-- /.WYSIWYG -->
 
@@ -149,7 +126,7 @@
 
 	<!--DO NOT REMOVE-->
 	<script>
-	var patternData = {"cssEnabled":false,"lineage":[],"lineageR":[],"patternBreadcrumb":"organisms &gt; misc","patternDesc":"","patternExtension":"twig","patternName":"wysiwyg wordpress","patternPartial":"organisms-wysiwyg-wordpress","patternState":"","extraOutput":[]};
+	var patternData = {"cssEnabled":false,"lineage":[{"lineagePattern":"molecules-image","lineagePath":"..\/..\/patterns\/02-organisms-99-misc-01-wysiwyg-default\/02-organisms-99-misc-01-wysiwyg-default.html"}],"lineageR":[{"lineagePattern":"pages-basicpage","lineagePath":"..\/..\/patterns\/05-pages-02-basicpage\/05-pages-02-basicpage.html"}],"patternBreadcrumb":"organisms &gt; misc","patternDesc":"","patternExtension":"twig","patternName":"wysiwyg default","patternPartial":"organisms-wysiwyg-default","patternState":"","extraOutput":[]};
 </script>
 
 <script>
@@ -185,10 +162,10 @@
 	}
 </script>
 
-<script id="pl-js-polyfill-insert-1440886423">
+<script id="pl-js-polyfill-insert-1440951902">
 	(function() {
 		if (self != top) {
-			var cb = '1440886423';
+			var cb = '1440951902';
 			var js = [];
 			if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 				js.push("styleguide/bower_components/classList.min.js");
@@ -198,10 +175,10 @@
 	})();
 </script>
 
-<script id="pl-js-insert-1440886423">
+<script id="pl-js-insert-1440951902">
 	(function() {
 		if (self != top) {
-			var cb = '1440886423';
+			var cb = '1440951902';
 			var js = [ { "src": "styleguide/bower_components/jwerty.min.js", "dep": [ { "src": "annotations/annotations.js", "dep": [ "styleguide/js/patternlab-pattern.min.js" ] } ] } ];
 			scriptLoader.run(js,cb,'pl-js-insert');
 		}

@@ -6,6 +6,11 @@
 
 .Pagination {
     ul {
-        @extend %u-inlineList;
+        @extend %u-inlineList--smallSpacing;
+    }
+
+    li {
+        @extend %u-smallText;
+
     }
 }

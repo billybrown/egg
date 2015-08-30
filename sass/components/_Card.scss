@@ -49,6 +49,13 @@ $Card-spacing: 30px;
 
     &__textGroup {
         padding: $Card-spacing;
+
+    }
+
+    &__summary {
+        p {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -56,10 +63,14 @@ $Card-spacing: 30px;
 /////////////////////////////////////-+++-
 // Card grid
 
-
-// for single row grids of cards
+// for multiple row up 4up cards
 .CardGrid {
-    @include u-equalColRow--gutter(1120px, 20px);
+    @include u-multiRowGrid( 1100px, 30px, 25% );
+}
+
+// for single row of equal columns
+.CardGridOneRow {
+    @include u-equalColRow--gutter( 800px, 30px);
 }
 
 

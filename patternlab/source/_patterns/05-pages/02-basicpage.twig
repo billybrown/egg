@@ -2,13 +2,16 @@
 
 {% block main %}
 
-	<div class="Frame">
-		<div class="u-constrained">
+    {% embed "organisms-frame" %}
+        {% block frame_content %}
 
 			{% embed "organisms-post" %}
+                {% block post_body %}
+                    {% include 'organisms-wysiwyg-default' %}
+                {% endblock %}
 			{% endembed %}
 
-		</div><!-- /.u-constrained -->
-	</div><!-- /.Frame-->
+        {% endblock %}
+    {% endembed %}
 
 {% endblock %}

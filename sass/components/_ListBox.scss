@@ -22,7 +22,7 @@
 
 
 $ListBox-bp: small-bp;
-$ListBox-headerSpacing: 40px;
+$ListBox-headerSpacing: 50px;
 $ListBox-footerSpacing: 50px;
 
 
@@ -36,5 +36,9 @@ $ListBox-footerSpacing: 50px;
     &__footer {
         text-align: center;
         margin-top: $ListBox-footerSpacing;
+
+        a {
+            font-weight: 800;
+        }
     }
 }

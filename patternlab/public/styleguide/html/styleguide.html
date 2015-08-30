@@ -7,16 +7,17 @@
 		<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1" />
 
 		<!-- google webfonts -->
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,600,600italic,700,700italic,800,800italic" media="all" />
+		<link href='https://fonts.googleapis.com/css?family=Raleway:800,500|Neuton:400,800,700' rel='stylesheet' type='text/css'>
 
 		<!-- Iconfont css from Icomoon -->
-		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?1440886423" media="all" />
+		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?1440951902" media="all" />
 
-		<!-- Minified and Concatenated Vendor CSS from bower -->
-		<link rel="stylesheet" href="../../../../build/css/plugins.css?1440886423" media="all" />
+		<!-- Minified and Concatenated Vendor CSS from bower
+		<link rel="stylesheet" href="../../../../build/css/plugins.css?1440951902" media="all" />
+		-->
 
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="../../../../build/css/main.min.css?1440886423" media="all" />
+		<link rel="stylesheet" href="../../../../build/css/main.min.css?1440951902" media="all" />
 		
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 		<!-- never cache patterns -->
@@ -63,11 +64,16 @@
 	</div>
 		<div class="sg-pattern-example">
 		<p class='u-largeText'>Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+<p class="u-text--blocked">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
 <p class="u-text--strong">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
 <p>Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
 <p class='u-smallText--strong'>Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
 <p class='u-smallText'>Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+<p class='u-tinyText'>Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
 
+<p class='u-giantSerifText'>Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+<p class='u-largeSerifText'>Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+<p class='u-serifText'>Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
 	</div>
 		<div class="sg-pattern-extra">
 		<div class="sg-pattern-extra-annotations" style="display: none">
@@ -1803,7 +1809,7 @@
 				</a>
 			</h3>
 		</header>
-					<div class="Card__summary">
+					<div class="Card__summary u-smallText">
 				<p>Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. </p>
 			</div>
 			</div><!-- /.Card__textGroup -->
@@ -1836,6 +1842,7 @@
 					The <span class="sg-pattern-extra-lineage-name">molecules-card</span> pattern is included in the following pattern(s): 
 					<ul>
 											<li> <a href="../../patterns/02-organisms-01-list-boxes-01-list-box/02-organisms-01-list-boxes-01-list-box.html" class="" data-patternpartial="organisms-list-box">organisms-list-box</a></li>
+											<li> <a href="../../patterns/05-pages-01-homepage/05-pages-01-homepage.html" class="" data-patternpartial="pages-homepage">pages-homepage</a></li>
 										</ul>
 				</div>
 								</div>
@@ -2017,7 +2024,7 @@
 		<li class="facebook"><a href=""><span class="u-visuallyHidden">facebook</span><i class="icon-facebook"></i></a></li>
 		<li class="twitter"><a href=""><span class="u-visuallyHidden">twitter</span><i class="icon-twitter"></i></a></li>
 		<li class="google-plus"><a href=""><span class="u-visuallyHidden">google plus</span><i class="icon-google-plus"></i></a></li>
-		<li><a href=""><span class="u-visuallyHidden">email</span><i class="icon-envelope"></i></a></li>
+		<li><a href=""><span class="u-visuallyHidden">email</span><i class="icon-envelope-o"></i></a></li>
 	</ul>
 </nav>
 	</div>
@@ -2051,19 +2058,21 @@
 				</div>
 								</div>
 			</div>
-</div>												<div id="molecules-image-with-caption" class="sg-pattern">
+</div>												<div id="molecules-image" class="sg-pattern">
 	<div class="sg-pattern-head">
-		<h3><a href="../../patterns/01-molecules-99-misc-01-image-with-caption/01-molecules-99-misc-01-image-with-caption.html" class="patternLink" data-patternpartial="molecules-image-with-caption">Image With Caption</a></h3>
+		<h3><a href="../../patterns/01-molecules-99-misc-01-image/01-molecules-99-misc-01-image.html" class="patternLink" data-patternpartial="molecules-image">Image</a></h3>
 		<div class="sg-pattern-head-actions">
 			<!--Pattern header options-->
 		</div>
 	</div>
 		<div class="sg-pattern-example">
-		<div class="ImageCredit__wrapper">
-	<img src="http://dummyimage.com/980x560/000/fff.png" alt="">
-	<div class="ImageCredit">Jane Doe</div>
-</div><!-- /.ImageCredit__wrapper -->
-<div class="ImageCaption"><p>Lorem ipsum ... </p></div>
+		<div class="Image ">
+    <div class="Image__creditWrapper">
+	   <img src="http://dummyimage.com/400x300/888/fff.png" alt="">
+	   <div class="Image__credit">Jane Smith</div>
+    </div><!-- /.Image__creditWrapper -->
+    <div class="Image__caption"><p>Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. Proin imperdiet ac nisi et porttitor. Sed sodales metus sit amet consequat placerat. </p></div>
+</div><!-- /.Image -->
 	</div>
 		<div class="sg-pattern-extra">
 		<div class="sg-pattern-extra-annotations" style="display: none">
@@ -2089,8 +2098,9 @@
 		<div class="sg-pattern-extra-lineage" style="display: none">
 			<span class="sg-pattern-extra-name">Lineages</span>
 										<div class="sg-pattern-extra-lineage">
-					The <span class="sg-pattern-extra-lineage-name">molecules-image-with-caption</span> pattern is included in the following pattern(s): 
+					The <span class="sg-pattern-extra-lineage-name">molecules-image</span> pattern is included in the following pattern(s): 
 					<ul>
+											<li> <a href="../../patterns/02-organisms-99-misc-01-wysiwyg-default/02-organisms-99-misc-01-wysiwyg-default.html" class="" data-patternpartial="organisms-wysiwyg-default">organisms-wysiwyg-default</a></li>
 										</ul>
 				</div>
 								</div>
@@ -2111,7 +2121,7 @@
 			</header>
 
 	<div class="ListBox__content">
-					<div class="CardGrid">
+					<div class="CardGridOneRow">
 				<div><article class="Card ">
 	<div class="Card__imageGroup">
 		<a href="">
@@ -2126,7 +2136,7 @@
 				</a>
 			</h3>
 		</header>
-					<div class="Card__summary">
+					<div class="Card__summary u-smallText">
 				<p>Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. </p>
 			</div>
 			</div><!-- /.Card__textGroup -->
@@ -2145,7 +2155,7 @@
 				</a>
 			</h3>
 		</header>
-					<div class="Card__summary">
+					<div class="Card__summary u-smallText">
 				<p>Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. </p>
 			</div>
 			</div><!-- /.Card__textGroup -->
@@ -2164,7 +2174,7 @@
 				</a>
 			</h3>
 		</header>
-					<div class="Card__summary">
+					<div class="Card__summary u-smallText">
 				<p>Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. </p>
 			</div>
 			</div><!-- /.Card__textGroup -->
@@ -2225,7 +2235,7 @@
 		<article class="Post">
 
 	<header class="Post__header">
-		<h2 class="Post__title u-largeText">Lorem ipsum dolor sit amet </h2>
+		<h2 class="Post__title u-giantSerif">Lorem ipsum dolor sit amet </h2>
 		<p class="Post__subTitle u-text--strong">Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. </p>
 	</header>
 
@@ -2271,9 +2281,9 @@
 				</div>
 								</div>
 			</div>
-</div>												<div id="organisms-wysiwyg-wordpress" class="sg-pattern">
+</div>												<div id="organisms-wysiwyg-default" class="sg-pattern">
 	<div class="sg-pattern-head">
-		<h3><a href="../../patterns/02-organisms-99-misc-01-wysiwyg-wordpress/02-organisms-99-misc-01-wysiwyg-wordpress.html" class="patternLink" data-patternpartial="organisms-wysiwyg-wordpress">Wysiwyg Wordpress</a></h3>
+		<h3><a href="../../patterns/02-organisms-99-misc-01-wysiwyg-default/02-organisms-99-misc-01-wysiwyg-default.html" class="patternLink" data-patternpartial="organisms-wysiwyg-default">Wysiwyg Default</a></h3>
 		<div class="sg-pattern-head-actions">
 			<!--Pattern header options-->
 		</div>
@@ -2281,7 +2291,122 @@
 		<div class="sg-pattern-example">
 		<div class="WYSIWYG">
 
-<p>The markup here should replicate the markup a wordpress WYSIWYG would output for things like blockquotes, floated images, text alignment, etc.</p>
+<p>The markup here should replicate the markup a basic WYSIWYG might output for things like blockquotes, floated images, text alignment, etc.</p>
+
+
+<div class="Image align-left">
+    <div class="Image__creditWrapper">
+	   <img src="http://dummyimage.com/400x300/888/fff.png" alt="">
+	   <div class="Image__credit">Jane Smith</div>
+    </div><!-- /.Image__creditWrapper -->
+    <div class="Image__caption"><p>Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. Proin imperdiet ac nisi et porttitor. Sed sodales metus sit amet consequat placerat. </p></div>
+</div><!-- /.Image -->
+<p>Lorem ipsum dolor sit amet, <strong>bold example</strong>&nbsp;adipiscing elit. Cras semper <em>italics example</em>, at venenatis lacus semper eget <del>strikethrough example</del>. Praesent vestibulum ac lectus vel maximus. Nunc vitae nibh quis mi porttitor scelerisque nec sed sem. <a href="http://google.com">Link example</a>, tincidunt purus ac, lacinia nunc. <span style="text-decoration: underline;">Underline example</span> Praesent felis sapien, eleifend a urna id, dictum commodo lacus.<span style="color: #ff0000;"> Example of text with color</span>. Ut varius sagittis ex, in tincidunt dolor viverra laoreet. Maecenas nibh neque, mollis quis luctus eleifend, aliquet at magna. Nam blandit leo pretium, pretium neque id, scelerisque nunc. Sed sit amet vulputate sem. Sed at purus et justo aliquam tristique ut et nulla. Quisque quis erat non urna pulvinar feugiat. Nulla facilisi. Sed rutrum nisl erat.</p>
+
+<ul>
+	<li>Example of an unordered list</li>
+	<li>Aliquam tristique</li>
+	<li>Quisque quis erat non urna pulvinar feugiat</li>
+</ul>
+
+<p>Curabitur ac nunc nibh. Nunc accumsan finibus tincidunt. Donec ornare nisi sapien. Vestibulum tempus mauris ut orci luctus mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent mattis neque et velit imperdiet, in venenatis lacus tempus. Mauris id gravida risus.</p>
+
+<h1>Heading 1 example</h1>
+
+<p>Pellentesque quis ipsum velit. Morbi dolor risus, porttitor eu ipsum in, efficitur egestas magna. Mauris tincidunt elementum tempus. Sed eget bibendum ligula. Ut ac risus vitae orci aliquam tincidunt id et neque. Nunc id risus diam. Aliquam semper leo libero, vel tincidunt felis iaculis nec. Sed faucibus tellus eget imperdiet euismod.</p>
+
+<ol>
+	<li>Example of an ordered list</li>
+	<li>Aliquam</li>
+	<li>sollicitudin</li>
+</ol>
+
+<p>Ut ac felis dui. Aliquam ut sem imperdiet, condimentum magna vitae, pellentesque ligula. Praesent condimentum dictum ante, vel ultricies odio porttitor ut. Donec vitae magna in tortor auctor sollicitudin. Vestibulum dapibus mattis magna, a interdum nulla efficitur sed. Proin blandit sem at eleifend eleifend. Aenean egestas, neque rutrum tincidunt ullamcorper, lacus dolor molestie est, nec vulputate velit lacus dapibus augue.</p>
+
+<h2>Heading 2 example</h2>
+
+<p>Cras ut massa sit amet turpis congue ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer nulla nibh, imperdiet non mauris nec, lobortis euismod lorem. Proin aliquet odio ipsum, sed ornare quam laoreet ac. Suspendisse at augue ac mi imperdiet dictum. Etiam placerat sollicitudin lacus eu dictum. In imperdiet est eget tincidunt porttitor.</p>
+
+<blockquote>
+	<p>Blockquote example. Aliquam ut sem imperdiet, condimentum magna vitae, pellentesque ligula. Praesent condimentum dictum ante, vel ultricies odio porttitor ut.</p>
+</blockquote>
+
+<p>Curabitur ac nunc nibh. Nunc accumsan finibus tincidunt. Donec ornare nisi sapien. Vestibulum tempus mauris ut orci luctus mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent mattis neque et velit imperdiet, in venenatis lacus tempus. Mauris id gravida risus.</p>
+
+<p>Below is an example of a horizontal rule.</p>
+
+<hr>
+
+<p>Ut ac felis dui. Aliquam ut sem imperdiet, condimentum magna vitae, pellentesque ligula. Praesent condimentum dictum ante, vel ultricies odio porttitor ut. Donec vitae magna in tortor auctor sollicitudin. Vestibulum dapibus mattis magna, a interdum nulla efficitur sed. Proin blandit sem at eleifend eleifend. Aenean egestas, neque rutrum tincidunt ullamcorper, lacus dolor molestie est, nec vulputate velit lacus dapibus augue.</p>
+
+<h3>Heading 3 example</h3>
+
+<p>Vestibulum dapibus mattis magna, a interdum nulla efficitur sed. Proin blandit sem at eleifend eleifend.</p>
+
+<h4>Heading 4 example</h4>
+
+<p>Aenean egestas, neque rutrum tincidunt ullamcorper, lacus dolor molestie est, nec vulputate velit lacus dapibus augue.</p>
+
+<h5>Heading 5 example</h5>
+
+<p>Ut ac felis dui. Aliquam ut sem imperdiet, condimentum magna vitae, pellentesque ligula</p>
+
+<h6>Heading 6 example</h6>
+
+<p>Cras ut massa sit amet turpis congue ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer nulla nibh, imperdiet non mauris nec, lobortis euismod lorem. Proin aliquet odio ipsum, sed ornare quam laoreet ac. Suspendisse at augue ac mi imperdiet dictum. Etiam placerat sollicitudin lacus eu dictum. In imperdiet est eget tincidunt porttitor.</p>
+
+
+</div><!-- /.WYSIWYG -->
+
+	</div>
+		<div class="sg-pattern-extra">
+		<div class="sg-pattern-extra-annotations" style="display: none">
+			<span class="sg-pattern-extra-name">Annotations</span>
+			<div id="sg-pattern-extra-annotations-container">
+			</div>
+		</div>
+		<div class="sg-pattern-extra-html" style="display: none">
+			<span class="sg-pattern-extra-name">HTML</span>
+			<pre>
+				<code id="sg-pattern-extra-html-container">
+					
+				</code>
+			</pre>
+		</div>
+		<div class="sg-pattern-extra-engine" style="display: none">
+			<span class="sg-pattern-extra-name"></span>
+			<pre>
+				<code id="sg-pattern-extra-engine-container">
+				</code>
+			</pre>
+		</div>
+		<div class="sg-pattern-extra-lineage" style="display: none">
+			<span class="sg-pattern-extra-name">Lineages</span>
+							<div class="sg-pattern-extra-lineage">
+					The <span class="sg-pattern-extra-lineage-name">organisms-wysiwyg-default</span> pattern contains the following pattern(s): 
+					<ul>
+											<li> <a href="../../patterns/02-organisms-99-misc-01-wysiwyg-default/02-organisms-99-misc-01-wysiwyg-default.html" class="" data-patternpartial="molecules-image">molecules-image</a></li>
+										</ul>
+				</div>
+										<div class="sg-pattern-extra-lineage">
+					The <span class="sg-pattern-extra-lineage-name">organisms-wysiwyg-default</span> pattern is included in the following pattern(s): 
+					<ul>
+											<li> <a href="../../patterns/05-pages-02-basicpage/05-pages-02-basicpage.html" class="" data-patternpartial="pages-basicpage">pages-basicpage</a></li>
+										</ul>
+				</div>
+								</div>
+			</div>
+</div>												<div id="organisms-wysiwyg-wordpress" class="sg-pattern">
+	<div class="sg-pattern-head">
+		<h3><a href="../../patterns/02-organisms-99-misc-02-wysiwyg-wordpress/02-organisms-99-misc-02-wysiwyg-wordpress.html" class="patternLink" data-patternpartial="organisms-wysiwyg-wordpress">Wysiwyg Wordpress</a></h3>
+		<div class="sg-pattern-head-actions">
+			<!--Pattern header options-->
+		</div>
+	</div>
+		<div class="sg-pattern-example">
+		<div class="WYSIWYG">
+
+<p>The markup here should replicate the markup a <strong>wordpress</strong> WYSIWYG would output for things like blockquotes, floated images, text alignment, etc.</p>
 
 <p>Lorem ipsum dolor sit amet, <strong>bold example</strong>&nbsp;adipiscing elit. Cras semper <em>italics example</em>, at venenatis lacus semper eget <del>strikethrough example</del>. Praesent vestibulum ac lectus vel maximus. Nunc vitae nibh quis mi porttitor scelerisque nec sed sem. <a href="http://google.com">Link example</a>, tincidunt purus ac, lacinia nunc. <span style="text-decoration: underline;">Underline example</span> Praesent felis sapien, eleifend a urna id, dictum commodo lacus.<span style="color: #ff0000;"> Example of text with color</span>. Ut varius sagittis ex, in tincidunt dolor viverra laoreet. Maecenas nibh neque, mollis quis luctus eleifend, aliquet at magna. Nam blandit leo pretium, pretium neque id, scelerisque nunc. Sed sit amet vulputate sem. Sed at purus et justo aliquam tristique ut et nulla. Quisque quis erat non urna pulvinar feugiat. Nulla facilisi. Sed rutrum nisl erat.</p>
 
@@ -2403,6 +2528,51 @@
 				</div>
 								</div>
 			</div>
+</div>												<div id="organisms-frame" class="sg-pattern">
+	<div class="sg-pattern-head">
+		<h3><a href="../../patterns/02-organisms-99-misc-50-frame/02-organisms-99-misc-50-frame.html" class="patternLink" data-patternpartial="organisms-frame">Frame</a></h3>
+		<div class="sg-pattern-head-actions">
+			<!--Pattern header options-->
+		</div>
+	</div>
+		<div class="sg-pattern-example">
+		<div class="Frame ">
+    <div class="u-constrained">
+        <div class="Frame__inside">
+                                </div><!-- /.Frame__inside -->
+    </div><!-- /.u-constrained -->
+</div><!-- /.Frame -->
+	</div>
+		<div class="sg-pattern-extra">
+		<div class="sg-pattern-extra-annotations" style="display: none">
+			<span class="sg-pattern-extra-name">Annotations</span>
+			<div id="sg-pattern-extra-annotations-container">
+			</div>
+		</div>
+		<div class="sg-pattern-extra-html" style="display: none">
+			<span class="sg-pattern-extra-name">HTML</span>
+			<pre>
+				<code id="sg-pattern-extra-html-container">
+					
+				</code>
+			</pre>
+		</div>
+		<div class="sg-pattern-extra-engine" style="display: none">
+			<span class="sg-pattern-extra-name"></span>
+			<pre>
+				<code id="sg-pattern-extra-engine-container">
+				</code>
+			</pre>
+		</div>
+		<div class="sg-pattern-extra-lineage" style="display: none">
+			<span class="sg-pattern-extra-name">Lineages</span>
+										<div class="sg-pattern-extra-lineage">
+					The <span class="sg-pattern-extra-lineage-name">organisms-frame</span> pattern is included in the following pattern(s): 
+					<ul>
+										</ul>
+				</div>
+								</div>
+			</div>
 </div>						</div> <!--end #sg-patterns-->
 
 </div><!--end .sg-main-->
@@ -2458,10 +2628,10 @@
 	}
 </script>
 
-<script id="pl-js-polyfill-insert-1440886423">
+<script id="pl-js-polyfill-insert-1440951902">
 	(function() {
 		if (self != top) {
-			var cb = '1440886423';
+			var cb = '1440951902';
 			var js = [];
 			if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 				js.push("styleguide/bower_components/classList.min.js");
@@ -2471,10 +2641,10 @@
 	})();
 </script>
 
-<script id="pl-js-insert-1440886423">
+<script id="pl-js-insert-1440951902">
 	(function() {
 		if (self != top) {
-			var cb = '1440886423';
+			var cb = '1440951902';
 			var js = [ { "src": "styleguide/bower_components/jwerty.min.js", "dep": [ { "src": "annotations/annotations.js", "dep": [ "styleguide/js/patternlab-pattern.min.js" ] } ] } ];
 			scriptLoader.run(js,cb,'pl-js-insert');
 		}

@@ -48,9 +48,19 @@ $Frame-smallspacing: 60px;
     }
 
     // this is the one child that Frame will ever have, its an additional wrapper
-    // if there are elements inside the Frame that need to be absolutely positioned
+    // for elements inside the Frame that need to be absolutely positioned
     &__inside {
         position: relative;
+
+        
+        // this is for when there are multiple items inside of a frame, they get spacing
+        > div:not(:last-child),
+        > section:not(:last-child),
+        > article:not(:last-child) {
+            margin-bottom: 60px;
+            border-bottom: 10px solid $text;
+            padding-bottom: 60px;
+        }
     }
 
 	// Frame with no padding (for when content spans height of container)
@@ -61,10 +71,28 @@ $Frame-smallspacing: 60px;
 
     &--tinySpacing {
         padding-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 2px;
+
+        @include mq($from: mobilemenu-bp) {
+            padding-bottom: 20px;
+        }
     }
 
-    &--gray {
-        background: $gray-light;
+    &--bordered {
+        border-top: 10px solid $text;
+        border-bottom: 10px solid $text;        
+    }
+
+    &--borderTop {
+        border-top: 10px solid $text;
+    }
+
+    &--black {
+        background: $text;
+        color: #fff;
+    }
+
+    &--yellow {
+        background: gold;
     }
 }
