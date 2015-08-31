@@ -8,13 +8,18 @@
 
     Simple Dependency Install:
     --------------------------
-    npm start (from the same root directory as the `package.json` file) (this runs both 'npm install' and 'bower install')
+    npm install (from the same root directory as the `package.json` file) 
+    bower install (only necessary if you need to add to or change plugins)
 
     Tasks:
     --------------------------
-    grunt (default is to watch both sass, js, and images)
+    grunt (default routes to 'grunt css')
     grunt css (compile sass into css once)
-    grunt watch (you can also explicitly call the watch task)
+    grunt javascript (hint custom js, concatenate and minify it with plugin js, move it to the build directory)
+    grunt watch (watch for changes to .scss files or scripts.js and compile on save)
+    grunt plugins (compile and minify all plugin css and js)
+    grunt images (optimize all images and move them to the build directory)
+    grunt sprites (create an svg sprite and corrasponding scss partial)
     grunt build (recompiled everything - sass, sprites, javascript, etc.)
 
     All commands are detailed by running the following:
@@ -32,42 +37,40 @@
 'use strict';
 
 module.exports = function(grunt) {
-  var path = require('path');
+    var path = require('path');
 
-  // this needs to go at the top - it will print out how long 
-  // things took. Helps with debugging
-  require('time-grunt')(grunt);
-  
-  // this allows you to remove all the 'loadNPMtasks' calls, and speeds up task running
-  require('jit-grunt')(grunt);
+    // this needs to go at the top - it will print out how long 
+    // things took. Helps with debugging
+    require('time-grunt')(grunt);
+    
+    // this allows you to remove all the 'loadNPMtasks' calls, and speeds up task running
+    require('jit-grunt')(grunt);
 
-  // Metadata.
-  var options = {
-    pkg: grunt.file.readJSON('package.json')
-  };
+    // Metadata.
+    var options = {
+        pkg: grunt.file.readJSON('package.json')
+    };
 
-  //loads the various task configuration files
-  var configs =   require('load-grunt-configs')(grunt, options);
-  grunt.initConfig(configs);
+    //loads the various task configuration files
+    var configs =   require('load-grunt-configs')(grunt, options);
+    grunt.initConfig(configs);
 
 
-  grunt.registerTask('default', ['css']);
-  grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin', 'clean:css']);
-  grunt.registerTask('javascript', ['clean:js_all', 'jshint:custom', 'bower_concat', 'uglify', 'copy:jquery', 'copy:modernizr', 'copy:selectivizr']);
-  grunt.registerTask('images', ['imagemin']);
-  //grunt.registerTask('sprites', ['dr-svg-sprites']);
+    grunt.registerTask('default', ['css']);
+    grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin:custom', 'clean:css']);
+    grunt.registerTask('javascript', ['jshint:custom', 'uglify' ]);
+    grunt.registerTask('plugins', ['clean:js_all', 'copy:icomoon', 'bower_concat', 'cssmin:plugins', 'clean:cssplugins', 'uglify', 'copy:vendorjs']);
+    grunt.registerTask('images', ['imagemin', 'copy:raster', 'copy:svg']);
+    //grunt.registerTask('sprites', ['dr-svg-sprites', 'copy:sprites', 'clean:sprites']);
 
-  grunt.registerTask('build', [
-    'clean:build',
-    'css',
-    'javascript',
-    //'sprites',
-    //'copy:chosensprite',
-    'images'
-  ]);
-
-  // this javascript task only gets called in the watch task
-  // its here to avoid having to recompile all the bower scripts
-  grunt.registerTask('custom-javascript', ['jshint:custom', 'uglify' ]);
+    grunt.registerTask('build', [
+        'clean:build',
+        'css',
+        'javascript',
+        'plugins',
+        //'sprites',
+        //'copy:chosensprite',
+        'images'
+    ]);
 };
 

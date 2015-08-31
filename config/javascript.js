@@ -17,12 +17,12 @@ module.exports.tasks = {
 	  			src: ['Gruntfile.js', 'config/*.js']
 	  		}
 	  	},
-	  	custom: ['js/*.js']
+	  	custom: ['src/js/scripts.js']
 	},
 
     bower_concat: {
         all: {
-            dest: 'build/js/plugins.js',
+            dest: 'src/js/compiled_bower.js',
             cssDest: 'build/css/plugins.css',
             exclude: [
                 'jquery',
@@ -44,37 +44,22 @@ module.exports.tasks = {
 
     //copy custom JS file over to the build directory
     copy: {
-        jquery: {
+        vendorjs: {
             files: [
-                { expand: true, cwd: 'js/vendor', src: ['jquery-1.11.3.min.js'], dest: 'build/js/'}
-            ]
-        },
-        modernizr: {
-            files: [
-                { expand: true, cwd: 'bower_components/modernizr', src: ['modernizr.js'], dest: 'build/js/'}
-            ]
-        },
-        custom_modernizr: {
-            files: [
-                { expand: true, cwd: 'js/vendor', src: ['modernizr.custom.js'], dest: 'build/js/'}
-            ]
-        },
-        chosensprite: {
-            files: [
-                { expand: true, cwd: 'bower_components/chosen', src: ['chosen-sprite.png', 'chosen-sprite@2x.png'], dest: 'build/css/'}
-            ]
-        },
-        selectivizr: {
-            files: [
-                { expand: true, cwd: 'js/vendor', src: ['selectivizr-min.js'], dest: 'build/js/'}
+                { expand: true, cwd: 'src/js/vendor', src: ['*'], dest: 'build/js/'}
             ]
         }
+        // chosensprite: {
+        //     files: [
+        //         { expand: true, cwd: 'bower_components/chosen', src: ['chosen-sprite.png', 'chosen-sprite@2x.png'], dest: 'build/css/'}
+        //     ]
+        // }
     },
 
     uglify: {
         my_target: {
             files: {
-              'build/js/plugins.min.js': ['build/js/plugins.js', 'js/scripts.js']
+              'build/js/plugins.min.js': ['src/js/compiled_bower.js', 'src/js/scripts.js']
             }
         }
     },

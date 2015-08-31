@@ -6,15 +6,15 @@ module.exports.tasks = {
     // files are saved.
     watch: {
       sass: {
-        files: ['sass/**/**/*.scss'],
+        files: ['src/sass/**/**/*.scss'],
         tasks: ['css']
       },
       js: {
-        files: ['js/scripts.js'],
-        tasks: ['custom-javascript']
+        files: ['src/js/scripts.js'],
+        tasks: ['javascript']
       },
       images: {
-        files: ['img/*'],
+        files: ['src/img/*'],
         tasks: ['images']
       },
       // this task must come last, and it will refresh your browser (as long
@@ -22,8 +22,7 @@ module.exports.tasks = {
       livereload: {
         options: { livereload: true },
         files: [
-          'css/main.css',
-          'js/scripts.js'
+          'build/css/main.min.css'
         ]
       }
     }

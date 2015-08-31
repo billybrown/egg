@@ -4,7 +4,8 @@
   "description": "A starting point for web projects",
   "main": "build/index.html",
   "author": "Bill Brown",
-  "homepage": "https://b.illbrown.com/egg",
+  "private": true,
+  "license": "UNLICENSED",
   "devDependencies": {
     "bower": "^1.5.2",
     "grunt": "^0.4.5",
