@@ -20,7 +20,7 @@
 // $gutter: the space in between the elements
 // $width: the width of the columns (defaults to 100% and can be overridden)
 
-@mixin u-multiRowGrid($bp, $gutter, $width: 100%) {
+@mixin u-multiRowGrid($bp, $gutter, $width: 100%, $bp2: '', $width2: '', $bp3: '', $width3: '') {
 
     @include mq($from: $bp) {
         margin-left: -$gutter;
@@ -36,6 +36,20 @@
             display: inline-block;
             padding-left: $gutter;
             width: $width;
+        }
+
+        @if $bp2 != '' {
+
+            @include mq($from: $bp2) {
+                width: $width2;
+            }
+        }
+
+        @if $bp3 != '' {
+
+            @include mq($from: $bp3) {
+                width: $width3;
+            }
         }
 
         &:not(:last-child) {
