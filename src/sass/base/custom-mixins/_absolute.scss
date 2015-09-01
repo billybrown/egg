@@ -3,6 +3,8 @@
 //
 // Mixins to easily position something absolutely.
 //
+// absolute centering supports ie9+
+//
 // @todo - Need better fallback solution for browsers that don't have css transforms
 // for the absolute centering mixin. 
 //
@@ -49,9 +51,8 @@
         @if $ie8 == true {
             .no-csstransforms & {
                 // @todo
-                // matrix filter?
-                // trigger js to calculate height and width and vertically align that way?
-                // some kind of modernizr test
+                // some kind of sass function that outputs all selectors that get this style
+                // that i can then tell js to calc height/width and add hard centering
             }
         }
     
