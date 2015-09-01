@@ -15,11 +15,13 @@
     --------------------------
     grunt (default routes to 'grunt css')
     grunt css (compile sass into css once)
-    grunt javascript (hint custom js, concatenate and minify it with plugin js, move it to the build directory)
+    grunt js (hint custom js, concatenate and minify it with plugin js, move it to the build directory)
     grunt watch (watch for changes to .scss files or scripts.js and compile on save)
     grunt plugins (compile and minify all plugin css and js)
+    grunt iconfonts (move iconfonts to build directory and concat and minify css with plugin css)
     grunt images (optimize all images and move them to the build directory)
     grunt sprites (create an svg sprite and corrasponding scss partial)
+    grunt js_vendor (move over any js that isn't included in bower over to the build directory)
     grunt build (recompiled everything - sass, sprites, javascript, etc.)
 
     All commands are detailed by running the following:
@@ -64,10 +66,10 @@ module.exports = function(grunt) {
     grunt.registerTask('js', ['jshint:custom', 'uglify' ]);
     grunt.registerTask('js_vendor', ['copy:vendorjs']);
 
-    grunt.registerTask('plugins_noprompt', ['bower_install', 'bower_concat', 'uglify', 'cssmin:plugins']);
+    grunt.registerTask('plugins_noprompt', ['bower_install', 'bower_concat', 'uglify', 'cssmin:plugins']); //add for chosen: 'copy:chosensprite'
     grunt.registerTask('plugins', ['confirm:bower', 'plugins_noprompt']);
     
-    grunt.registerTask('icomoon'), ['copy:icomoon_fonts', 'cssmin:plugins' ]
+    grunt.registerTask('iconfonts', ['copy:icomoon_fonts', 'cssmin:plugins' ]);
     grunt.registerTask('images', ['imagemin', 'copy:raster', 'copy:svg']);
     //grunt.registerTask('sprites', ['dr-svg-sprites', 'copy:sprites', 'clean:sprites']);
 
@@ -77,10 +79,9 @@ module.exports = function(grunt) {
         'css',
         'js',
         'js_vendor',
-        'plugins_noprompt',
         //'sprites',
-        //'copy:chosensprite',
-        'icomoon',
+        'copy:icomoon_fonts',
+        'plugins_noprompt',
         'images'
     ]);
 };

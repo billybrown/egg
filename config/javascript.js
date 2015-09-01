@@ -46,7 +46,7 @@ module.exports.tasks = {
     copy: {
         vendorjs: {
             files: [
-                { expand: true, cwd: 'src/js/vendor', src: ['*'], dest: 'build/js/'}
+                { expand: true, cwd: 'src/js/vendor', src: ['*.js'], dest: 'build/js/'}
             ]
         }
         // chosensprite: {
