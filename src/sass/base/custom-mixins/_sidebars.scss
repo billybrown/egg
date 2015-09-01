@@ -1,0 +1,145 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Sidebars
+//
+// This is a mixin for applying a sidebar. 
+// The sidebar is fixed width and the main column is fluid
+//
+//
+// use the mixin like so:
+//
+//      .MyExampleClass {
+//          @include u-sidebar(800px, "left", 300px);
+//      }
+//
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+// $bp - when the sidebar is triggered
+// $direction - which side the sidebar is on
+// $width - how big the sidebar is
+// $gutter - the distance between columns
+// $layerSpace - the distance between columns when stacked
+
+// these are the styles for just the sidebar or rail
+@mixin u-sidebar__rail($bp, $width) {
+    order: 2;
+
+    @include mq($from: $bp) {
+        width: $width;
+        flex: 0 0 $width;
+    }   
+}
+
+// these are the styles for the main column
+@mixin u-sidebar__mainCol($bp, $layerSpace) {
+    order: 1;
+    margin-bottom: $layerSpace;
+
+    @include mq($from: $bp) {
+        margin-bottom: 0;
+    }
+}
+
+// lets put it all together now
+@mixin u-sidebar($bp, $direction, $width, $gutter, $layerSpace: 0) {
+    display: flex;
+    flex-direction: column;
+
+    @include mq($from: $bp) {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    & > div:first-child {
+        @if $direction == "left" {
+            @include u-sidebar__rail($bp, $width);   
+
+            @include mq($from: $bp) {
+                order: 1;  
+            }
+
+        } @else {
+            @include u-sidebar__mainCol($bp, $layerSpace); 
+        } 
+
+        @include mq($from: $bp) {
+            padding-right: $gutter*.5;      
+        }
+    }
+
+    // main column
+    & > div:last-child {
+        @if $direction == "left" {
+            @include u-sidebar__mainCol($bp, $layerSpace);
+
+            @include mq($from: $bp) {   
+                order: 2; 
+            }
+
+        } @else {
+            @include u-sidebar__rail($bp, $width);     
+        } 
+
+        @include mq($from: $bp) {
+            padding-left: $gutter*.5;      
+        }
+    }
+}
+
+
+
+/////////////////////////////////////-+++-
+// version with a border
+//
+// $borderColor - the color of the border
+// $borderWidth - the width of the border
+// $borderPosition - can take "middle", "right", or "left". Left would make the border flush with the left column.
+
+@mixin u-sidebar--border($bp, $direction, $width, $gutter, $borderColor, $borderWidth, $borderPosition: "middle", $layerSpace: 0) {
+    @include u-sidebar($bp, $direction, $width, $gutter, $layerSpace);
+
+
+    & > div:first-child {
+        position: relative;
+
+        @include mq($from: $bp) {
+            @if $borderPosition == "left" {
+                padding-right: 0;
+            } @elseif $borderPosition == "right" {
+                padding-right: $gutter;
+            }
+        } 
+
+        &:after {
+            @include u-absolute(null, 0, -$borderWidth * .5, null);
+            content: '';
+            background: $borderColor;
+            width: 100%;
+            height: $borderWidth;
+
+            @include mq($from: $bp) {
+                width: $borderWidth;
+                height: 100%;
+                bottom: 0;
+
+                @if $borderPosition == "middle" {
+                    right: -$borderWidth * .5;
+                }
+            }
+        }
+    }
+
+    & > div:last-child {
+        @include mq($from: $bp) {
+            @if $borderPosition == "left" {
+                padding-left: $gutter;
+            } @elseif $borderPosition == "right" {
+                padding-left: 0;
+            }    
+        }    
+    }
+}
+
+
+
+

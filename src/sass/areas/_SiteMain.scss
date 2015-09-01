@@ -6,7 +6,12 @@
 
 
 
+$SiteMain-bp: 1000px;
 
 .SiteMain {
     background: $background;
+
+    &__sidebarLayout {
+        @include u-sidebar($SiteMain-bp, "left", 250px, 70px);
+    }
 }

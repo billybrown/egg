@@ -9,15 +9,11 @@
 		<!-- google webfonts -->
 		<link href='https://fonts.googleapis.com/css?family=Raleway:800,500|Neuton:400,800,700' rel='stylesheet' type='text/css'>
 
-		<!-- Iconfont css from Icomoon -->
-		<link rel="stylesheet" href="../../../../fonts/icomoon/style.css?1441037938" media="all" />
-
-		<!-- Minified and Concatenated Vendor CSS from bower
-		<link rel="stylesheet" href="../../../../build/css/plugins.css?1441037938" media="all" />
-		-->
+		<!-- Minified and Concatenated Vendor CSS -->
+		<link rel="stylesheet" href="../../../../build/css/plugins.min.css?1441070779" media="all" />
 
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="../../../../build/css/main.min.css?1441037938" media="all" />
+		<link rel="stylesheet" href="../../../../build/css/main.min.css?1441070779" media="all" />
 		
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 		<!-- never cache patterns -->
@@ -154,11 +150,36 @@
 <main class="SiteMain">
 
     
+
     <div class="Frame ">
     <div class="u-constrained">
         <div class="Frame__inside">
             
-			<article class="Post">
+            <div class="SiteMain__sidebarLayout">
+
+
+                <div class="SiteMain__rail">
+                    <article class="Card Card--yellow">
+	<div class="Card__imageGroup">
+		<a href="">
+			<img src="http://dummyimage.com/570x320/000/fff.png" alt="" />
+		</a>
+	</div><!-- /.Card__imageGroup -->
+	<div class='Card__textGroup'>
+		<header class="Card__header">
+			<h3 class="Card__title ">
+				<a href="">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				</a>
+			</h3>
+		</header>
+					<div class="Card__summary u-smallText">
+				<p>Ut malesuada felis vitae mattis imperdiet. Nam fringilla id felis quis mattis. Maecenas faucibus nunc quis lectus pretium, a maximus turpis laoreet. </p>
+			</div>
+			</div><!-- /.Card__textGroup -->
+</article>                </div>
+                <div class="SiteMain__mainCol">
+                    <article class="Post">
 
 	<header class="Post__header">
 		<h2 class="Post__title u-giantSerif">Lorem ipsum dolor sit amet </h2>
@@ -168,7 +189,7 @@
 	<div class="Post__content">
 
 		<div class="Post__body">
-			                    <div class="WYSIWYG">
+			                            <div class="WYSIWYG">
 
 <p>The markup here should replicate the markup a basic WYSIWYG might output for things like blockquotes, floated images, text alignment, etc.</p>
 
@@ -236,12 +257,15 @@
 
 
 </div><!-- /.WYSIWYG -->
-                		</div><!-- /.Post__body -->
+                        		</div><!-- /.Post__body -->
 
 	</div><!-- /.Post__content -->
 
 </article><!-- /.Post -->
 
+                </div>
+
+            </div><!-- /.SidebarLayout -->
 
                 </div><!-- /.Frame__inside -->
     </div><!-- /.u-constrained -->
@@ -264,7 +288,7 @@
 
 	<!--DO NOT REMOVE-->
 	<script>
-	var patternData = {"cssEnabled":false,"lineage":[{"lineagePattern":"organisms-wysiwyg-default","lineagePath":"..\/..\/patterns\/05-pages-02-basicpage\/05-pages-02-basicpage.html"}],"lineageR":[],"patternBreadcrumb":"pages","patternDesc":"","patternExtension":"twig","patternName":"basicpage","patternPartial":"pages-basicpage","patternState":"","extraOutput":[]};
+	var patternData = {"cssEnabled":false,"lineage":[{"lineagePattern":"molecules-card","lineagePath":"..\/..\/patterns\/05-pages-02-basicpage\/05-pages-02-basicpage.html"},{"lineagePattern":"organisms-wysiwyg-default","lineagePath":"..\/..\/patterns\/05-pages-02-basicpage\/05-pages-02-basicpage.html"}],"lineageR":[],"patternBreadcrumb":"pages","patternDesc":"","patternExtension":"twig","patternName":"basicpage","patternPartial":"pages-basicpage","patternState":"","extraOutput":[]};
 </script>
 
 <script>
@@ -300,10 +324,10 @@
 	}
 </script>
 
-<script id="pl-js-polyfill-insert-1441037938">
+<script id="pl-js-polyfill-insert-1441070779">
 	(function() {
 		if (self != top) {
-			var cb = '1441037938';
+			var cb = '1441070779';
 			var js = [];
 			if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 				js.push("styleguide/bower_components/classList.min.js");
@@ -313,10 +337,10 @@
 	})();
 </script>
 
-<script id="pl-js-insert-1441037938">
+<script id="pl-js-insert-1441070779">
 	(function() {
 		if (self != top) {
-			var cb = '1441037938';
+			var cb = '1441070779';
 			var js = [ { "src": "styleguide/bower_components/jwerty.min.js", "dep": [ { "src": "annotations/annotations.js", "dep": [ "styleguide/js/patternlab-pattern.min.js" ] } ] } ];
 			scriptLoader.run(js,cb,'pl-js-insert');
 		}
