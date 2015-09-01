@@ -75,3 +75,8 @@ $animation-speed: .2s;
 $animation-easing: ease;
 $animation: $animation-speed $animation-easing;
 
+
+// flag for ie8 support or not. Used in layout mixins.
+$ie8: true;
+
+
