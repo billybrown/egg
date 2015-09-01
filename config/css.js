@@ -39,7 +39,7 @@ module.exports.tasks = {
     },
 
     copy: {
-        icomoon: {
+        icomoon_fonts: {
             files: [
                 { expand: true, cwd: 'src/fonts/icomoon', src: ['fonts/*'], dest: 'build/css/'}
             ]
@@ -62,7 +62,7 @@ module.exports.tasks = {
         },
         plugins: {
             files: {
-                'build/css/plugins.min.css': ['build/css/plugins.css', 'src/fonts/icomoon/style.css']
+                'build/css/plugins.min.css': ['src/js/temp/plugins.css', 'src/fonts/icomoon/style.css']
             }
         }
     },
@@ -113,8 +113,7 @@ module.exports.tasks = {
 // },
   
     clean: {
-        css: ['build/css/main.css', 'build/css/main.css.map'],
-        cssplugins: ['build/css/plugins.css', 'build/css/plugins.min.css.map']
+        css: ['build/css/main.css', 'build/css/main.css.map']
     }
 
 };

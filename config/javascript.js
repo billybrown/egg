@@ -22,8 +22,8 @@ module.exports.tasks = {
 
     bower_concat: {
         all: {
-            dest: 'src/js/compiled_bower.js',
-            cssDest: 'build/css/plugins.css',
+            dest: 'src/js/temp/compiled_bower.js',
+            cssDest: 'src/js/temp/compiled_bower.css',
             exclude: [
                 'jquery',
                 'modernizr'
@@ -57,15 +57,20 @@ module.exports.tasks = {
     },
 
     uglify: {
-        my_target: {
+        js: {
             files: {
-              'build/js/plugins.min.js': ['src/js/compiled_bower.js', 'src/js/scripts.js']
+              'build/js/plugins.min.js': ['src/js/temp/compiled_bower.js', 'src/js/scripts.js']
             }
         }
     },
 
-    clean: {
-        js_all: ['build/js/**']
+    confirm: {
+        bower: {
+            options: {
+                question: 'You are about to run bower install. Have you pulled the latest version of the repo? :',
+                input: '_key:y' // Continue the flow if `Y` key is pressed.
+            }
+        }
     }
     
 };

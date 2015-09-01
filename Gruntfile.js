@@ -44,7 +44,9 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
     
     // this allows you to remove all the 'loadNPMtasks' calls, and speeds up task running
-    require('jit-grunt')(grunt);
+    require('jit-grunt')(grunt, {
+        bower_install: 'grunt-bower-install-task'
+    });
 
     // Metadata.
     var options = {
@@ -58,18 +60,27 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['css']);
     grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin:custom', 'clean:css']);
-    grunt.registerTask('javascript', ['jshint:custom', 'uglify' ]);
-    grunt.registerTask('plugins', ['clean:js_all', 'copy:icomoon', 'bower_concat', 'cssmin:plugins', 'clean:cssplugins', 'uglify', 'copy:vendorjs']);
+   
+    grunt.registerTask('js', ['jshint:custom', 'uglify' ]);
+    grunt.registerTask('js_vendor', ['copy:vendorjs']);
+
+    grunt.registerTask('plugins_noprompt', ['bower_install', 'bower_concat', 'uglify', 'cssmin:plugins']);
+    grunt.registerTask('plugins', ['confirm:bower', 'plugins_noprompt']);
+    
+    grunt.registerTask('icomoon'), ['copy:icomoon_fonts', 'cssmin:plugins' ]
     grunt.registerTask('images', ['imagemin', 'copy:raster', 'copy:svg']);
     //grunt.registerTask('sprites', ['dr-svg-sprites', 'copy:sprites', 'clean:sprites']);
 
     grunt.registerTask('build', [
+        'confirm:bower',
         'clean:build',
         'css',
-        'javascript',
-        'plugins',
+        'js',
+        'js_vendor',
+        'plugins_noprompt',
         //'sprites',
         //'copy:chosensprite',
+        'icomoon',
         'images'
     ]);
 };
