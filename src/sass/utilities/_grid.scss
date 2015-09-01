@@ -14,7 +14,7 @@ $grid-bp: 800px;
 $grid-spacing: 20px;
 
 .u-grid {
-    @include u-multiRowGrid($grid-bp, $grid-spacing);
+    @include u-multiRowGrid--gutter($grid-bp, $grid-spacing);
 
     // some default inline grid layouts
     @include mq($from: $grid-bp) {

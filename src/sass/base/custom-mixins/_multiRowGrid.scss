@@ -9,7 +9,7 @@
 // use the mixin like so:
 //
 //      .MyExampleClass {
-//          @include u-multiRowGrid( 800px, 30px, 33.3333% );
+//          @include u-multiRowGrid--gutter( 800px, 30px, 33.3333% );
 //      }
 //
 /////////////////////////////////////-+++-/////////////////////////////////////////
@@ -19,11 +19,20 @@
 // $bp: the breakpoint for when the grid is triggered
 // $gutter: the space in between the elements
 // $width: the width of the columns (defaults to 100% and can be overridden)
+// $bp* and $width* are for when you want the grid to change at different breakpoints
 
-@mixin u-multiRowGrid($bp, $gutter, $width: 100%, $bp2: '', $width2: '', $bp3: '', $width3: '') {
+@mixin u-multiRowGrid($bp, $width: 100%, $bp2: '', $width2: '', $bp3: '', $width3: '', $bp4: '', $width4: '') {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
     @include mq($from: $bp) {
-        margin-left: -$gutter;
+        display: flex;
+        flex-wrap: wrap;
+
+        .no-flexbox {
+            display: block;
+        }
     }
 
     & > div,
@@ -31,11 +40,13 @@
         min-height: 1px;
         
         @include mq($from: $bp) {
-            margin-right: -.25em;
-            vertical-align: top;
-            display: inline-block;
-            padding-left: $gutter;
             width: $width;
+
+            .no-flexbox {
+                margin-right: -.25em;
+                vertical-align: top;
+                display: inline-block;
+            }
         }
 
         @if $bp2 != '' {
@@ -52,13 +63,96 @@
             }
         }
 
-        &:not(:last-child) {
-            margin-bottom: $gutter;
+        @if $bp4 != '' {
+
+            @include mq($from: $bp4) {
+                width: $width4;
+            }
         }
     }
 
     img {
         width: 100%;
+    }
+}
+
+
+
+/////////////////////////////////////-+++-
+// a version with gutters
+
+@mixin u-multiRowGrid--gutter($bp, $gutter, $width: 100%, $bp2: '', $width2: '', $bp3: '', $width3: '', $bp4: '', $width4: '') {
+    @include u-multiRowGrid($bp, $width, $bp2, $width2, $bp3, $width3, $bp4, $width4);
+    
+    @include mq($from: $bp) {
+        margin-left: -$gutter;
+        width: calc(100% + #{$gutter});
+        overflow: hidden;
+
+        .no-flexbox {
+            width: 100%;
+        }
+    }
+
+    & > div,
+    & > li {
+        
+        @include mq($from: $bp) {
+            padding-left: $gutter;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $gutter;
+        }
+    }
+
+}
+
+
+
+/////////////////////////////////////-+++-
+// a version with a border in between the rows
+
+@mixin u-multiRowGrid--rowBorder($bp, $gutter, $bordercolor, $borderwidth, $width: 100%, $bp2: '', $width2: '', $bp3: '', $width3: '', $bp4: '', $width4: '') {
+    @include u-multiRowGrid--gutter($bp, $gutter, $width, $bp2, $width2, $bp3, $width3, $bp4, $width4);
+    padding-bottom: 1px;
+
+    & > div,
+    & > li {
+        position: relative;
+        padding-top: $gutter*.75;
+        padding-bottom: $gutter*.75;
+
+        &, &:not(:last-child) {
+            margin-bottom: -$borderwidth;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            width: 100%;
+            height: $borderwidth;
+            background: $bordercolor;
+            display: none;
+
+            @include mq($from: $bp) {
+                display: block;
+            }
+        }
+
+        &:before {
+            @include u-absolute(0, null, 0, null, $bp);
+            @include mq($from: $bp) {
+                left: $gutter;
+            }
+        }
+
+        &:after {
+            @include u-absolute(null, null, 0, 0, $bp);
+            @include mq($from: $bp) {
+                left: $gutter;
+            }
+        }
     }
 }
 
