@@ -13,10 +13,9 @@
 
 // import custom mixins (edit these if you want) 
 @import 'custom-mixins/absolute';
-@import 'custom-mixins/imageCol';
 @import 'custom-mixins/multiRowGrid';
 @import 'custom-mixins/equalColRow';
-@import 'custom-mixins/sidebars';
+@import 'custom-mixins/fixedFluidRow';
 
 // import some default variables
 @import 'variablesDefault';

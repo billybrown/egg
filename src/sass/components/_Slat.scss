@@ -33,7 +33,7 @@ $Slat-imageGutter: 30px;
 
 
 .Slat {
-    @include u-imageCol--bp($Slat-bp, "right", 30px);
+    @include u-fixedFluidRow($Slat-bp, "right", 30px);
 
     &__imageGroup {
 
