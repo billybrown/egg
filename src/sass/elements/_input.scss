@@ -15,6 +15,7 @@ $placeholder-default: $text;
     border: 2px solid $text;
     border-radius: 0;
     padding: 7px 14px;
+    height: 42px; // need to put height here for firefox
     -webkit-appearance: none;
     transition: background $animation, border $animation;
 

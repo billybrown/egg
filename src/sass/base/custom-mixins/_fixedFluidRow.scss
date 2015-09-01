@@ -1,15 +1,19 @@
 /////////////////////////////////////-+++-/////////////////////////////////////////
 // Fixed-Fluid Row
 //
-// This is a mixin for applying a sidebar. 
-// The sidebar is fixed width and the main column is fluid
+// This is a mixin for doing 1 fixed column and 1 fluid column.
+// This layout uses flexbox then degrades to display: table
 //
+// the table layout is based on the bootstrap media object: http://getbootstrap.com/components/#media
 //
 // use the mixin like so:
 //
 //      .MyExampleClass {
-//          @include u-fixedFluidRow(800px, "left", 300px);
+//          @mixin u-fixedFluidRow(800px, "left", 70px, 50px, "second", 300px) {
 //      }
+//      // the mixin above will start at 800px breakpoint, with the fixed column on the left
+//      // 70px worth of gutter, 50px between columns when stacked, the second column will
+//      // show up first on mobile, and the fixed column will be 300px wide.
 //
 /////////////////////////////////////-+++-/////////////////////////////////////////
 
@@ -27,6 +31,17 @@
     @include mq($from: $bp) {
         width: $width;
         flex: 0 0 $width;
+
+        .no-flexbox & {
+            display: table-cell;
+            vertical-align: top;
+
+            img {
+                display: block;
+                max-width: none;
+                width: $width;
+            }
+        }
     }   
 }
 
@@ -36,6 +51,15 @@
 
     @include mq($from: $bp) {
         margin-bottom: 0;
+        flex: 1;
+
+        .no-flexbox & {
+            display: table-cell;
+            vertical-align: middle;
+            overflow: hidden;
+            zoom: 1;
+            width: 10000px;
+        }
     }
 }
 
@@ -43,15 +67,23 @@
 @mixin u-fixedFluidRow($bp, $direction, $gutter, $layerSpace: 0, $primary: "first", $width: auto) {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     @include mq($from: $bp) {
-        width: 100%;
         flex-direction: row;
+
+        .no-flexbox & {
+            overflow: hidden;
+            zoom: 1;
+            display: table;
+        }
     }
+
 
     & > div:first-child {
         @if $direction == "left" {
             @include u-fixedFluidRow__fixed($bp, $width);   
+
         } @else {
             @include u-fixedFluidRow__fluid($bp, $layerSpace); 
         } 
@@ -72,8 +104,9 @@
     & > div:last-child {
         @if $direction == "left" {
             @include u-fixedFluidRow__fluid($bp, $layerSpace);
+
         } @else {
-            @include u-fixedFluidRow__fixed($bp, $width);     
+            @include u-fixedFluidRow__fixed($bp, $width);    
         } 
 
         @if $primary == "first" {
@@ -86,6 +119,11 @@
             order: 2;
             padding-left: $gutter*.5;      
         }
+    }
+
+    // this is a flexbox bug in firefox where the img breaks the container otherwise
+    img {
+        width: 100%;
     }
 }
 
